@@ -1,0 +1,84 @@
+.picross__ctn {
+  margin: 0 auto;
+  max-width: 780px;
+}
+
+.picross__numbers {
+  width: 80px;
+  height: 80px;
+}
+
+.picross__square {
+  width: 80px;
+  height: 80px;
+  background-color: #fff; 
+  border-right: 2px solid #ccc; 
+  border-top: 2px solid #ccc; 
+  border-bottom: 2px solid #ccc;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.picross__square:nth-child(2) {
+  border-left: 2px solid #ccc; 
+}
+
+.columns-5 {
+  width: 80px;
+  height: 80px;
+}
+
+.picross__square:hover {
+  background-color: #347DCB;
+  border-top: 3px solid #2AA2CF; 
+  border-bottom: 3px solid #2AA2CF; 
+  border-left: 3px solid #2AA2CF; 
+  border-right: 3px solid #2AA2CF;
+}
+
+.picross__square--true {
+  background-color: #55AA55;
+  border-radius: 8px;
+  border-top: 2px solid #88CC88; 
+  border-bottom: 2px solid #88CC88; 
+
+  border-right: 2px solid #88CC88; 
+}
+
+.picross__square--active-hover {
+  background-color: blue;
+  border-radius: 8px;
+  border-top: 2px solid #88CC88; 
+  border-bottom: 2px solid #88CC88; 
+  border-right: 2px solid #88CC88; 
+}
+
+.picross__square--false-hover {
+  background-color: orange;
+  border-radius: 8px;
+  border-top: 2px solid #88CC88; 
+  border-bottom: 2px solid #88CC88; 
+  border-right: 2px solid #88CC88;
+}
+
+.picross__square--true:first-child  {
+  border-left: 2px solid #88CC88; 
+}
+
+.picross__square--false {
+  border-top: 2px solid #CB3434; 
+  border-bottom: 2px solid #CB3434; 
+  border-left: 2px solid #CB3434; 
+  border-right: 2px solid #CB3434; 
+}
+
+.picross__square--false:first-child { 
+  border-left: 2px solid #CB3434; 
+ }
+
+.picross__square--false::after {
+  content: 'X';
+  font-size: 80px;
+  color: #cb3434;
+  line-height: 50px;
+}
