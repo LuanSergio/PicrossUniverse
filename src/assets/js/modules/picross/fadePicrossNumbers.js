@@ -6,7 +6,8 @@ export function fadePicrossNumbers(columns, rows,){
   let picrossValues = getPicrossValues(columns, rows);
 
   // tirar o array daqui, pegar o array no create picross e passar ele de parametros para as funções
-  const numbersArray = picrossNumberCounter(columns, rows, matrix, direction);
+  const numbersArray = picrossNumberCounter(columns, rows, matrix, 'vertical');
+  
   let secondaryArray = [];
   let counter = 0;
   for (let i = 0, j = 0; i < rows; i++) {

@@ -1,6 +1,5 @@
-import { picrossNumberCounter } from './picrossNumberCounter';
-export function printPicrossNumbers(width, height, matrix, direction) {
-  const numbersArray = picrossNumberCounter(width, height, matrix, direction);
+export function printPicrossNumbers(width, height, direction, picrossNumbers) {
+  const numbersArray = picrossNumbers;
   let numbers
   console.log('numbersArray');
   console.log(numbersArray);

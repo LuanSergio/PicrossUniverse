@@ -1,6 +1,8 @@
 import { printPicrossNumbers } from './printPicrossNumbers';
 import { picrossValidator } from './picrossValidator';
 import { fillSquares } from './fillSquares'
+import { picrossNumberCounter } from './picrossNumberCounter';
+
 export function createPicross(width, height, matrix) {
   const picross = document.querySelector('[data-picross]');
 
@@ -28,8 +30,10 @@ export function createPicross(width, height, matrix) {
       }
   }
 
-  printPicrossNumbers(width, height, matrix, "horizontal");
-  printPicrossNumbers(width, height, matrix, "vertical");
+  let picrossNumbers = picrossNumberCounter(width, height, matrix, "horizontal");
+  printPicrossNumbers(width, height, "horizontal", picrossNumbers);
+  picrossNumbers = picrossNumberCounter(width, height, matrix, "vertical");
+  printPicrossNumbers(width, height, "vertical", picrossNumbers);
   fillSquares();
   picrossValidator(width, height, matrix);
 }
