@@ -2,7 +2,9 @@ import { picrossNumberCounter } from './picrossNumberCounter';
 export function printPicrossNumbers(width, height, matrix, direction) {
   const numbersArray = picrossNumberCounter(width, height, matrix, direction);
   let numbers
-
+  console.log('numbersArray');
+  console.log(numbersArray);
+  
   if(direction === 'horizontal'){
     numbers = document.querySelectorAll('[data-numbers-x]');
     for (let i = 0; i < height; i++) {

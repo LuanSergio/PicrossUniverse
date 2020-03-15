@@ -6,7 +6,7 @@ export function fillSquares() {
     falseHover: 'picross__square--false-hover'
   };
 
-  let square = document.querySelectorAll('[data-picross-square]');
+  let squares = document.querySelectorAll('[data-picross-square]');
   let initialSquare = null;
   let hoveredSquares = [];
   let isToggling = false;
@@ -32,10 +32,15 @@ export function fillSquares() {
     lastRemoved = false;
   }
 
+  function mouseHover(evt) {
+    highlightSquares(evt.target);
+  }
+
   function fillMouseEnter(evt) {
     if (isToggling === false) {
       return;
     }
+    
     hoveredSquares.push(evt.target);
     if(clickSide === 0) {
       hoverDecorate(evt.target, states.trueHover);
@@ -134,11 +139,24 @@ export function fillSquares() {
     lastRemoved = false;
   }
 
-  for (let i = 0; i < square.length; i++) {
-    square[i].addEventListener('mousedown', evt => fillMouseDown(evt, square[i]));
-    square[i].addEventListener('mouseup', evt => fillMouseUp(evt, square[i]));
-    square[i].addEventListener('mouseenter', evt => fillMouseEnter(evt));
-    window.addEventListener('mouseup', evt => outsideMouseUp(evt, square[i]));
-    square[i].addEventListener('contextmenu', evt => evt.preventDefault());
+  function highlightSquares(highlightedSquare){
+    squares.forEach(elm => {
+      if((highlightedSquare.getAttribute('data-x')) === (elm.getAttribute('data-x')) ||
+      (highlightedSquare.getAttribute('data-y')) === (elm.getAttribute('data-y'))){
+        elm.classList.add('picross__square--highlight');
+      } else {
+        elm.classList.remove('picross__square--highlight');
+      }
+    });
+  }
+
+  for (let i = 0; i < squares.length; i++) {
+    squares[i].addEventListener('mousedown', evt => fillMouseDown(evt, squares[i]));
+    squares[i].addEventListener('mouseup', evt => fillMouseUp(evt, squares[i]));
+    squares[i].addEventListener('mouseenter', evt => fillMouseEnter(evt));
+    squares[i].addEventListener('mouseover', evt => mouseHover(evt));
+    window.addEventListener('mouseup', evt => outsideMouseUp(evt, squares[i]));
+    squares[i].addEventListener('contextmenu', evt => evt.preventDefault());
+    
   }
 }

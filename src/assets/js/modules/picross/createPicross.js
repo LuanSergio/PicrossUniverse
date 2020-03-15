@@ -9,13 +9,14 @@ export function createPicross(width, height, matrix) {
   row.appendChild(header);
   for ( let i = 0; i < width; i++) {
     header = document.createElement("TH");
+    header.classList.add('picross__numbers');
     row.appendChild(header);
     header.dataset.numbersY= `${i}`;
   }
   for (let i = 0; i < height; i++) {
     header = document.createElement("TH");
+    header.classList.add('picross__numbers');
     header.dataset.numbersX= `${i}`;
-    header.className = 'picross__numbers';
     let row = picross.insertRow();
     row.appendChild(header);
       for (let j = 0; j < width; j++) {

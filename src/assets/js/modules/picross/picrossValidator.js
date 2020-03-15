@@ -7,12 +7,11 @@ export function picrossValidator(columns, rows, matrix) {
   
   picross.addEventListener('click', function(){
     picrossValues = getPicrossValues(columns, rows);
-    compareMatrices(columns, rows, matrix, picrossValues);
+   
+    if(compareMatrices(columns, rows, matrix, picrossValues)){
+      console.log('true');
+      alert('YOU WIN!')
+    }
   });
 
-  // picross.addEventListener('contextmenu', function(ev) {
-  //   ev.preventDefault();
-  //   picrossValues = getPicrossValues(columns, rows);
-  //   compareMatrices(columns, rows, matrix, picrossValues);
-  // });
 }

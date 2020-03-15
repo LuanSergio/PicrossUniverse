@@ -5,7 +5,9 @@
 
 .picross__numbers {
   width: 80px;
-  height: 80px;
+  height 80px;
+  padding-bottom: 20px;
+  vertical-align: bottom;
 }
 
 .picross__square {
@@ -36,12 +38,19 @@
   border-right: 3px solid #2AA2CF;
 }
 
+.picross__square--highlight {
+  background-color: #ccc;
+  border-top: 3px solid grey; 
+  border-bottom: 3px solid grey; 
+  border-left: 3px solid grey; 
+  border-right: 3px solid grey;
+}
+
 .picross__square--true {
   background-color: #55AA55;
   border-radius: 8px;
   border-top: 2px solid #88CC88; 
   border-bottom: 2px solid #88CC88; 
-
   border-right: 2px solid #88CC88; 
 }
 
