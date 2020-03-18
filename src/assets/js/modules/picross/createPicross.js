@@ -1,10 +1,19 @@
 import { printPicrossNumbers } from './printPicrossNumbers';
 import { picrossValidator } from './picrossValidator';
 import { fillSquares } from './fillSquares'
+import { fadePicrossNumbers } from './fadePicrossNumbers';
 import { picrossNumberCounter } from './picrossNumberCounter';
 
 export function createPicross(width, height, matrix) {
   const picross = document.querySelector('[data-picross]');
+  const horizontalNumbersArray = picrossNumberCounter(width, height, matrix, "horizontal");
+  const verticalNumbersArray = picrossNumberCounter(width, height, matrix, "vertical");
+
+  // console.log('horizontalNumbersArray');
+  // console.log(horizontalNumbersArray);
+  // console.log('verticalNumbersArray');
+  // console.log(verticalNumbersArray);
+  
 
   let row = picross.insertRow();
   let header = document.createElement("TH");
@@ -30,10 +39,11 @@ export function createPicross(width, height, matrix) {
       }
   }
 
-  let picrossNumbers = picrossNumberCounter(width, height, matrix, "horizontal");
-  printPicrossNumbers(width, height, "horizontal", picrossNumbers);
-  picrossNumbers = picrossNumberCounter(width, height, matrix, "vertical");
-  printPicrossNumbers(width, height, "vertical", picrossNumbers);
+  printPicrossNumbers(width, height, "horizontal", horizontalNumbersArray);
+  printPicrossNumbers(width, height, "vertical", verticalNumbersArray);
   fillSquares();
+  fadePicrossNumbers(width, height, "horizontal", horizontalNumbersArray);
+  fadePicrossNumbers(width, height, "vertical", verticalNumbersArray);
+  // fadePicrossNumbers();
   picrossValidator(width, height, matrix);
 }

@@ -1,8 +1,5 @@
-export function printPicrossNumbers(width, height, direction, picrossNumbers) {
-  const numbersArray = picrossNumbers;
-  let numbers
-  console.log('numbersArray');
-  console.log(numbersArray);
+export function printPicrossNumbers(width, height, direction, numbersArray) {
+  let numbers;
   
   if(direction === 'horizontal'){
     numbers = document.querySelectorAll('[data-numbers-x]');
@@ -15,7 +12,7 @@ export function printPicrossNumbers(width, height, direction, picrossNumbers) {
         }
       }
     }
-  } else {
+  } else if(direction === 'vertical') {
     numbers = document.querySelectorAll('[data-numbers-y]');
     for (let i = 0; i < width; i++) {
       for (let j = 0; j < height; j++) {

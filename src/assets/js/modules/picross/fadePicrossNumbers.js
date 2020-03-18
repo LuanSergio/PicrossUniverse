@@ -1,25 +1,37 @@
-import { picrossNumberCounter } from './picrossNumberCounter';
 import { getPicrossValues } from './getPicrossValues'
 
-export function fadePicrossNumbers(columns, rows,){
-  // tirar o array daqui, pegar o array no create picross e passar ele de parametros para as funções
-  let picrossValues = getPicrossValues(columns, rows);
+export function fadePicrossNumbers(columns, rows, direction, numbersArray){
+  let picrossValues;
+  const picross = document.querySelector('[data-picross]');
 
-  // tirar o array daqui, pegar o array no create picross e passar ele de parametros para as funções
-  const numbersArray = picrossNumberCounter(columns, rows, matrix, 'vertical');
+  console.log('numbersArray');
+  console.log(numbersArray);
   
-  let secondaryArray = [];
-  let counter = 0;
-  for (let i = 0, j = 0; i < rows; i++) {
-    secondaryArray[i] = []
-    while(j < columns){
-      if(picrossValues[i][j] != undefined) {
-        while(picrossValues[i][j] === true) {
-          counter++;
-          j++;
+  picross.addEventListener('click', function(evt){
+    picrossValues = getPicrossValues(columns, rows);
+    console.log('generated matrix');
+    console.log(picrossValues);
+     let countedArray = [];
+    if(direction == 'horizontal') {
+      for (let i = 0; i  < rows; i++) {
+        console.log('index now:' + i);
+        countedArray[i] = [];
+        let counter = 0;
+        for (let j = 0; j < columns; j++) {
+          console.log('values picross ' + 'i:' + i + ' j: ' + j );
+          if(picrossValues[i][j] === true){
+            counter++;
         }
-       secondaryArray.push[counter++];
+          console.log('counter');
+          console.log(counter);
+        }
+        countedArray[i].push(counter);
+        console.log('countedArray');
+        console.log(countedArray);
       }
     }
-  }
+  });
+
+  
+
 }
