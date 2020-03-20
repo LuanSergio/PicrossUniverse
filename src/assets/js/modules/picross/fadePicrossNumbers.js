@@ -7,31 +7,39 @@ export function fadePicrossNumbers(columns, rows, direction, numbersArray){
   console.log('numbersArray');
   console.log(numbersArray);
   
-  picross.addEventListener('click', function(evt){
-    picrossValues = getPicrossValues(columns, rows);
-    console.log('generated matrix');
-    console.log(picrossValues);
-     let countedArray = [];
-    if(direction == 'horizontal') {
-      for (let i = 0; i  < rows; i++) {
-        console.log('index now:' + i);
-        countedArray[i] = [];
-        let counter = 0;
-        for (let j = 0; j < columns; j++) {
-          console.log('values picross ' + 'i:' + i + ' j: ' + j );
-          if(picrossValues[i][j] === true){
-            counter++;
+  
+
+ function createClicksNumberArray(){
+  let countedArray = [];
+  picrossValues = getPicrossValues(columns, rows);
+  if(direction == 'horizontal') {
+    for (let i = 0; i  < rows; i++) {
+      countedArray[i] = [];
+      let counter = 0;
+      for (let j = 0; j < columns; j++) {
+        
+        if(picrossValues[i][j] === true){
+          counter++;
+        } else {
+          if(counter > 0 ){
+            countedArray[i].push(counter);
+            counter = 0;
+            }
         }
-          console.log('counter');
-          console.log(counter);
+
+        if ((j+1) === columns) {
+          if(counter > 0 ){
+            countedArray[i].push(counter);
+            counter = 0;
+          }
         }
-        countedArray[i].push(counter);
-        console.log('countedArray');
-        console.log(countedArray);
       }
     }
-  });
+  }
+  console.log('countedArray');
+  console.log(countedArray);
+ }  
 
-  
+ picross.addEventListener('click', evt => createClicksNumberArray());
 
 }

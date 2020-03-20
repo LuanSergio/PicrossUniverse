@@ -43,7 +43,7 @@ export function createPicross(width, height, matrix) {
   printPicrossNumbers(width, height, "vertical", verticalNumbersArray);
   fillSquares();
   fadePicrossNumbers(width, height, "horizontal", horizontalNumbersArray);
-  fadePicrossNumbers(width, height, "vertical", verticalNumbersArray);
+  // fadePicrossNumbers(width, height, "vertical", verticalNumbersArray);
   // fadePicrossNumbers();
   picrossValidator(width, height, matrix);
 }
