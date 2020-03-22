@@ -6,8 +6,14 @@ import { picrossNumberCounter } from './picrossNumberCounter';
 
 export function createPicross(width, height, matrix) {
   const picross = document.querySelector('[data-picross]');
-  const horizontalNumbersArray = picrossNumberCounter(width, height, matrix, "horizontal");
-  const verticalNumbersArray = picrossNumberCounter(width, height, matrix, "vertical");
+  const horizontalNumbersArray = picrossNumberCounter(width, height, matrix, 'row');
+  const verticalNumbersArray = picrossNumberCounter(width, height, matrix, 'column');
+
+  console.log('horizontalNumbersArray');
+  console.log(horizontalNumbersArray);
+  console.log('verticalNumbersArray');
+  console.log(verticalNumbersArray);
+  
 
   // console.log('horizontalNumbersArray');
   // console.log(horizontalNumbersArray);
@@ -39,10 +45,10 @@ export function createPicross(width, height, matrix) {
       }
   }
 
-  printPicrossNumbers(width, height, "horizontal", horizontalNumbersArray);
-  printPicrossNumbers(width, height, "vertical", verticalNumbersArray);
+  printPicrossNumbers(width, height, "row", horizontalNumbersArray);
+  printPicrossNumbers(width, height, "column", verticalNumbersArray);
   fillSquares();
-  fadePicrossNumbers(width, height, "horizontal", horizontalNumbersArray);
+  fadePicrossNumbers(width, height, "row", horizontalNumbersArray);
   // fadePicrossNumbers(width, height, "vertical", verticalNumbersArray);
   // fadePicrossNumbers();
   picrossValidator(width, height, matrix);
