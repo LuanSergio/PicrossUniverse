@@ -1,25 +1,14 @@
-import { printPicrossNumbers } from './printPicrossNumbers';
-import { picrossValidator } from './picrossValidator';
-import { fillSquares } from './fillSquares'
-import { fadePicrossNumbers } from './fadePicrossNumbers';
-import { picrossNumberCounter } from './picrossNumberCounter';
+import printPicrossNumbers from './printPicrossNumbers';
+import picrossValidator from './picrossValidator';
+// import fillSquares from './fillSquares'
+import interactions from './interactions/interactions'
+import fadePicrossNumbers from './fadePicrossNumbers';
+import picrossNumberCounter from './picrossNumberCounter';
 
-export function createPicross(width, height, matrix) {
+export default function createPicross(width, height, matrix) {
   const picross = document.querySelector('[data-picross]');
   const horizontalNumbersArray = picrossNumberCounter(width, height, matrix, 'row');
   const verticalNumbersArray = picrossNumberCounter(width, height, matrix, 'column');
-
-  console.log('horizontalNumbersArray');
-  console.log(horizontalNumbersArray);
-  console.log('verticalNumbersArray');
-  console.log(verticalNumbersArray);
-  
-
-  // console.log('horizontalNumbersArray');
-  // console.log(horizontalNumbersArray);
-  // console.log('verticalNumbersArray');
-  // console.log(verticalNumbersArray);
-  
 
   let row = picross.insertRow();
   let header = document.createElement("TH");
@@ -47,9 +36,8 @@ export function createPicross(width, height, matrix) {
 
   printPicrossNumbers(width, height, "row", horizontalNumbersArray);
   printPicrossNumbers(width, height, "column", verticalNumbersArray);
-  fillSquares();
+  // fillSquares();
+  interactions();
   fadePicrossNumbers(width, height, "row", horizontalNumbersArray);
-  // fadePicrossNumbers(width, height, "vertical", verticalNumbersArray);
-  // fadePicrossNumbers();
   picrossValidator(width, height, matrix);
 }

@@ -1,9 +1,9 @@
-import { createPicross } from '../picross/createPicross';
-import { createMatrix } from '../../utils/createMatrix';
-import { alocatePicrossValues } from '../picross/alocatePicrossValues';
-import { definePicrossSize } from '../picross/definePicrossSize';
+import createPicross from '../picross/createPicross';
+import createMatrix from '../../utils/createMatrix';
+import alocatePicrossValues from '../picross/alocatePicrossValues';
+import definePicrossSize from '../picross/definePicrossSize';
 
-export function generateNewPicross(width, height) {
+export default function generateNewPicross(width, height) {
   const btnGenerate = document.querySelector('[data-generate-picross]');
   
   btnGenerate.addEventListener('click', function(){
@@ -17,8 +17,6 @@ export function generateNewPicross(width, height) {
     alocatePicrossValues(width, height, matrix, width);
     
     createPicross(width, height, matrix);
-    
-    console.log(matrix);
     
   });
 };

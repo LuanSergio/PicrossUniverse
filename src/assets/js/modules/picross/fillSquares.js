@@ -1,4 +1,4 @@
-export function fillSquares() {
+export default function fillSquares() {
   const states = {
     true: 'picross__square--true',
     false: 'picross__square--false',

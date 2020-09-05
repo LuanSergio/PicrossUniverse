@@ -1,5 +1,5 @@
-@require "/core/index.styl";
-@require "/components/index.styl";
+@import "core/index.scss";
+@import "components/index.scss";
 
 .main__ctn {
   display: flex;

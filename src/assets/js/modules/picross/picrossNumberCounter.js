@@ -1,4 +1,4 @@
-export function picrossNumberCounter(width, height, matrix, direction) {
+export default function picrossNumberCounter(width, height, matrix, direction) {
   let numbersArray = [];
   let counter = 0;
 

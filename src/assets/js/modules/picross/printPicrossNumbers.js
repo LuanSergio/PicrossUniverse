@@ -1,4 +1,4 @@
-export function printPicrossNumbers(width, height, direction, numbersArray) {
+export default function printPicrossNumbers(width, height, direction, numbersArray) {
   let numbersHolders;
   let numbersArraywrapped = [];
 

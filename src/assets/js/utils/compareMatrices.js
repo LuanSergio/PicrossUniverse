@@ -1,4 +1,4 @@
-export function compareMatrices(columns, rows, matrix1, matrix2) {
+export default function compareMatrices(columns, rows, matrix1, matrix2) {
   let counter;
 
   counter = 0;

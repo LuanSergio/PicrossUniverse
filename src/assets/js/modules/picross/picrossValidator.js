@@ -1,7 +1,7 @@
-import { getPicrossValues } from './getPicrossValues'
-import { compareMatrices } from '../../utils/compareMatrices'
+import getPicrossValues from './getPicrossValues'
+import compareMatrices from '../../utils/compareMatrices'
 
-export function picrossValidator(columns, rows, matrix) {
+export default function picrossValidator(columns, rows, matrix) {
   const picross = document.querySelector('[data-picross]');
   let picrossValues = [];
   

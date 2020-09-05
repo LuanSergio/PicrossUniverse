@@ -1,4 +1,4 @@
-export function createMatrix(columns, rows) {
+export default function createMatrix(columns, rows) {
   let matrix = [];
 
   for (let i = 0; i < rows; i++) {

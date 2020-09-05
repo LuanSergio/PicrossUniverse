@@ -1,3 +1,3 @@
-export function addPicrossNumberSpace(index, column, matrix, value) {
+export default function addPicrossNumberSpace(index, column, matrix, value) {
     matrix[column][index] = !(value);
 };

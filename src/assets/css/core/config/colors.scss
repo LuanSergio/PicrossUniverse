@@ -1,0 +1,17 @@
+// // NAMED COLORS
+$colors : (
+  cerise: #e11d81,
+  bright: #fff,
+  deep: #000,
+  brick-red: #d2004e,
+);
+
+// // THEME COLORS
+$theme : (
+  main: map-get($colors, cerise),
+  secondary: map-get($colors, brick-red),
+  // base: '',
+  // neutral: '',
+  deep: map-get($colors, deep),
+  bright: map-get($colors, bright),
+);
