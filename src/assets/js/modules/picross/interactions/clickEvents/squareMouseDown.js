@@ -13,7 +13,6 @@ export default function squareMouseDown(clickInteractions, event, hoveredSquares
 
     hoveredSquares.push(clickInteractions.initialSquare);
     clickInteractions.initialSquare.classList.add(states.trueHover);
-    
     fillSquare(
       clickInteractions.initialSquare, 
       clickInteractions.behavior, 

@@ -1,6 +1,6 @@
-import squareMouseDown from './mouseEvents/squareMouseDown';
-import squareMouseEnter from './mouseEvents/squareMouseEnter';
-import squareMouseUp from './mouseEvents/squareMouseUp';
+import squareMouseDown from './clickEvents/squareMouseDown';
+import squareMouseEnter from './clickEvents/squareMouseEnter';
+import squareMouseUp from './clickEvents/squareMouseUp';
 import highlightSquares from './highlightSquares'
 
 export default function interactions() {
@@ -31,9 +31,9 @@ export default function interactions() {
     });
 
     square.addEventListener('mouseover', event => {
-      if(clickInteractions.isPressed === false){
-        highlightSquares(event.target);
-      }
+      // if(clickInteractions.isPressed === false){
+        highlightSquares(event.target, hoveredSquares, states, clickInteractions);
+      // }
     });
 
   });

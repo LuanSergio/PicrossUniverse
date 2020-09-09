@@ -7,25 +7,26 @@ export default function squareMouseEnter(clickInteractions, target, hoveredSquar
   }
 
   if(clickInteractions.initialSquare) {
-    const isTheSameRow = (target.getAttribute('data-x') === initialSquare.getAttribute('data-x'));
+    const isTheSameRow = target.getAttribute('data-x') === initialSquare.getAttribute('data-x');
     const isTheSameColumn = target.getAttribute('data-y') === initialSquare.getAttribute('data-y');
 
       if(!(target.classList.contains(states.trueHover))) {
         if(isTheSameRow || isTheSameColumn){
           if(isTheSameRow) {
-            if(orientation != 'y') {
-              clickInteractions.orientation = 'x';
+            if(orientation != 'x') {
+              // clickInteractions.orientation = 'y';
               hoveredSquares.push(target);
               target.classList.add(states.trueHover);
             }
           } else if (isTheSameColumn) {
-            if(orientation != 'x') {
-              clickInteractions.orientation = 'y';
+            if(orientation != 'y') {
+              // clickInteractions.orientation = 'x';
               hoveredSquares.push(target);
               target.classList.add(states.trueHover);
             }
           }
         }
+
       } else {
         if(!(target.isSameNode(initialSquare))) {
             const lastButOne = hoveredSquares[hoveredSquares.length - 2];
@@ -37,6 +38,7 @@ export default function squareMouseEnter(clickInteractions, target, hoveredSquar
               target.classList.remove(states.trueHover);
               last.classList.remove(states.trueHover);
             }
+
         } else if(hoveredSquares.length === 2){
           const last = hoveredSquares.pop();
           last.classList.remove(states.trueHover);
