@@ -1,6 +1,6 @@
-import generateRandomNumber from '../../utils/generateRandomNumber';
-import generateBooleanValue from '../../utils/generateBooleanValue';
-import addValueToMatrix from '../../utils/addValueToMatrix';
+import generateRandomNumber from '../../../utils/generateRandomNumber';
+import generateBooleanValue from '../../../utils/generateBooleanValue';
+import addValueToMatrix from '../../../utils/addValueToMatrix';
 import addPicrossNumberSpace from './addPicrossNumberSpace';
 
 export default function alocatePicrossValues(columns, rows, matrix, limit) {

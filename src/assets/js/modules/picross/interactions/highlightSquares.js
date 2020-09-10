@@ -1,50 +1,59 @@
 import setClickOrientation from './setClickOrientation';
 
-export default function highlightSquares(highlightedSquare, hoveredSquares, states, clickInteractions){
-
+export default function highlightSquares(target, hoveredSquares, states, clickInteractions){
+  const initialSquare = clickInteractions.initialSquare;
   const squares = document.querySelectorAll('[data-picross-square]');
-  if(highlightedSquare.isSameNode(clickInteractions.initialSquare)) {
+  const isPressed = clickInteractions.isPressed;
+
+  if(target.isSameNode(initialSquare)) {
     clickInteractions.orientation = null;
   } 
 
   squares.forEach(square => {
 
-    setClickOrientation(highlightedSquare, states, clickInteractions);
+    setClickOrientation(target, states, clickInteractions);
     
-    if(clickInteractions.isPressed === false){
-      if((highlightedSquare.getAttribute('data-x')) === (square.getAttribute('data-x')) ||
-      (highlightedSquare.getAttribute('data-y')) === (square.getAttribute('data-y'))){
+    if(isPressed === false){
+      if((target.getAttribute('data-x')) === (square.getAttribute('data-x')) ||
+      (target.getAttribute('data-y')) === (square.getAttribute('data-y'))){
         square.classList.add('picross__square--highlight');
-      } else {
+      } 
+      else {
         square.classList.remove('picross__square--highlight');
       }
 
-    } else if(clickInteractions.isPressed === true) {
-      console.log('orientation', clickInteractions.orientation );
+    } 
+    else if(isPressed === true) {
+      const isTheSameRow = (initialSquare.getAttribute('data-x')) === (square.getAttribute('data-x'));
+      const isTheSameColumn = (initialSquare.getAttribute('data-y')) === (square.getAttribute('data-y'));
+      
       if(clickInteractions.orientation === 'x') {
-        if((clickInteractions.initialSquare.getAttribute('data-y')) === (square.getAttribute('data-y'))){
+        if(isTheSameColumn){
           square.classList.add('picross__square--highlight');
-        } else {
+        } 
+        else {
           square.classList.remove('picross__square--highlight');
         }
-      } else if (clickInteractions.orientation === 'y') {
 
-
-        if((clickInteractions.initialSquare.getAttribute('data-x')) === (square.getAttribute('data-x'))){
-
+      } 
+      else if (clickInteractions.orientation === 'y') {
+        if(isTheSameRow){
           square.classList.add('picross__square--highlight');
-        } else {
+        } 
+        else {
           square.classList.remove('picross__square--highlight');
         }
-      } else {
-        if((highlightedSquare.getAttribute('data-x')) === (square.getAttribute('data-x')) ||
-        (highlightedSquare.getAttribute('data-y')) === (square.getAttribute('data-y'))){
+
+      } 
+      else {
+        if((target.getAttribute('data-x')) === (square.getAttribute('data-x')) ||
+        (target.getAttribute('data-y')) === (square.getAttribute('data-y'))){
           square.classList.add('picross__square--highlight');
-        } else {
+        } 
+        else {
           square.classList.remove('picross__square--highlight');
         }
       }
-
     }
   });
 }

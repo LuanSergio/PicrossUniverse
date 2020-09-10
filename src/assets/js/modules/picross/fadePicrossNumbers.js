@@ -1,4 +1,4 @@
-import getPicrossValues from './getPicrossValues'
+import getPicrossValues from './creation/getPicrossValues'
 
 export default function fadePicrossNumbers(columns, rows, direction, numbersArray){
 //   let picrossValues;

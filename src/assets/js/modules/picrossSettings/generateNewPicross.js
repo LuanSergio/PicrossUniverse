@@ -1,7 +1,7 @@
-import createPicross from '../picross/createPicross';
+import createPicross from '../picross/creation/createPicross';
 import createMatrix from '../../utils/createMatrix';
-import alocatePicrossValues from '../picross/alocatePicrossValues';
-import definePicrossSize from '../picross/definePicrossSize';
+import alocatePicrossValues from '../picross/creation/alocatePicrossValues';
+import definePicrossSize from '../picross/creation/definePicrossSize';
 
 export default function generateNewPicross(width, height) {
   const btnGenerate = document.querySelector('[data-generate-picross]');

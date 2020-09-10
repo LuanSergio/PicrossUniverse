@@ -1,9 +1,9 @@
 //picross
 import createMatrix from './utils/createMatrix';
-import alocatePicrossValues from './modules/picross/alocatePicrossValues';
-import createPicross from './modules/picross/createPicross';
+import alocatePicrossValues from './modules/picross/creation/alocatePicrossValues';
+import createPicross from './modules/picross/creation/createPicross';
 import preventContextMenu from './utils/preventContextMenu'
-import definePicrossSize from './modules/picross/definePicrossSize';
+import definePicrossSize from './modules/picross/creation/definePicrossSize';
 import generateNewPicross from './modules/picrossSettings/generateNewPicross';
 
 let matrix = createMatrix(5, 5);

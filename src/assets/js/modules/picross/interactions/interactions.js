@@ -8,7 +8,8 @@ export default function interactions() {
     true: 'picross__square--true',
     false: 'picross__square--false',
     trueHover: 'picross__square--active-hover',
-    falseHover: 'picross__square--false-hover'
+    falseHover: 'picross__square--false-hover',
+    highlight: 'picross__square--highlight'
   };
   
   const squares = document.querySelectorAll('[data-picross-square]');
@@ -31,9 +32,7 @@ export default function interactions() {
     });
 
     square.addEventListener('mouseover', event => {
-      // if(clickInteractions.isPressed === false){
-        highlightSquares(event.target, hoveredSquares, states, clickInteractions);
-      // }
+      highlightSquares(event.target, hoveredSquares, states, clickInteractions);
     });
 
   });

@@ -1,4 +1,4 @@
-import createMatrix from '../../utils/createMatrix';
+import createMatrix from '../../../utils/createMatrix';
 
 export default function getPicrossValues(columns, rows){
 

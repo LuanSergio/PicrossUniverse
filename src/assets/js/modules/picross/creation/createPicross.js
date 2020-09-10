@@ -1,8 +1,7 @@
 import printPicrossNumbers from './printPicrossNumbers';
 import picrossValidator from './picrossValidator';
-// import fillSquares from './fillSquares'
-import interactions from './interactions/interactions'
-import fadePicrossNumbers from './fadePicrossNumbers';
+import interactions from '../interactions/interactions'
+import fadePicrossNumbers from '../fadePicrossNumbers';
 import picrossNumberCounter from './picrossNumberCounter';
 
 export default function createPicross(width, height, matrix) {
@@ -36,7 +35,6 @@ export default function createPicross(width, height, matrix) {
 
   printPicrossNumbers(width, height, "row", horizontalNumbersArray);
   printPicrossNumbers(width, height, "column", verticalNumbersArray);
-  // fillSquares();
   interactions();
   fadePicrossNumbers(width, height, "row", horizontalNumbersArray);
   picrossValidator(width, height, matrix);
