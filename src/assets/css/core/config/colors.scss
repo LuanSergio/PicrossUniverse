@@ -1,17 +1,15 @@
 // // NAMED COLORS
 $colors : (
-  cerise: #e11d81,
-  bright: #fff,
-  deep: #000,
-  brick-red: #d2004e,
+  lucky-point: #221A75,
+  lightning-yellow: #ffc412,
+  white: #fefefe,
+  black: #222222,
 );
 
 // // THEME COLORS
 $theme : (
-  main: map-get($colors, cerise),
-  secondary: map-get($colors, brick-red),
-  // base: '',
-  // neutral: '',
-  deep: map-get($colors, deep),
-  bright: map-get($colors, bright),
+  main: map-get($colors, lucky-point),
+  secondary: map-get($colors, lightning-yellow),
+  light: map-get($colors, white),
+  dark: map-get($colors, dark),
 );

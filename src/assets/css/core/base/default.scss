@@ -1,3 +1,5 @@
+@import '../config/colors.scss';
+
 *,
 *::before,
 *::after {
@@ -17,8 +19,53 @@ html,
 body {
   width: 100%;
   margin: 0;
-  padding-top: 20px;
   padding-left: 0;
   padding-right: 0;
   padding-bottom: 0;
+  // font-family: $fontfamily.main;
+  // background-size: cover;
+  font-size: 1em;
+  //firefox custom scrollbar
+  scrollbar-color: map-get($theme, secondary) map-get($theme, main);
+  scrollbar-width: auto;
+  // ie and edge custom scroll bar
+  scrollbar-face-color: map-get($theme, main);
+  scrollbar-track-color: map-get($theme, secondary);
+  scrollbar-arrow-color: map-get($theme, main);
+  scrollbar-shadow-color: map-get($theme, main); //border
 }
+
+body {
+  padding-top: 20px;
+  background-color: #221a75;
+}
+
+//chrome custom scroll bar
+body::-webkit-scrollbar {
+  width: 15px;
+  height: 0px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: map-get($theme, main);
+  border-radius: 0px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: map-get($theme, secondary);
+  border-radius: 0px;
+}
+
+body::-webkit-scrollbar-corner {
+  background-color: map-get($theme, secondary);
+}
+
+button:focus,
+input:focus,
+optgroup:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border: 2px solid red;
+}
+

@@ -1,0 +1,70 @@
+@import '../../core/config/colors.scss';
+
+.c-menu {
+  margin-bottom: 40px;
+
+}
+
+.c-menu__item-holder {
+  list-style-type: none;
+  margin-bottom: 40px;
+  text-align: right;
+  letter-spacing: -3pt;
+}
+
+.c-menu__item {
+  margin-right: 40px;
+  color: map-get($theme, light);
+  font-size: 38px;
+  width: 400px;
+  height: 100px;
+  background-color: transparent;
+  border: none;
+  display: inline-block;
+
+}
+
+.c-menu__item.-focus {
+  background-color: map-get($theme, secondary);
+  text-align: center;
+  width: 400px;
+  height: 100px;
+  font-weight: bold;
+  text-decoration: none;
+  color: map-get($theme, main);
+  font-size: 42px;
+  
+  margin: 0;
+  display: inline-block;
+}
+
+// .c-menu__item:focus {
+//   background-color: map-get($theme, secondary);
+//   text-align: center;
+//   width: 400px;
+//   height: 100px;
+//   font-weight: bold;
+//   text-decoration: none;
+//   color: map-get($theme, main);
+//   font-size: 42px;
+//   letter-spacing: 0;
+  
+//   margin: 0;
+//   display: inline-block;
+// }
+
+.c-menu__item-holder.-focus::after {
+  content: '';
+  position: relative;
+  display: inline-block;
+  width: 400px;
+  height: 100px;
+  top: 30px;
+  letter-spacing: 0;
+  overflow: visible;
+  // z-index: -1;
+  background-color: #e8a410;
+  -webkit-box-shadow: inset 38px 0px 10px -28px rgba(0,0,0,0.29);
+  -moz-box-shadow: inset 38px 0px 10px -28px rgba(0,0,0,0.29);
+  box-shadow: inset 38px 0px 10px -28px rgba(0,0,0,0.29);
+}
