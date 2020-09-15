@@ -1,7 +1,10 @@
 // // NAMED COLORS
 $colors : (
-  lucky-point: #221A75,
+  lucky-point: #272073,
+  // lucky-point: #331d75,
+  // lucky-point: #2f167a,
   lightning-yellow: #ffc412,
+  gamboge: #e8a410,
   white: #fefefe,
   black: #222222,
 );
@@ -9,7 +12,11 @@ $colors : (
 // // THEME COLORS
 $theme : (
   main: map-get($colors, lucky-point),
+  // main-lighter: map-get($colors, lucky-point),
+  // main-darker: map-get($colors, lucky-point),
   secondary: map-get($colors, lightning-yellow),
+  // secondary-ligher: map-get($colors, lightning-yellow),
+  secondary-darker: map-get($colors, gamboge),
   light: map-get($colors, white),
   dark: map-get($colors, dark),
 );

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel index.html -d dev --open",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html --public-url ./"
   },
   "repository": "https://github.com/luansergiomattos/PicrossJs.git",
   "author": "Luan Sergio Mattos",
@@ -15,6 +15,17 @@
     "cssnano": "^4.1.10",
     "posthtml-include": "^1.3.3",
     "sass": "^1.26.10"
+  }, 
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {
+        "overrideBrowserslist": [
+          "> 1%",
+          "last 4 versions",
+          "ie >= 9"
+        ]
+      }
+    }
   },
   "dependencies": {
     "autoprefixer": "^9.7.4",

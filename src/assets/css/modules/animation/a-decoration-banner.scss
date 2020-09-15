@@ -1,0 +1,48 @@
+@import '../../core/config/colors.scss';
+
+@keyframes decoration-banner-initial {
+  0%{width: 0;}
+  100%{width: 210px;}
+  from {background-color: transparent;}
+  to {background-color: map-get($theme, secondary-darker);}
+}
+
+.a-decoration-banner-initial {
+  animation-fill-mode: forwards;     
+  animation-timing-function: linear;
+  animation-name: decoration-banner-initial;
+  animation-duration: 0.15s;
+  animation-iteration-count: 1;
+}
+
+@keyframes decoration-banner-background {
+  0%{width: 0;}
+  100%{width: 400px;}
+  from {background-color: transparent;}
+  to {background-color: map-get($theme, secondary);}
+}
+
+.a-decoration-banner-background {
+  animation-fill-mode: forwards;     
+  animation-timing-function: linear;
+  animation-name: decoration-banner-background;
+  animation-duration: 0.15s;
+  animation-delay: 0.15s;
+  animation-iteration-count: 1;
+}
+
+@keyframes decoration-banner-text {
+  from {color: map-get($theme, light);}
+  to {color: map-get($theme, main);}
+  from {font-weight: normal;}
+  to {font-weight: bold;}
+}
+
+.a-decoration-banner-text {
+  animation-fill-mode: forwards;     
+  animation-timing-function: linear;
+  animation-name: decoration-banner-text;
+  animation-duration: 0.15s;
+  animation-delay: 0.15s;
+  animation-iteration-count: 1;
+}
