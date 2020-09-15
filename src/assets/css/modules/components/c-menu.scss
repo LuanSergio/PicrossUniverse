@@ -28,6 +28,19 @@
   @extend .a-decoration-banner-text;
 }
 
+.c-menu__item:hover {
+  @extend .a-decoration-banner-text-hover;
+}
+
+
+.c-menu__item:focus {
+  @extend .a-decoration-banner-text-focus;
+}
+
+.c-menu__item:focus.c-menu__item:hover {
+  @extend .a-decoration-banner-text-hover-and-focus;
+}
+
 .c-menu__item:hover ~ .c-menu__item-decoration,
 .c-menu__item:focus ~ .c-menu__item-decoration {
   // background-color: map-get($theme, secondary);
@@ -39,10 +52,18 @@
   margin-right: 205px;
 }
 
+.c-menu__item:hover ~ .c-menu__item-decoration {
+  @extend .a-decoration-banner-background-hover;
+}
+
+.c-menu__item:focus ~ .c-menu__item-decoration {
+  @extend .a-decoration-banner-background-focus;
+}
+
 .c-menu__item:hover ~ .c-menu__item-decoration::before,
 .c-menu__item:focus ~ .c-menu__item-decoration::before {
   content: '';
-  @extend .a-decoration-banner-initial;
+  @extend .a-decoration-banner-before;
   display: block;
   position: absolute;
   height: 100px;
@@ -52,4 +73,12 @@
   -webkit-box-shadow: inset 38px 0px 10px -28px rgba(0,0,0,0.29);
   -moz-box-shadow: inset 38px 0px 10px -28px rgba(0,0,0,0.29);
   box-shadow: inset 40px 0px 12px -25px rgba(0,0,0,0.29);
+}
+
+.c-menu__item:hover ~ .c-menu__item-decoration::before {
+  @extend .a-decoration-banner-before-hover;
+}
+
+.c-menu__item:focus ~ .c-menu__item-decoration::before {
+  @extend .a-decoration-banner-before-focus;
 }

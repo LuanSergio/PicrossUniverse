@@ -1,48 +1,108 @@
 @import '../../core/config/colors.scss';
 
-@keyframes decoration-banner-initial {
+// Banner before
+@keyframes decoration-banner-before-focus {
   0%{width: 0;}
   100%{width: 210px;}
   from {background-color: transparent;}
   to {background-color: map-get($theme, secondary-darker);}
 }
 
-.a-decoration-banner-initial {
+@keyframes decoration-banner-before-hover {
+  0%{width: 0;}
+  100%{width: 210px;}
+  from {background-color: transparent;}
+  to {background-color: map-get($theme, light);}
+}
+
+
+
+.a-decoration-banner-before {
   animation-fill-mode: forwards;     
   animation-timing-function: linear;
-  animation-name: decoration-banner-initial;
   animation-duration: 0.15s;
   animation-iteration-count: 1;
 }
 
-@keyframes decoration-banner-background {
+.a-decoration-banner-before-hover {
+  animation-name: decoration-banner-before-hover;
+}
+
+.a-decoration-banner-before-focus {
+  animation-name: decoration-banner-before-focus;
+}
+
+// Banner Background
+@keyframes decoration-banner-background-focus {
   0%{width: 0;}
   100%{width: 400px;}
   from {background-color: transparent;}
   to {background-color: map-get($theme, secondary);}
 }
 
+@keyframes decoration-banner-background-hover {
+  0%{width: 0;}
+  100%{width: 400px;}
+  from {background-color: transparent;}
+  to {background-color: map-get($theme, light);}
+}
+
 .a-decoration-banner-background {
   animation-fill-mode: forwards;     
   animation-timing-function: linear;
-  animation-name: decoration-banner-background;
   animation-duration: 0.15s;
   animation-delay: 0.15s;
   animation-iteration-count: 1;
 }
 
-@keyframes decoration-banner-text {
+.a-decoration-banner-background-hover {
+  animation-name: decoration-banner-background-hover;
+}
+
+.a-decoration-banner-background-focus {
+  animation-name: decoration-banner-background-focus;
+}
+
+// Banner Text
+@keyframes decoration-banner-text-focus {
   from {color: map-get($theme, light);}
   to {color: map-get($theme, main);}
   from {font-weight: normal;}
   to {font-weight: bold;}
 }
 
+@keyframes decoration-banner-text-hover {
+  from {color: map-get($theme, light);}
+  to {color: map-get($theme, main);}
+  from {font-weight: normal;}
+  to {font-weight: bold;}
+}
+
+@keyframes decoration-banner-text-hover-and-focus {
+  from {color: map-get($theme, secondary-darker);}
+  to {color: map-get($theme, light);}
+  from {font-weight: bold;}
+  to {font-weight: normal;}
+}
+
 .a-decoration-banner-text {
   animation-fill-mode: forwards;     
   animation-timing-function: linear;
-  animation-name: decoration-banner-text;
   animation-duration: 0.15s;
   animation-delay: 0.15s;
   animation-iteration-count: 1;
+}
+
+.a-decoration-banner-text-hover {
+  animation-name: decoration-banner-text-hover;
+}
+
+.a-decoration-banner-text-focus {
+  animation-name: decoration-banner-text-focus;
+}
+
+.a-decoration-banner-text-hover-and-focus {
+  animation-name: decoration-banner-text-hover-and-focus;
+  animation-delay: 5s !important;
+  // font-weight: bold;
 }
