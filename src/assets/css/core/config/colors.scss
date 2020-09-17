@@ -6,6 +6,7 @@ $colors : (
   lightning-yellow: #ffc412,
   gamboge: #e8a410,
   white: #fefefe,
+  zircon:#f5f7ff,
   black: #222222,
 );
 
@@ -18,5 +19,6 @@ $theme : (
   // secondary-ligher: map-get($colors, lightning-yellow),
   secondary-darker: map-get($colors, gamboge),
   light: map-get($colors, white),
-  dark: map-get($colors, dark),
+  neutral-light: map-get($colors, zircon),
+  dark: map-get($colors, black),
 );

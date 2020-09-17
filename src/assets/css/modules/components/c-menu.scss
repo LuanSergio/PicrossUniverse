@@ -28,22 +28,8 @@
   @extend .a-decoration-banner-text;
 }
 
-.c-menu__item:hover {
-  @extend .a-decoration-banner-text-hover;
-}
-
-
-.c-menu__item:focus {
-  @extend .a-decoration-banner-text-focus;
-}
-
-.c-menu__item:focus.c-menu__item:hover {
-  @extend .a-decoration-banner-text-hover-and-focus;
-}
-
 .c-menu__item:hover ~ .c-menu__item-decoration,
 .c-menu__item:focus ~ .c-menu__item-decoration {
-  // background-color: map-get($theme, secondary);
   @extend .a-decoration-banner-background;
   height: 100px;
   display: inline-block;
@@ -81,4 +67,13 @@
 
 .c-menu__item:focus ~ .c-menu__item-decoration::before {
   @extend .a-decoration-banner-before-focus;
+}
+
+.c-menu__item:focus,
+.c-menu__item:hover {
+  font-weight: bold;
+}
+
+.c-menu__item:focus.c-menu__item:hover {
+  @extend .a-decoration-banner-text-focus-and-hover ;
 }

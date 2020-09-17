@@ -12,10 +12,8 @@
   0%{width: 0;}
   100%{width: 210px;}
   from {background-color: transparent;}
-  to {background-color: map-get($theme, light);}
+  to {background-color: map-get($theme, neutral-light);}
 }
-
-
 
 .a-decoration-banner-before {
   animation-fill-mode: forwards;     
@@ -33,11 +31,14 @@
 }
 
 // Banner Background
+
 @keyframes decoration-banner-background-focus {
   0%{width: 0;}
   100%{width: 400px;}
   from {background-color: transparent;}
   to {background-color: map-get($theme, secondary);}
+  from{box-shadow: none;}
+  to{box-shadow: 0px 9px 14px 0px rgba(0,0,0,0.51);}
 }
 
 @keyframes decoration-banner-background-hover {
@@ -46,7 +47,6 @@
   from {background-color: transparent;}
   to {background-color: map-get($theme, light);}
 }
-
 .a-decoration-banner-background {
   animation-fill-mode: forwards;     
   animation-timing-function: linear;
@@ -64,28 +64,13 @@
 }
 
 // Banner Text
-@keyframes decoration-banner-text-focus {
+@keyframes decoration-banner-text{
   from {color: map-get($theme, light);}
   to {color: map-get($theme, main);}
-  from {font-weight: normal;}
-  to {font-weight: bold;}
-}
-
-@keyframes decoration-banner-text-hover {
-  from {color: map-get($theme, light);}
-  to {color: map-get($theme, main);}
-  from {font-weight: normal;}
-  to {font-weight: bold;}
-}
-
-@keyframes decoration-banner-text-hover-and-focus {
-  from {color: map-get($theme, secondary-darker);}
-  to {color: map-get($theme, light);}
-  from {font-weight: bold;}
-  to {font-weight: normal;}
 }
 
 .a-decoration-banner-text {
+  animation-name: decoration-banner-text;
   animation-fill-mode: forwards;     
   animation-timing-function: linear;
   animation-duration: 0.15s;
@@ -93,16 +78,15 @@
   animation-iteration-count: 1;
 }
 
-.a-decoration-banner-text-hover {
-  animation-name: decoration-banner-text-hover;
+@keyframes decoration-banner-text-focus-and-hover {
+  from {color: map-get($theme, light);}
+  to {color: map-get($theme, light);}
 }
 
-.a-decoration-banner-text-focus {
-  animation-name: decoration-banner-text-focus;
-}
-
-.a-decoration-banner-text-hover-and-focus {
-  animation-name: decoration-banner-text-hover-and-focus;
-  animation-delay: 5s !important;
-  // font-weight: bold;
+.a-decoration-banner-text-focus-and-hover {
+  animation-name: decoration-banner-text-focus-and-hover;
+  animation-fill-mode: forwards;     
+  animation-timing-function: linear;
+  animation-duration: 0.15s;
+  animation-iteration-count: 1;
 }
