@@ -1,16 +1,17 @@
 @import '../../core/config/colors.scss';
+@import '../../core/functions/em.scss';
 
 // Banner before
 @keyframes decoration-banner-before-focus {
   0%{width: 0;}
-  100%{width: 210px;}
+  100%{width: rem(210);}
   from {background-color: transparent;}
   to {background-color: map-get($theme, secondary-darker);}
 }
 
 @keyframes decoration-banner-before-hover {
   0%{width: 0;}
-  100%{width: 210px;}
+  100%{width: rem(210);}
   from {background-color: transparent;}
   to {background-color: map-get($theme, neutral-light);}
 }
@@ -34,16 +35,16 @@
 
 @keyframes decoration-banner-background-focus {
   0%{width: 0;}
-  100%{width: 400px;}
+  100%{width: rem(400);}
   from {background-color: transparent;}
   to {background-color: map-get($theme, secondary);}
   from{box-shadow: none;}
-  to{box-shadow: 0px 9px 14px 0px rgba(0,0,0,0.51);}
+  to{box-shadow: 0 rem(9) rem(14) 0 rgba(0,0,0,0.51);}
 }
 
 @keyframes decoration-banner-background-hover {
   0%{width: 0;}
-  100%{width: 400px;}
+  100%{width: rem(400);}
   from {background-color: transparent;}
   to {background-color: map-get($theme, light);}
 }

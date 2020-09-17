@@ -4,19 +4,23 @@
 
 .c-menu__item-holder {
   list-style-type: none;
-  margin-bottom: 15px;
+  margin-bottom: rem(15);
   text-align: right;
   position: relative;
+}
 
+.c-menu__item-holder a {
+  display: inline-block;
+  line-height: rem(100);
 }
 
 .c-menu__item {
-  margin-right: 205px;
+  margin-right: rem(205);
   color: map-get($theme, light);
   text-align: center;
-  font-size: 38px;
-  width: 400px;
-  height: 100px;
+  font-size: rem(38);
+  width: rem(400);
+  height: rem(100);
   position: relative;
   background-color: transparent;
   border: none;
@@ -31,11 +35,11 @@
 .c-menu__item:hover ~ .c-menu__item-decoration,
 .c-menu__item:focus ~ .c-menu__item-decoration {
   @extend .a-decoration-banner-background;
-  height: 100px;
+  height: rem(100);
   display: inline-block;
   position: absolute;
   right: 0;
-  margin-right: 205px;
+  margin-right: rem(205);
 }
 
 .c-menu__item:hover ~ .c-menu__item-decoration {
@@ -52,13 +56,13 @@
   @extend .a-decoration-banner-before;
   display: block;
   position: absolute;
-  height: 100px;
-  right: -205px;
-  top: 5px;
+  height: rem(100);
+  right: rem(-205);
+  top: rem(5);
   z-index: -2;
-  -webkit-box-shadow: inset 38px 0px 10px -28px rgba(0,0,0,0.29);
-  -moz-box-shadow: inset 38px 0px 10px -28px rgba(0,0,0,0.29);
-  box-shadow: inset 40px 0px 12px -25px rgba(0,0,0,0.29);
+  -webkit-box-shadow: inset rem(40) 0 rem(12) rem(-25) rgba(0,0,0,0.29);
+  -moz-box-shadow: inset rem(40) 0 rem(12) rem(-25) rgba(0,0,0,0.29);
+  box-shadow: inset rem(40) 0 rem(12) rem(-25) rgba(0,0,0,0.29);
 }
 
 .c-menu__item:hover ~ .c-menu__item-decoration::before {
