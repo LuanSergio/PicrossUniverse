@@ -1,7 +1,7 @@
 .t-template {
   position: absolute;
   height: 100vh;
-  background-color: transparent;
+  background-color: #333333;
   top: 0;
   width: 100vw;
   overflow: hidden;
@@ -23,63 +23,58 @@
   position: absolute;
 }
 
-.t-template__cloud.-bottom-back {
+.t-template__cloud {
   // padding-top: 20px;
   // background-color: map-get($theme, main);
-  width: 100vw;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-position-y: 50vh;
-  background-size: 100% auto;
-  background-image: url("../img/clound-bottom-back.svg");
+  will-change: transform;
 }
+
+.t-template__cloud.-bottom-back {
+  display: flex;
+  justify-content: center;
+  bottom: -50px;
+  // left: -80px;
+}
+
+.t-template__cloud.-bottom-back svg:nth-child(1) {
+  // transform: translateX(-100vw);
+  background-color: red;
+  animation: scroll-2 2.5s linear infinite;
+  animation-delay: 0.1s;
+}
+
+.t-template__cloud.-bottom-back svg:nth-child(2) {
+  background-color: blue;
+  animation: scroll-1 2.5s linear infinite;
+
+}
+
 
 .t-template__cloud.-bottom-front {
-  // padding-top: 20px;
-  // background-color: map-get($theme, main);
-  width: 100vw;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-position-y: 70vh;
-  background-size: 100% auto;
-  background-image: url("../img/clound-bottom-front.svg");
+  bottom: -200px;
+  left: -80px;
+  // animation: scroll-1 5s linear infinite;
+  // animation: scroll-1 2400s linear infinite;
 }
 
-.t-template__cloud.-bottom-back {
-
-}
-
-// .t-template__cloud.-bottom-back {
-//   display: flex;
-//   justify-content: center;
-//   bottom: -50px;
-//   // left: -80px;
-// }
-
-// .t-template__cloud.-bottom-back svg:nth-child(1) {
-//   transform: translateX(-100vw);
-//   background-color: red;
-//   // animation-delay: 3s;
-//   animation: scroll 3s linear infinite;
-// }
-
-// .t-template__cloud.-bottom-back svg:nth-child(2) {
-//   background-color: blue;
-//   animation: scroll 3s linear infinite;
-
-// }
-
-
-// .t-template__cloud.-bottom-front {
-//   bottom: -200px;
-//   left: -80px;
-//   // animation: scroll 5s linear infinite;
-//   // animation: scroll 2400s linear infinite;
-// }
-
-@keyframes scroll {
+@keyframes scroll-1 {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
   100% {
       -webkit-transform: translateX(100vw);
       transform: translateX(100vw);
+  }
+}
+
+@keyframes scroll-2 {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+      -webkit-transform: translateX(50vw);
+      transform: translateX(50vw);
   }
 }
