@@ -22,6 +22,7 @@ body {
   padding-left: 0;
   padding-right: 0;
   padding-bottom: 0;
+  padding-top: 0;
   // font-family: $fontfamily.main;
   // background-size: cover;
   font-size: 1em;
@@ -36,7 +37,7 @@ body {
 }
 
 body {
-  padding-top: 20px;
+  // padding-top: 20px;
   background-color: map-get($theme, main);
   background-image: url("../img/body-background.png");
   background-size: contain;
