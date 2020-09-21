@@ -32,21 +32,27 @@
 .t-template__cloud.-bottom-back {
   display: flex;
   justify-content: center;
-  bottom: -50px;
+  bottom: -100px;
   // left: -80px;
 }
 
 .t-template__cloud.-bottom-back svg:nth-child(1) {
-  // transform: translateX(-100vw);
+  position: absolute;
+  transform: translateX(-110.26vw);
   background-color: red;
-  animation: scroll-2 2.5s linear infinite;
-  animation-delay: 0.1s;
+  animation: scroll-1 42.05s linear infinite;
+  // animation-delay: 0.5s;
 }
 
 .t-template__cloud.-bottom-back svg:nth-child(2) {
   background-color: blue;
-  animation: scroll-1 2.5s linear infinite;
+  // animation: scroll-2 200s linear infinite;
+  animation: scroll-2 20s linear infinite;
 
+}
+
+.t-template__cloud.-bottom-back-delay {
+  animation-delay: 22.05s;
 }
 
 
@@ -59,8 +65,8 @@
 
 @keyframes scroll-1 {
   0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    -webkit-transform: translateX(-110.26vw);
+    transform: translateX(-110.26vw);
   }
   100% {
       -webkit-transform: translateX(100vw);
@@ -74,7 +80,7 @@
     transform: translateX(0);
   }
   100% {
-      -webkit-transform: translateX(50vw);
-      transform: translateX(50vw);
+      -webkit-transform: translateX(100vw);
+      transform: translateX(100vw);
   }
 }
