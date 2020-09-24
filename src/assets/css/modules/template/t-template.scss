@@ -1,67 +1,41 @@
-.t-template {
-  position: absolute;
+.t-template__background {
+  position: relative;
   height: 100vh;
-  background-color: #333333;
-  top: 0;
   width: 100vw;
   overflow: hidden;
-
-  // background-image: url("../img/clound-bottom-front.svg");
-  // background-position-y: 0;
-  // background-size: contain;
 }
 
-// .t-template__background {
-//   position: relative;
-//   height: 100vh;
-//   max-height: 100vh;
-//   background-color: red;
+.t-template__cloud {
+  position: absolute;
+  overflow: visible;
+  // height: auto;
+}
 
+.t-template__cloud.--center {
+
+}
+
+
+.t-template__cloud.--bottom-front  {
+  bottom: -317px;
+  left: -146px;
+  z-index: 20;
+}
+
+.t-template__cloud.--bottom-back {
+  z-index: -10;
+  bottom: -107px;
+  left: -116px;
+}
+
+
+// .scroll-1 {
+//   animation: scroll-1 42.05s linear infinite;
 // }
 
-.t-template__cloud {
-  position: absolute;
-}
-
-.t-template__cloud {
-  // padding-top: 20px;
-  // background-color: map-get($theme, main);
-  will-change: transform;
-}
-
-.t-template__cloud.-bottom-back {
-  display: flex;
-  justify-content: center;
-  bottom: -100px;
-  // left: -80px;
-}
-
-.t-template__cloud.-bottom-back svg:nth-child(1) {
-  position: absolute;
-  transform: translateX(-110.26vw);
-  background-color: red;
-  animation: scroll-1 42.05s linear infinite;
-  // animation-delay: 0.5s;
-}
-
-.t-template__cloud.-bottom-back svg:nth-child(2) {
-  background-color: blue;
-  // animation: scroll-2 200s linear infinite;
-  animation: scroll-2 20s linear infinite;
-
-}
-
-.t-template__cloud.-bottom-back-delay {
-  animation-delay: 22.05s;
-}
-
-
-.t-template__cloud.-bottom-front {
-  bottom: -200px;
-  left: -80px;
-  // animation: scroll-1 5s linear infinite;
-  // animation: scroll-1 2400s linear infinite;
-}
+// .scroll-2 {
+//   animation: scroll-2 20s linear infinite;
+// }
 
 @keyframes scroll-1 {
   0% {

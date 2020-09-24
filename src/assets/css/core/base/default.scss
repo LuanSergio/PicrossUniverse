@@ -43,6 +43,10 @@ body {
   background-size: contain;
 }
 
+svg:not(:root) {
+  overflow: visible;
+}
+
 //chrome custom scroll bar
 body::-webkit-scrollbar {
   width: 15px;
