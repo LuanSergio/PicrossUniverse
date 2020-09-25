@@ -1,3 +1,5 @@
+@import '../../core/functions/respond-to.scss';
+
 .t-template__background {
   position: relative;
   height: 100vh;
@@ -9,6 +11,35 @@
   position: absolute;
   overflow: visible;
   // height: auto;
+}
+
+.t-template__cloud.--center {
+  left: -50%;
+  background-color: red;
+}
+
+.t-template__cloud.--left-top-large {
+  left: -82px;
+  top: -97px;
+}
+
+.t-template__cloud.--left-top-medium {
+
+}
+
+.t-template__cloud.--right-top-small {
+  right: -72px;
+  top: -73px;
+}
+
+.t-template__cloud.--right-top-medium {
+  right: -23px;
+  top: 137px;
+}
+
+.t-template__cloud.--right-top-large {
+  right: -72px;
+  top: -73px;
 }
 
 .t-template__cloud.--center {
@@ -56,5 +87,11 @@
   100% {
       -webkit-transform: translateX(100vw);
       transform: translateX(100vw);
+  }
+}
+
+@include respond-to(notebook) {
+  .t-template__cloud {
+    font-size: 11.33px;
   }
 }

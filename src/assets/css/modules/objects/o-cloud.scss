@@ -1,4 +1,33 @@
+@import '../../core/functions/em.scss';
+
 .o-cloud {
   height: auto;
 }
 
+.o-cloud.--right-top-large {
+  width: em(516);
+}
+
+.o-cloud.--left-top-large {
+  width: em(709);
+}
+
+.o-cloud.--center-top {
+  width: em(301);
+}
+
+.o-cloud.--center {
+  width: em(316);
+}
+
+.o-cloud.--left-top-medium {
+  width: em(324);
+}
+
+.o-cloud.--right-top-medium {
+  width: em(309);
+}
+
+.o-cloud.--right-top-small {
+  width: em(186);
+}
