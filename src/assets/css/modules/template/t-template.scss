@@ -7,15 +7,20 @@
   overflow: hidden;
 }
 
-.t-template__cloud {
+.t-template__moon {
   position: absolute;
   overflow: visible;
+  left: 8vw;
+  top: -8vw;
+}
+
+.t-template__cloud {
+  position: absolute;
   // height: auto;
 }
 
 .t-template__cloud.--center {
   left: -50%;
-  background-color: red;
 }
 
 .t-template__cloud.--left-top-large {
@@ -23,9 +28,14 @@
   top: -97px;
 }
 
-.t-template__cloud.--left-top-medium {
+.t-template__cloud.--left-top-medium-1 {
   left: 17vw;
   top: 4vw;
+}
+
+.t-template__cloud.--left-top-medium-2 {
+  left: -1vw;
+  top: 7vw;
 }
 
 .t-template__cloud.--center-top {
@@ -34,8 +44,8 @@
 }
 
 .t-template__cloud.--right-top-small {
-  right: -72px;
-  top: -73px;
+  right: 13vw;
+  top: 4vw;
 }
 
 .t-template__cloud.--right-top-medium {
