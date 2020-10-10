@@ -2,6 +2,20 @@
 @import '../../core/functions/em.scss';
 @import '../animation/a-decoration-banner.scss';
 
+.c-menu {
+  position: relative;
+  z-index: 10;
+}
+
+.c-menu__holder {
+  margin: 0;
+  display: block;
+  position: absolute;
+  top: 50vh;
+  right: 0;
+  transform: translateY(-50%);
+}
+
 .c-menu__item-holder {
   list-style-type: none;
   margin-bottom: rem(15);

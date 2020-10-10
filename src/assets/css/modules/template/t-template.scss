@@ -1,7 +1,9 @@
 @import '../../core/functions/respond-to.scss';
+@import '../../core/functions/em.scss';
+@import '../../core/functions/viewport.scss';
 
 .t-template__background {
-  position: relative;
+  position: absolute;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
@@ -16,16 +18,11 @@
 
 .t-template__cloud {
   position: absolute;
-  // height: auto;
-}
-
-.t-template__cloud.--center {
-  left: -50%;
 }
 
 .t-template__cloud.--left-top-large {
-  left: -82px;
-  top: -97px;
+  left: vw(-108);
+  top: vh(-15);
 }
 
 .t-template__cloud.--left-top-medium-1 {
@@ -38,41 +35,29 @@
   top: 7vw;
 }
 
-.t-template__cloud.--center-top {
-  left: 52vw;
-  top: -32px;
-}
-
 .t-template__cloud.--right-top-small {
   right: 13vw;
   top: 4vw;
 }
 
 .t-template__cloud.--right-top-medium {
-  right: -23px;
-  top: 137px;
+  right: -1.6911764705882353vw;
+  top: 21.439749608763695vh;
 }
 
 .t-template__cloud.--right-top-large {
-  right: -72px;
-  top: -73px;
+  right: -5.294117647058823vw;
+  top: -7.82472613458529vh;
 }
-
-.t-template__cloud.--center {
-
-}
-
 
 .t-template__cloud.--bottom-front  {
-  bottom: -317px;
-  left: -146px;
-  z-index: 20;
+  bottom: -32.863849765258216vh;
+  left: -3.6764705882352944vw;
 }
 
 .t-template__cloud.--bottom-back {
-  z-index: -10;
-  bottom: -107px;
-  left: -116px;
+  bottom: -16.74491392801252vh;
+  left: -3.6764705882352944vw;
 }
 
 

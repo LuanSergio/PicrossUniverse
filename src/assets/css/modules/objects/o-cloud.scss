@@ -1,33 +1,36 @@
 @import '../../core/functions/em.scss';
+@import '../../core/functions/viewport.scss';
 
 .o-cloud {
   height: auto;
 }
 
-.o-cloud.--right-top-large {
-  width: em(516);
+.o-cloud.--bottom-back {
+  width: vw(1428);
+}
+
+.o-cloud.--bottom-front {
+ width: vw(1428);
 }
 
 .o-cloud.--left-top-large {
-  width: em(709);
-}
-
-.o-cloud.--center-top {
-  width: em(301);
-}
-
-.o-cloud.--center {
-  width: em(316);
+  width: vw(502);
 }
 
 .o-cloud.--left-top-medium {
-  width: em(324);
+  width: vw(229);
+}
+
+
+.o-cloud.--right-top-large {
+  width: vw(435);
 }
 
 .o-cloud.--right-top-medium {
-  width: em(309);
+  width: vw(220);
 }
 
+
 .o-cloud.--right-top-small {
-  width: em(186);
+  width: vw(138);
 }

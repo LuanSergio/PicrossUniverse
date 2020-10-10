@@ -1,67 +1,28 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <meta name=viewport content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="A random Picross generated game using Js">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, minimum-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="A random generate Picross game">
+  <meta name="keywords" content="Picross, Picross Universe, Game, Nonogram, Logic Pix">
+  <meta name="author" content="Luan Sergio Mattos">
+  <meta name="theme-color" content="#272073" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#272073">
+  <meta name="apple-mobile-web-app-title" content="Picross Universe">
+
   <title>Picross Universe</title>
   <link href="/src/assets/css/apps.scss" rel="stylesheet">
 </head>
 
 <body>
   <main style="position: relative;">
-    <div class="t-template">
-      <div class="t-template__background">
-        <div class="t-template__moon">
-          <include src="./background/moon.html"></include> 
-        </div>
-
-        <div class="t-template__cloud --center">
-          <include src="./background/clouds/center.html"></include> 
-        </div>
-
-        <div class="t-template__cloud --left-top-large">
-          <include src="./background/clouds/left-top-large.html"></include> 
-        </div>
-
-        <div class="t-template__cloud --left-top-medium-1">
-          <include src="./background/clouds/left-top-medium.html"></include> 
-        </div>
-
-        <div class="t-template__cloud --left-top-medium-2">
-          <include src="./background/clouds/left-top-medium.html"></include> 
-        </div>
-
-        <div class="t-template__cloud --center-top">
-          <include src="./background/clouds/center-top.html"></include> 
-        </div>
-
-        <div class="t-template__cloud --right-top-large">
-          <include src="./background/clouds/right-top-large.html"></include> 
-        </div>
-
-        <div class="t-template__cloud --right-top-medium">
-          <include src="./background/clouds/right-top-medium.html"></include> 
-        </div>
-
-        <div class="t-template__cloud --right-top-small">
-          <include src="./background/clouds/right-top-small.html"></include> 
-        </div>
-
-        <div class="t-template__cloud --bottom-back">
-          <include src="./background/clouds/bottom-back-1.html"></include> 
-        </div>
-
-        <div class="t-template__cloud --bottom-front">
-          <include src="./background/clouds/bottom-front.html"></include> 
-        </div>
-      </div>
-    </div>
+    <include src="./partials/template.html"></include>
 
     <div>
-      <!-- <include src="./partials/home.html"></include> -->
+      <include src="./partials/home.html"></include>
 
       <!-- <div class="t-ctn">
         <div class="main__ctn"></div>

@@ -1,6 +1,6 @@
-@import '../../core/functions/em.scss';
+@import '../../core/functions/viewport.scss';
 
 .o-moon {
   height: auto;
-  width: em(588);
+  width: vw(588);
 }
