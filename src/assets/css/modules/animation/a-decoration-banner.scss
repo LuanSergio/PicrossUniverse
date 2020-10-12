@@ -1,17 +1,18 @@
 @import '../../core/config/colors.scss';
 @import '../../core/functions/em.scss';
+@import '../../core/functions/viewport.scss';
 
 // Banner before
 @keyframes decoration-banner-before-focus {
   0%{width: 0;}
-  100%{width: rem(210);}
+  100%{width: vw(210);}
   from {background-color: transparent;}
   to {background-color: map-get($theme, secondary-darker);}
 }
 
 @keyframes decoration-banner-before-hover {
   0%{width: 0;}
-  100%{width: rem(210);}
+  100%{width: vw(210);}
   from {background-color: transparent;}
   to {background-color: map-get($theme, neutral-light);}
 }
@@ -35,7 +36,7 @@
 
 @keyframes decoration-banner-background-focus {
   0%{width: 0;}
-  100%{width: rem(400);}
+  100%{width: vw(400);}
   from {background-color: transparent;}
   to {background-color: map-get($theme, secondary);}
   from{box-shadow: none;}
@@ -44,7 +45,7 @@
 
 @keyframes decoration-banner-background-hover {
   0%{width: 0;}
-  100%{width: rem(400);}
+  100%{width: vw(400);}
   from {background-color: transparent;}
   to {background-color: map-get($theme, light);}
 }
