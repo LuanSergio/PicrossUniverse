@@ -1,6 +1,6 @@
 .picross__ctn {
   margin: 0 auto;
-  max-width: 780px;
+  // max-width: 60vw;
 }
 
 .picross__numbers {
@@ -8,21 +8,49 @@
   height: 80px;
   padding-bottom: 20px;
   vertical-align: bottom;
+  color: map-get($theme, secondary);
 }
 
 .picross__square {
   width: 80px;
   height: 80px;
-  background-color: #fff; 
-  border-right: 2px solid #ccc; 
-  border-top: 2px solid #ccc; 
-  border-bottom: 2px solid #ccc;
+  background-color: #424392; 
+  border-right: 2px solid #1f204c; 
+  border-top: 2px solid #1f204c; 
+  border-bottom: 2px solid #1f204c;
   border-radius: 6px;
   text-align: center;
 }
 
+.picross__row:nth-child(2) .picross__square{
+  border-top: 5px solid #1f204c;
+}
+
+.picross__row .picross__square:nth-child(2) {
+  border-left: 5px solid #1f204c;
+}
+.picross__row .picross__square:last-child {
+  border-right: 5px solid #1f204c;
+}
+
+.picross__row .picross__square:nth-child(2) {
+  border-left: 5px solid #1f204c;
+}
+
+.picross__row:last-child .picross__square{
+  border-bottom: 5px solid #1f204c;
+}
+
+.picross__row:nth-child(2) .picross__square:not(:last-child) {
+  border-top-right-radius: 0;
+}
+
+.picross__row:last-child .picross__square:not(:last-child) {
+  border-bottom-right-radius: 0;
+}
+
 .picross__square:nth-child(2) {
-  border-left: 2px solid #ccc; 
+  border-left: 2px solid #1f204c; 
 }
 
 .columns-5 {
