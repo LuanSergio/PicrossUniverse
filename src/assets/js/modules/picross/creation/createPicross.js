@@ -11,16 +11,19 @@ export default function createPicross(width, height, matrix) {
 
   let row = picross.insertRow();
   let header = document.createElement("TH");
+  header.dataset.counterHolder = '';
+  header.classList.add('picross__values', 'picross__values--timer');
   row.appendChild(header);
+  row.classList.add('picross__row', 'picross__row--header');
   for (let i = 0; i < width; i++) {
     header = document.createElement("TH");
-    header.classList.add('picross__numbers');
+    header.classList.add('picross__values', 'picross__values--header');
     row.appendChild(header);
     header.dataset.numbersY = `${i}`;
   }
   for (let i = 0; i < height; i++) {
     header = document.createElement("TH");
-    header.classList.add('picross__numbers');
+    header.classList.add('picross__values');
     header.dataset.numbersX = `${i}`;
     let row = picross.insertRow();
     row.appendChild(header);

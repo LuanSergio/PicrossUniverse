@@ -2,16 +2,16 @@ export default function printPicrossNumbers(width, height, direction, numbersArr
   let numbersHolders;
   let numbersArraywrapped = [];
 
-  function wrapNumbersArrayInSpan(){
+  function wrapNumbersArrayInSpan() {
     for (let i = 0; i < numbersArray.length; i++) {
       numbersArraywrapped[i] = [];
-      if(numbersArray[i] == '') {
+      if (numbersArray[i] == '') {
         numbersArraywrapped[i] = [0];
       }
       for (let j = 0; j < numbersArray[i].length; j++) {
-        numbersArraywrapped[i][j] = `<span data-number-${direction}=${i} data-number-position=${j}>` + 
-        numbersArray[i][j] + 
-        '</span>'
+        numbersArraywrapped[i][j] = `<span class="picross__numbers" data-number-${direction}=${i} data-number-position=${j}>` +
+          numbersArray[i][j] +
+          '</span>'
       }
     }
   }
@@ -27,11 +27,11 @@ export default function printPicrossNumbers(width, height, direction, numbersArr
       }
       break;
     case "column":
-      numbersHolders = document.querySelectorAll('[data-numbers-y]');  
+      numbersHolders = document.querySelectorAll('[data-numbers-y]');
       wrapNumbersArrayInSpan();
       for (let i = 0; i < width; i++) {
         for (let j = 0; j < height; j++) {
-          numbersHolders[i].innerHTML = numbersArraywrapped[i].join("<br>");
+          numbersHolders[i].innerHTML = numbersArraywrapped[i].join("");
         }
       }
       break;
