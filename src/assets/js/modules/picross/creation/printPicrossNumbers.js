@@ -6,7 +6,7 @@ export default function printPicrossNumbers(width, height, direction, numbersArr
     for (let i = 0; i < numbersArray.length; i++) {
       numbersArraywrapped[i] = [];
       if (numbersArray[i] == '') {
-        numbersArraywrapped[i] = [0];
+        numbersArraywrapped[i] = [`<span class="picross__numbers" data-number-${direction}=${i} data-number-position=0>0</span>`];
       }
       for (let j = 0; j < numbersArray[i].length; j++) {
         numbersArraywrapped[i][j] = `<span class="picross__numbers" data-number-${direction}=${i} data-number-position=${j}>` +
@@ -20,6 +20,7 @@ export default function printPicrossNumbers(width, height, direction, numbersArr
     case "row":
       numbersHolders = document.querySelectorAll('[data-numbers-x]');
       wrapNumbersArrayInSpan();
+      console.log('numbersArraywrapped', numbersArraywrapped)
       for (let i = 0; i < height; i++) {
         for (let j = 0; j < width; j++) {
           numbersHolders[i].innerHTML = numbersArraywrapped[i].join(" ");
@@ -29,6 +30,7 @@ export default function printPicrossNumbers(width, height, direction, numbersArr
     case "column":
       numbersHolders = document.querySelectorAll('[data-numbers-y]');
       wrapNumbersArrayInSpan();
+      console.log('numbersArraywrapped', numbersArraywrapped)
       for (let i = 0; i < width; i++) {
         for (let j = 0; j < height; j++) {
           numbersHolders[i].innerHTML = numbersArraywrapped[i].join("");

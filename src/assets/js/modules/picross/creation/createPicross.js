@@ -14,16 +14,16 @@ export default function createPicross(width, height, matrix) {
   header.dataset.counterHolder = '';
   header.classList.add('picross__values', 'picross__values--timer');
   row.appendChild(header);
-  row.classList.add('picross__row', 'picross__row--header');
+  row.classList.add('picross__row', 'picross__row--horizontal');
   for (let i = 0; i < width; i++) {
     header = document.createElement("TH");
-    header.classList.add('picross__values', 'picross__values--header');
+    header.classList.add('picross__values', 'picross__values--horizontal');
     row.appendChild(header);
     header.dataset.numbersY = `${i}`;
   }
   for (let i = 0; i < height; i++) {
     header = document.createElement("TH");
-    header.classList.add('picross__values');
+    header.classList.add('picross__values', 'picross__values--vertical');
     header.dataset.numbersX = `${i}`;
     let row = picross.insertRow();
     row.appendChild(header);
