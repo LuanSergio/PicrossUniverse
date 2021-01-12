@@ -12,19 +12,26 @@
 }
 
 .picross__table {
-  background-color: #271f73;
+  background-color: rgba($color: #110C40, $alpha: 0.95);
   // width: 500px;
   // height: 450px;
-  width: 45vw;
-  height: 86.5vh;
+  width: 44vw;
+  height: 40vw;
+  // width: 45vw;
+  // height: 86.5vh;
   margin-bottom: 10px;
   display: block;
   margin-right: 10px;
   border-collapse: separate !important;
   box-sizing: border-box !important;
   text-indent: initial !important;
-  border-spacing: 2px !important;
-  border-color: grey !important;
+  overflow: auto;
+  overflow-x: auto;
+
+  border-radius: 20px;
+  padding: 10px;
+  // border-spacing: 2px !important;
+  // border-color: grey !important;
 }
 
 tbody {
@@ -32,7 +39,11 @@ tbody {
   flex-direction: column;
   width: 100%;
   height: 100%;
+  // border: 10px;
   border-radius: 20px;
+  overflow:auto;
+  overflow-x: auto;
+
 }
 
 .picross__row {
@@ -42,22 +53,24 @@ tbody {
 }
 
 .picross__values {
-  background-color: ocean;
-  border: 1px solid pink;
+  // border: 1px solid #FDCA17;
+  border: 1px solid #110C40;
+  background-color: #221A75;
   flex-grow: 1;
+  justify-content: flex-end;
 }
 
 .picross__square {
-  background-color: tomato;
+  background-color: #221A90;
   flex-grow: 1;
   flex-basis: 0;
-  border: 1px solid pink;
+  border: 1px solid #110C40;
 /*   min-width: 0.5vw;
   min-height: 0.5vw; */
 }
 
 .picross__square:hover {
-  background-color: #322c75;
+  background-color: #766bf5;
 }
 
 .picross__square--true {
@@ -65,28 +78,24 @@ tbody {
 }
 
 .picross__square--highlight {
-  border-color:  #766bf5;
+  // border-color:  #766bf5;
+  background-color: #4052B3;
   border-radius: 0;
-  border-top: 2px solid grey; 
-  border-bottom: 2px solid grey; 
-  border-left: 2px solid grey; 
-  border-right: 2px solid grey;
+  border-spacing: 2px !important;
+  // border: 1px solid #766bf5;
 }
 
 .picross__square--active-hover {
-  // background-color: blue;
-  border-color:  #88CC88;
-  border-radius: 8px;
-  border-top: 2px solid #88CC88; 
-  border-bottom: 2px solid #88CC88; 
-  border-right: 2px solid #88CC88; 
+  // background-color: #FDCA17;
+  // border-radius: 8px;
+  border: 1px solid #2e1fd4;
 }
 
 .picross__square--false {
-  border-top: 2px solid #CB3434; 
-  border-bottom: 2px solid #CB3434; 
-  border-left: 2px solid #CB3434; 
-  border-right: 2px solid #CB3434;
+  // border-top: 2px solid #CB3434; 
+  // border-bottom: 2px solid #CB3434; 
+  // border-left: 2px solid #CB3434; 
+  // border-right: 2px solid #CB3434;
   background-color: #05003f;
   text-align: center;
   position: relative;
@@ -94,24 +103,23 @@ tbody {
 
 .picross__square--false::after {
   content: 'X';
-  font-size: 50px;
+  font-size: 30px;
   display: block;
   color: #cb3434;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  line-height: 50px;
-}
-
-.time {
-  font-size: 30%;
-  color: #fff;
+  line-height: 30px;
 }
 
 .picross__values--horizontal {
   flex-direction: column;
-  flex-basis: 20%;;
+  flex-basis: 20%;
+}
+
+.picross__values--horizontal .picross__numbers {
+  margin-bottom: 10%;
 }
 
 .picross__values {
@@ -135,22 +143,18 @@ tbody {
   flex-basis: 10%;
 }
 
+.picross__values--vertical .picross__numbers {
+  margin-right: 10%;
+}
+
 
 .picross__numbers {
   // font-size: 65%;
   font-size: 0.67em;
-  color: green;
   letter-spacing: 0;
-  // line-height: 0;
   flex-grow: 0;
   flex-basis: 0;
-  // top: 50%;
-  // left: 50%;
-  // transform: translate(-50%, -50%);
-  // position: absolute;
-
   display: flex;
-  // flex-grow: 1;
   flex-basis: 0;
   justify-content: center;
   align-items: center;
