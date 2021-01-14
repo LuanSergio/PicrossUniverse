@@ -1,9 +1,9 @@
-.content {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-}
+// .content {
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   position: absolute;
+// }
 
 .picross__table {
   background-color: rgba($color: #110C40, $alpha: 0.95);
@@ -11,9 +11,9 @@
   height: 40vw;
   // width: 45vw;
   // height: 86.5vh;
-  margin-bottom: 10px;
+  // margin-bottom: 10px;
   display: block;
-  margin-right: 10px;
+  margin-right: 40px;
   border-collapse: separate !important;
   box-sizing: border-box !important;
   text-indent: initial !important;
@@ -57,6 +57,7 @@ tbody {
 
 .picross__square {
   background-color: #221A90;
+  // background-color: #452979;
   flex-grow: 1;
   flex-basis: 0;
   border: 1px solid #110C40;

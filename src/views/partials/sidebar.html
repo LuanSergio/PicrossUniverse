@@ -1,9 +1,10 @@
-<div class="side-bar">
-  <div class="side-bar__settings">
-    <h2>
-      Picross Size: 
+<div class="settings">
+  <div class="settings__holder">
+    <h2 class="settings__title">
+      Picross Size:
     </h2>
-    <select data-select-width>
+    <label for="rows" class="settings__label">Rows:</label>
+    <select id="rows" data-select-width class="settings__options">
       <option value="5">
         5
       </option>
@@ -29,7 +30,8 @@
       </option>
     </select>
 
-    <select data-select-height>
+    <label for="columns" class="settings__label">Columns:</label>
+    <select id="columns" data-select-height class="settings__options">
       <option value="5">
         5
       </option>
@@ -55,12 +57,6 @@
         30
       </option>
     </select>
-
-    <button data-generate-picross>Generate</button>
-
-    <div>
-      <input type="checkbox" id="autoCorrect" name="autoCorrect">
-      <label for="autoCorrect">Auto-Correct</label>
-    </div>
+    <button data-generate-picross class="settings__button">Create</button>
   </div>
 </div>
