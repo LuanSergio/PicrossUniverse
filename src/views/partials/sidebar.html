@@ -4,59 +4,11 @@
       Picross Size:
     </h2>
     <label for="rows" class="settings__label">Rows:</label>
-    <select id="rows" data-select-width class="settings__options">
-      <option value="5">
-        5
-      </option>
-
-      <option value="10">
-        10
-      </option>
-
-      <option value="15">
-        15
-      </option>
-
-      <option value="20">
-        20
-      </option>
-
-      <option value="25">
-        25
-      </option>
-
-      <option value="30">
-        30
-      </option>
-    </select>
-
+    <input type="number" data-select-width value="5" id="rows" class="settings__options" min="5" max="30" step="5">
     <label for="columns" class="settings__label">Columns:</label>
-    <select id="columns" data-select-height class="settings__options">
-      <option value="5">
-        5
-      </option>
-
-      <option value="10">
-        10
-      </option>
-
-      <option value="15">
-        15
-      </option>
+    <input type="number" data-select-height value="5" id="columns" class="settings__options" min="5" max="30" step="5">
 
 
-      <option value="25">
-        20
-      </option>
-
-      <option value="25">
-        25
-      </option>
-
-      <option value="30">
-        30
-      </option>
-    </select>
     <button data-generate-picross class="settings__button">Create</button>
   </div>
 </div>

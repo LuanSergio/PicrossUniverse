@@ -6,7 +6,7 @@
 // }
 
 .picross__table {
-  background-color: rgba($color: #110C40, $alpha: 0.95);
+  background-color: rgba($color: #110C40, $alpha: 0.94);
   width: 44vw;
   height: 40vw;
   // width: 45vw;
@@ -42,21 +42,25 @@ tbody {
 
 .picross__values {
   border: 1px solid #110C40;
-  background-color: #221A75;
+  background-color: #2c275f;
   flex-grow: 1;
   justify-content: flex-end;
 }
 
 .picross__values--horizontal:nth-child(odd) {
-    background-color: #362475;
+    // background-color: #362475;
+    background-color: #342a6d;
 }
 
 .picross__row:nth-child(even) .picross__values--vertical{
-    background-color: #362475;
+    // background-color: #362475;
+    background-color: #342a6d;
 }
 
 .picross__square {
   background-color: #221A90;
+  background-color: #B7C1D7;
+
   // background-color: #452979;
   flex-grow: 1;
   flex-basis: 0;
@@ -65,16 +69,18 @@ tbody {
 
 .picross__square:hover {
   // background-color: #4a40af;
-  background-color: #766bf5;
+  background-color: #8ea4eb;
 }
 
 .picross__square--true {
   // background-color: #2e1fd4 !important;
-  background-color: #3527c9 !important;
+  background-color: #342ca5 !important;
 }
 
 .picross__square--highlight {
   background-color: #4052B3;
+  background-color: #aeb8f3;
+
   border-radius: 0;
   border-spacing: 2px !important;
 }
@@ -86,7 +92,7 @@ tbody {
 .picross__square--active-hover {
   // border: 1px solid #4a40af;
   // background-color: #4a40af;
-  background-color: #4a40af;
+  background-color: #3429a8;
 
 }
 
