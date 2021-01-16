@@ -5,6 +5,14 @@
   max-width: 20vw;
   border-radius: 20px;
   padding: 2.5vw 2vw;
+  -webkit-box-shadow: rem(3) rem(3) rem(3) rem(5) rgba(0,0,0,0.45);
+  -moz-box-shadow: rem(3) rem(3) rem(3) rem(5) rgba(0,0,0,0.45);
+  box-shadow: rem(3) rem(3) rem(3) rem(5) rgba(0,0,0,0.45);
+  
+  transition: 0.15s;
+  transition-timing-function: linear;
+  animation-name: popIn;
+  animation-duration: 0.4s;
 }
 
 .settings__holder {
@@ -25,7 +33,7 @@
   flex-basis: 100%;
   font-size: 2.4vw;
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: rem(10);
   flex-basis: 90%;
 }
 
@@ -33,34 +41,36 @@
   color: #FDCA17;
   font-size: 2vw;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: rem(20);
   max-height: 0.5vw;
 }
 
-.settings__options {
+.settings__option {
   flex-basis: 100%;
+  font-weight: bold;
   background-color: transparent;
-  border: 4px solid #fff;
+  border: rem(4) solid #fff;
   border-radius: 10px;
-  padding: 5px 20px;
+  padding: rem(5) rem(20);
   text-align: center;
   color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: rem(20);
   max-height: 4vw;
   font-size: 2vw;
 }
 
 .settings__button {
   background-color: transparent;
-  border: 4px solid #fff;
+  border: rem(4) solid #fff;
   border-radius: 10px;
   padding: 0.8vw 1vw;
   color: #fff;
   font-size: 2vw;
   flex-basis: 100%;
   align-self: flex-end;
+  font-family: 'Roboto';
 }
 
-.settings__button:hover, .settings__options:hover {
+.settings__button:hover, .settings__option:hover {
   background-color: rgba($color: #fff, $alpha: 0.15);
 }

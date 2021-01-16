@@ -20,6 +20,7 @@ html,
 body {
   width: 100%;
   margin: 0;
+  font-family: 'Roboto';
   padding-left: 0;
   padding-right: 0;
   padding-bottom: 0;
@@ -40,7 +41,7 @@ body {
 body {
   // padding-top: 20px;
   // background-color: map-get($theme, main);
-  // background-color: #1e1c31;
+  background-color: #221A75;
   background-image: url("../img/body-background.svg");
   background-size: cover;
   background-repeat: no-repeat;
