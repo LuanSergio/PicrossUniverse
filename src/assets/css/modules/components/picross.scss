@@ -32,7 +32,7 @@
   animation-duration: 0.4s;
 }
 
-tbody {
+.picross__table tbody {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -129,9 +129,11 @@ tbody {
 .picross__square--false.picross__square:hover {
   background-color: #1d166e !important;
 }
+
 .picross__square--false::after {
   content: '\e998';
   font-family: 'icon';
+  // font-size: 100%;
   font-size: 26px;
   display: block;
   color: #FDCA17;
@@ -139,6 +141,7 @@ tbody {
   position: absolute;
   top: 50%;
   left: 50%;
+  // line-height: 100%;
   line-height: 26px;
   transform: translate(-50%, -50%);
 }

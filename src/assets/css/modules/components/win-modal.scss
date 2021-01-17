@@ -1,0 +1,86 @@
+.modal__overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 10;
+  transition: 0.15s;
+}
+
+.modal__content {
+  margin: 0 auto;
+  width: 45vw;
+  height: 25vw;
+  background-color: #221A75;
+  position: fixed;
+	top: 50%;
+  left: 50%;
+  z-index: 100;
+  border: 8px solid #FDCA17;
+  border-radius: 30px;
+  padding: 0 3vw;
+  text-align: center;
+  transform: translateX(-50%) translateY(-50%);
+
+  transition: 0.15s;
+  transition-timing-function: linear;
+  animation-name: popInTranslate;
+  animation-duration: 0.5s;
+}
+
+.modal__close {
+  position: absolute;
+  right: 1.5vw;
+  top: 1vw;
+  background-color: transparent;
+  border: 0;
+  font-size: 0;
+}
+
+.modal__close::before {
+  content: '\e997';
+  font-family: 'icon';
+  display: block;
+  font-size: 2vw;
+  color: #FDCA17;
+  cursor: pointer;
+}
+
+.modal__close:hover::before {
+  color: #f5e7b6;
+}
+
+.modal__content-container {
+  width: calc(100% - 6vw);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal__title {
+  color: #FDCA17;
+  font-size: 6vw;
+  letter-spacing: 7pt;
+  margin-top: 0;
+  margin-bottom: 2.5vw;
+  border-bottom: 10px dashed #FDCA17;
+}
+
+.modal__time {
+  color: #FFFFFF;
+  font-size: 3vw;
+  font-weight: bold;
+  letter-spacing: 3pt;
+
+}
+
+.modal__size {
+  color: #FFFFFF;
+  font-size: 2.5vw;
+  font-weight: bold;
+  letter-spacing: 3pt;
+  display: flex;
+  margin-top: 1vw;
+  justify-content: space-evenly;
+}
