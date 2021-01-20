@@ -1,8 +1,9 @@
 import printPicrossNumbers from './printPicrossNumbers';
 import picrossValidator from './picrossValidator';
 import interactions from '../interactions/interactions'
-import fadePicrossNumbers from '../fadePicrossNumbers';
+// import fadePicrossNumbers from '../fadePicrossNumbers';
 import picrossNumberCounter from './picrossNumberCounter';
+import timer from '../../timer/timer'
 
 export default function createPicross(width, height, matrix) {
   const picross = document.querySelector('[data-picross]');
@@ -11,10 +12,32 @@ export default function createPicross(width, height, matrix) {
 
   let row = picross.insertRow();
   let header = document.createElement("TH");
-  header.dataset.counterHolder = '';
+  let seconds = document.createElement("span");
+  let minutes = document.createElement("span");
+  let hours = document.createElement("span");
+
+  seconds.dataset.timerSeconds = '';
+  seconds.innerHTML = "00"
+  seconds.classList.add('picross__timer', 'picross__timer--seconds');
+
+  minutes.dataset.timerMinutes = '';
+  minutes.innerHTML = ":00:"
+  minutes.classList.add('picross__timer', 'picross__timer--minutes');
+
+  hours.dataset.timerHours = '';
+  hours.innerHTML = "00"
+  hours.classList.add('picross__timer', 'picross__timer--hours');
+
+  header.dataset.timerHolder = '';
   header.classList.add('picross__values', 'picross__values--timer');
+
+  header.appendChild(hours);
+  header.appendChild(minutes);
+  header.appendChild(seconds);
+  
   row.appendChild(header);
   row.classList.add('picross__row', 'picross__row--horizontal');
+
   for (let i = 0; i < width; i++) {
     header = document.createElement("TH");
     header.classList.add('picross__values', 'picross__values--horizontal');
@@ -40,6 +63,7 @@ export default function createPicross(width, height, matrix) {
   printPicrossNumbers(width, height, "row", horizontalNumbersArray);
   printPicrossNumbers(width, height, "column", verticalNumbersArray);
   interactions();
-  fadePicrossNumbers(width, height, "row", horizontalNumbersArray);
+  // fadePicrossNumbers(width, height, "row", horizontalNumbersArray);
+  timer();
   picrossValidator(width, height, matrix);
 }

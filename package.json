@@ -13,7 +13,7 @@
   "private": true,
   "devDependencies": {
     "cssnano": "^4.1.10",
-    "posthtml-include": "^1.3.3",
+    "posthtml-include": "^1.6.0",
     "sass": "^1.26.10"
   },
   "postcss": {

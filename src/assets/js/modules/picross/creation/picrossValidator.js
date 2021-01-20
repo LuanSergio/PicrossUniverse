@@ -10,8 +10,7 @@ export default function picrossValidator(columns, rows, matrix) {
     picrossValues = getPicrossValues(columns, rows);
 
     if (compareMatrices(columns, rows, matrix, picrossValues)) {
-      console.log('win')
-      toggleModal();
+      toggleModal(columns, rows);
     }
   });
 

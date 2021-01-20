@@ -4,9 +4,9 @@ import alocatePicrossValues from '../picross/creation/alocatePicrossValues';
 import definePicrossSize from '../picross/creation/definePicrossSize';
 
 export default function generateNewPicross(width, height) {
-  const btnGenerate = document.querySelector('[data-generate-picross]');
+  const buttonGenerate = document.querySelector('[data-generate-picross]');
   
-  btnGenerate.addEventListener('click', function(){
+  buttonGenerate.addEventListener('click', function(){
     let picross = document.querySelector('[data-picross]');
     while (picross.firstChild){
       picross.removeChild(picross.firstChild);

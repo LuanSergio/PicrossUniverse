@@ -9,13 +9,15 @@ import closeModalWhenOverlayIsClicked from './modules/modal/closeModalWhenOverla
 import closeModalWhenButtonIsPressed from './modules/modal/closeModalWhenButtonIsPressed'
 
 let matrix = createMatrix(5, 5);
+let stopTime = false;
+
 console.log(matrix);
 
 alocatePicrossValues(5, 5, matrix, 5);
 
 const { width, height } = definePicrossSize();
 
-createPicross(width, height, matrix);
+createPicross(width, height, matrix, stopTime);
 generateNewPicross(width, height);
 preventContextMenu();
 closeModalWhenButtonIsPressed();
