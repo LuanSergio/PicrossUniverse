@@ -173,6 +173,25 @@
 
 .picross__values--timer {
   flex-basis: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FDCA17;
+  background-color: rgba($color: #110C40, $alpha: 0.0);
+}
+
+.picross__timer--hours {
+  font-size: 24px;
+}
+
+.picross__timer--minutes {
+  font-size: 24px;
+}
+
+.picross__timer--seconds {
+  font-size: 24px;
+  // vertical-align: bottom;
+  // align-self: flex-end;
 }
 
 .picross__values--vertical {
