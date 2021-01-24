@@ -1,30 +1,21 @@
-// .content {
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   position: absolute;
-// }
 
 .picross__table {
-  background-color: rgba($color: #110C40, $alpha: 0.94);
+  background-color: rgba($color: map-get($colors, base), $alpha: 0.94);
   width: 44vw;
   height: 40vw;
-  // width: 45vw;
-  // height: 86.5vh;
-  // margin-bottom: 10px;
   display: block;
-  margin-right: 40px;
+  margin-right: rem(40);
   border-collapse: separate !important;
   box-sizing: border-box !important;
   text-indent: initial !important;
   overflow: auto;
   overflow-x: auto;
-  border-radius: 20px;
-  padding: 10px;
+  border-radius: rem(20);
+  padding: rem(10);
 
-  -webkit-box-shadow: 3px 3px 3px 5px rgba(0,0,0,0.45);
-  -moz-box-shadow: 3px 3px 3px 5px rgba(0,0,0,0.45);
-  box-shadow: 3px 3px 3px 5px rgba(0,0,0,0.45);
+  -webkit-box-shadow: rem(3) rem(3) rem(3) rem(5) rgba(0,0,0,0.45);
+  -moz-box-shadow: rem(3) rem(3) rem(3) rem(5) rgba(0,0,0,0.45);
+  box-shadow: rem(3) rem(3) rem(3) rem(5) rgba(0,0,0,0.45);
 
   transition: 0.15s;
   transition-timing-function: linear;
@@ -37,7 +28,7 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
-  border-radius: 20px;
+  border-radius: rem(20);
   overflow:auto;
   overflow-x: auto;
 
@@ -49,11 +40,76 @@
   flex-basis: 0;
 }
 
-.picross__values {
-  border: 1px solid #110C40;
-  background-color: #2c275f;
+.picross__square {
+  background-color: map-get($picross, square);
   flex-grow: 1;
-  // font-weight: bold;
+  flex-basis: 0;
+  border: rem(1) solid map-get($colors, base);
+
+  transition: 0.10s;
+  transition-timing-function: linear;
+  animation-name: popIn;
+  animation-duration: 0.3s;
+}
+
+.picross__square:hover {
+  background-color: map-get($picross, square-hover);
+}
+
+.picross__square--true {
+  background-color: map-get($picross, square-true) !important;
+}
+
+.picross__square--highlight {
+  background-color: map-get($picross, square-highlight);
+
+  border-radius: 0;
+  border-spacing: rem(2) !important;
+}
+
+.picross__square--true.picross__square--highlight {
+  background-color: map-get($picross, square-highlight-true) !important;
+}
+
+.picross__square--true.picross__square:hover {
+  background-color: map-get($picross, square-true-hover) !important;
+}
+
+.picross__square--active-hover {
+  background-color: map-get($picross, square-active);
+}
+
+.picross__square--false {
+  background-color: map-get($picross, square-false);
+  text-align: center;
+  position: relative;
+}
+
+.picross__square--false.picross__square--highlight {
+  background-color: map-get($picross, square-highlight-false) !important;
+}
+.picross__square--false.picross__square:hover {
+  background-color: map-get($picross, square-false-hover) !important;
+}
+
+.picross__square--false::after {
+  content: '\e998';
+  font-family: 'icon';
+  font-size: rem(26);
+  display: block;
+  color: map-get($colors, contrast);
+  font-weight: bolds;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  line-height: rem(26);
+  transform: translate(-50%, -50%);
+}
+
+.picross__values {
+  border: rem(1) solid map-get($colors, base);
+  background-color: map-get($picross, values-1);
+  flex-grow: 1;
   justify-content: flex-end;
 
   transition: 0.15s;
@@ -63,93 +119,17 @@
 }
 
 .picross__values--horizontal:nth-child(odd) {
-    // background-color: #362475;
-    background-color: #342a6d;
+    background-color: map-get($picross, values-2);
 }
 
 .picross__row:nth-child(even) .picross__values--vertical{
-    // background-color: #362475;
-    background-color: #342a6d;
-}
-
-.picross__square {
-  background-color: #221A90;
-  background-color: #B7C1D7;
-
-  // background-color: #452979;
-  flex-grow: 1;
-  flex-basis: 0;
-  border: 1px solid #110C40;
-
-  transition: 0.10s;
-  transition-timing-function: linear;
-  animation-name: popIn;
-  animation-duration: 0.3s;
-}
-
-.picross__square:hover {
-  // background-color: #4a40af;
-  background-color: #8ea4eb;
-}
-
-.picross__square--true {
-  // background-color: #2e1fd4 !important;
-  background-color: #342ca5 !important;
-}
-
-.picross__square--highlight {
-  background-color: #4052B3;
-  background-color: #aeb8f3;
-
-  border-radius: 0;
-  border-spacing: 2px !important;
-}
-
-.picross__square--true.picross__square--highlight {
-  background-color: #3d32b9 !important;
-}
-
-.picross__square--true.picross__square:hover {
-  background-color: #4438cf !important;
-}
-
-.picross__square--active-hover {
-  background-color: #3429a8;
-}
-
-.picross__square--false {
-  background-color: #15104d;
-  text-align: center;
-  position: relative;
-}
-
-.picross__square--false.picross__square--highlight {
-  background-color: #19135e !important;
-}
-.picross__square--false.picross__square:hover {
-  background-color: #1d166e !important;
-}
-
-.picross__square--false::after {
-  content: '\e998';
-  font-family: 'icon';
-  // font-size: 100%;
-  font-size: 26px;
-  display: block;
-  color: #FDCA17;
-  font-weight: bolds;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  // line-height: 100%;
-  line-height: 26px;
-  transform: translate(-50%, -50%);
+    background-color: map-get($picross, values-2);
 }
 
 .picross__values--horizontal {
   flex-direction: column;
   flex-basis: 20%;
-  padding-top: 5px;
+  padding-top: rem(5);
 }
 
 
@@ -168,7 +148,7 @@
   display: flex;
   position: relative;
   flex-basis: 0;
-  font-size: 26px;
+  font-size: rem(26);
 }
 
 .picross__values--timer {
@@ -176,27 +156,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #FDCA17;
-  background-color: rgba($color: #110C40, $alpha: 0.0);
+  color: map-get($colors, contrast);
+  background-color: rgba($color: map-get($colors, base), $alpha: 0.0);
 }
 
-.picross__timer--hours {
-  font-size: 24px;
-}
-
-.picross__timer--minutes {
-  font-size: 24px;
-}
-
-.picross__timer--seconds {
-  font-size: 24px;
-  // vertical-align: bottom;
-  // align-self: flex-end;
+.picross__timer {
+  font-size: rem(24);
 }
 
 .picross__values--vertical {
   flex-basis: 10%;
-  padding-left: 5px;
+  padding-left: rem(5);
 }
 
 .picross__values--vertical .picross__numbers {
@@ -207,7 +177,6 @@
   margin-right: 10%;
 }
 
-
 .picross__numbers {
   font-size: 0.67em;
   letter-spacing: 0;
@@ -217,5 +186,5 @@
   flex-basis: 0;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: map-get($colors, white);;
 }

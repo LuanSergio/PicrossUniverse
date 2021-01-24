@@ -1,24 +1,22 @@
-// // NAMED COLORS
-$colors : (
-  lucky-point: #272073,
-  // lucky-point: #331d75,
-  // lucky-point: #2f167a,
-  lightning-yellow: #ffc412,
-  gamboge: #e8a410,
-  white: #fefefe,
-  zircon:#f5f7ff,
+$colors: (  
+  base: #110C40,
+  main: #342ca5,
+  contrast: #FDCA17,
+  white: #FEFEFE,
   black: #222222,
 );
 
-// // THEME COLORS
-$theme : (
-  main: map-get($colors, lucky-point),
-  // main-lighter: map-get($colors, lucky-point),
-  // main-darker: map-get($colors, lucky-point),
-  secondary: map-get($colors, lightning-yellow),
-  // secondary-ligher: map-get($colors, lightning-yellow),
-  secondary-darker: map-get($colors, gamboge),
-  light: map-get($colors, white),
-  neutral-light: map-get($colors, zircon),
-  dark: map-get($colors, black),
+$picross: (
+  values-1: #2c275f,
+  values-2: #342a6d,
+  square: #B7C1D7,
+  square-hover: #8ea4eb,
+  square-true: #342ca5,
+  square-true-hover: #4438cf,
+  square-false: #15104d,
+  square-false-hover: #1d166e,
+  square-active: #3429a8,
+  square-highlight: #aeb8f3,
+  square-highlight-true: #3d32b9,
+  square-highlight-false: #19135e,
 );

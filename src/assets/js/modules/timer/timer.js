@@ -34,7 +34,6 @@ export default function timer() {
       minutes = minutes + 1;
       if (minutes < 10) {
         minutes = '0' + minutes;
-        console.log('minutou', minutes)
       }
       minutesHolder.innerHTML = ":" + minutes + ":";
       seconds = 0;
@@ -51,6 +50,7 @@ export default function timer() {
     }
 
     secondsHolder.innerHTML = seconds;
+    
     if (!(modal.classList.contains('hidden'))) {
       secondsHolder.innerHTML = '00';
       minutesHolder.innerHTML = ":" + '00' + ":";
@@ -60,7 +60,7 @@ export default function timer() {
 
     seconds++;
 
-  }, 1000);
+  }, 100);
 
 }
 

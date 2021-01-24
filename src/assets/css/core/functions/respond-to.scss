@@ -1,6 +1,6 @@
 @import '../../core/config/media.scss';
 
-@mixin respond-to($media) {
+@mixin media($media) {
   @if $media == mobile {
     @media only screen and (max-width: map-get($break, mobile)) {
       @content;

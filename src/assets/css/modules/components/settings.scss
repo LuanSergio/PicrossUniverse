@@ -3,8 +3,8 @@
   flex-grow: 1;
   height: 35vw;
   max-width: 20vw;
-  border-radius: 20px;
-  padding: 2.5vw 2vw;
+  border-radius: rem(20);
+  padding: 2vw 2vw;
   -webkit-box-shadow: rem(3) rem(3) rem(3) rem(5) rgba(0,0,0,0.45);
   -moz-box-shadow: rem(3) rem(3) rem(3) rem(5) rgba(0,0,0,0.45);
   box-shadow: rem(3) rem(3) rem(3) rem(5) rgba(0,0,0,0.45);
@@ -44,7 +44,7 @@
   font-size: 1.8vw;
   font-weight: bold;
   margin-bottom: rem(25);
-  max-height: 0.5vw;
+  max-height: 1vw;
 }
 
 
@@ -53,7 +53,7 @@
   font-weight: bold;
   background-color: transparent;
   border: rem(4) solid #fff;
-  border-radius: 10px;
+  border-radius: rem(10);
   padding: 0.7vw 1vw;
   text-align: center;
   color: #fff;
@@ -65,7 +65,7 @@
 .settings__button {
   background-color: transparent;
   border: rem(4) solid #fff;
-  border-radius: 10px;
+  border-radius: rem(10);
   padding: 0.9vw 1vw;
   color: #fff;
   font-size: 1.7vw;

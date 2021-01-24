@@ -16,8 +16,8 @@
 	top: 50%;
   left: 50%;
   z-index: 1000;
-  border: 8px solid #FDCA17;
-  border-radius: 30px;
+  border: rem(8) solid #FDCA17;
+  border-radius: rem(30);
   padding: 0 3vw;
   text-align: center;
   transform: translateX(-50%) translateY(-50%);
@@ -63,7 +63,7 @@
   letter-spacing: 7pt;
   margin-top: 0;
   margin-bottom: 2.5vw;
-  border-bottom: 10px dashed #FDCA17;
+  border-bottom: rem(10) dashed #FDCA17;
 }
 
 .modal__time {

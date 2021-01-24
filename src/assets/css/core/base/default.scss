@@ -25,23 +25,21 @@ body {
   padding-right: 0;
   padding-bottom: 0;
   padding-top: 0;
-  // font-family: $fontfamily.main;
-  // background-size: cover;
   font-size: 1em;
+
   //firefox custom scrollbar
-  scrollbar-color: map-get($theme, secondary) map-get($theme, main);
+  scrollbar-color: map-get($colors, contrast) map-get($colors, base);
   scrollbar-width: auto;
+
   // ie and edge custom scroll bar
-  scrollbar-face-color: map-get($theme, main);
-  scrollbar-track-color: map-get($theme, secondary);
-  scrollbar-arrow-color: map-get($theme, main);
-  scrollbar-shadow-color: map-get($theme, main); //border
+  scrollbar-face-color: map-get($colors, basse);
+  scrollbar-track-color: map-get($colors, contrast);
+  scrollbar-arrow-color: map-get($colors, base);
+  scrollbar-shadow-color: map-get($colors, base); //border
 }
 
 body {
-  // padding-top: 20px;
-  // background-color: map-get($theme, main);
-  background-color: #221A75;
+  background-color: map-get($colors, main);
   background-image: url("../img/body-background.svg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -53,22 +51,22 @@ svg:not(:root) {
 
 //chrome custom scroll bar
 body::-webkit-scrollbar {
-  width: 15px;
-  height: 0px;
+  width: rem(15);
+  height: 0;
 }
 
 body::-webkit-scrollbar-track {
-  background-color: map-get($theme, main);
-  border-radius: 0px;
+  background-color: map-get($colors, base);
+  border-radius: 0;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: map-get($theme, secondary);
-  border-radius: 0px;
+  background-color: map-get($colors, contrast);
+  border-radius: 0;
 }
 
 body::-webkit-scrollbar-corner {
-  background-color: map-get($theme, secondary);
+  background-color: map-get($colors, contrast);
 }
 
 button:focus,
@@ -78,11 +76,4 @@ select:focus,
 a:focus,
 textarea:focus {
   outline: none;
-  // border: 2px solid red;
 }
-
-// @include respond-to(desktop) {
-//   html {
-//     font-size: 1px;
-//   }
-// }
