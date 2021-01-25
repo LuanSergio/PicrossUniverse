@@ -60,7 +60,7 @@ export default function timer() {
 
     seconds++;
 
-  }, 100);
+  }, 1000);
 
 }
 
