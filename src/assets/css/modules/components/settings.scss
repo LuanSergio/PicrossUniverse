@@ -32,11 +32,11 @@
   color: #FDCA17;
   flex-basis: 100%;
   margin-top: 0;
-  margin-bottom: rem(15);
+  margin-bottom: rem(10);
 }
 
 .settings__title-image {
-  max-width: 14vw;
+  max-width: 15vw;
 }
 
 .settings__label {
@@ -57,7 +57,7 @@
   padding: 0.7vw 1vw;
   text-align: center;
   color: #fff;
-  margin-bottom: rem(25);
+  margin-bottom: rem(15);
   max-height: 4vw;
   font-size: 1.7vw;
 }
@@ -70,6 +70,7 @@
   color: #fff;
   font-size: 1.7vw;
   flex-basis: 100%;
+  margin-top: rem(20);
   align-self: flex-end;
   font-family: 'Roboto';
 }
