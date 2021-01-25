@@ -3,7 +3,8 @@ import picrossValidator from './picrossValidator';
 import interactions from '../interactions/interactions'
 // import fadePicrossNumbers from '../fadePicrossNumbers';
 import picrossNumberCounter from './picrossNumberCounter';
-import timer from '../../timer/timer'
+import timer from '../../timer/timer';
+import changePicrossClassBasedOnSize from './changePicrossClassBasedOnSize';
 
 export default function createPicross(width, height, matrix) {
   const picross = document.querySelector('[data-picross]');
@@ -65,5 +66,6 @@ export default function createPicross(width, height, matrix) {
   interactions();
   // fadePicrossNumbers(width, height, "row", horizontalNumbersArray);
   timer();
+  changePicrossClassBasedOnSize(width, height);
   picrossValidator(width, height, matrix);
 }
