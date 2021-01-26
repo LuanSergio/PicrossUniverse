@@ -1,0 +1,64 @@
+.picross__values {
+  display: flex;
+  flex-basis: 0;
+  flex-grow: 1;
+  justify-content: flex-end;
+  position: relative;
+  box-sizing: border-box; 
+  
+  background-color: map-get($picross, values-1);
+  border: rem(1) solid map-get($colors, base);
+  font-size: rem(26);
+  letter-spacing: 0;
+
+  transition: 0.15s;
+  transition-timing-function: linear;
+  animation-name: popIn;
+  animation-duration: 0.3s;
+}
+
+.picross__values--horizontal:nth-child(odd) {
+    background-color: map-get($picross, values-2);
+}
+
+.picross__row:nth-child(even) .picross__values--vertical{
+    background-color: map-get($picross, values-2);
+}
+
+.picross__values--horizontal {
+  flex-direction: column;
+  padding-top: rem(5);
+}
+
+.picross__values--horizontal .picross__numbers {
+  margin-bottom: 7%;
+}
+
+.picross__values--horizontal .picross__numbers:last-child {
+  margin-bottom: 10%;
+}
+
+.picross__values--vertical {
+  flex-basis: 10%;
+  padding-left: rem(5);
+}
+
+.picross__values--vertical .picross__numbers {
+  margin-right: 7%;
+}
+
+.picross__values--vertical .picross__numbers:last-child {
+  margin-right: 10%;
+}
+
+.picross__numbers {
+  font-size: 0.67em;
+  letter-spacing: 0;
+  flex-grow: 0;
+  flex-basis: 0;
+  display: flex;
+  flex-basis: 0;
+  justify-content: center;
+  align-items: center;
+  color: map-get($colors, white);;
+}

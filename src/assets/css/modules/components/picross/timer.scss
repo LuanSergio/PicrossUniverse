@@ -1,0 +1,12 @@
+.picross__values--timer {
+  flex-basis: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: map-get($colors, contrast);
+  background-color: rgba($color: map-get($colors, base), $alpha: 0.0);
+}
+
+.picross__timer {
+  font-size: rem(24);
+}

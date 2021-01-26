@@ -1,0 +1,97 @@
+.picross__square {
+  background-color: map-get($picross, square);
+  flex-grow: 1;
+  flex-basis: 0;
+  border: rem(1) solid map-get($colors, base);
+  box-sizing: border-box;
+  transition: 0.10s;
+  transition-timing-function: linear;
+  animation-name: popIn;
+  animation-duration: 0.3s;
+}
+
+.picross__square:hover {
+  background-color: map-get($picross, square-hover);
+}
+
+.picross__square--highlight {
+  background-color: map-get($picross, square-highlight);
+}
+
+.picross__square--true {
+  background-color: map-get($picross, square-true);
+}
+
+.picross__square--true.picross__square--highlight {
+  background-color: map-get($picross, square-highlight-true);
+}
+
+.picross__square--true.picross__square:hover {
+  background-color: map-get($picross, square-true-hover);
+}
+
+.picross__square--active-hover {
+  background-color: map-get($picross, square-active);
+}
+
+.picross__square--false {
+  background-color: map-get($picross, square-false);
+  text-align: center;
+  position: relative;
+}
+
+.picross__square--false::after {
+  content: '\e998';
+  font-family: 'icon';
+  font-size: rem(26);
+  display: block;
+  color: map-get($colors, contrast);
+  font-weight: bolds;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  line-height: rem(26);
+  transform: translate(-50%, -50%);
+}
+
+.picross__square--false.picross__square--highlight {
+  background-color: map-get($picross, square-highlight-false);
+}
+
+.picross__square--false:hover {
+  background-color: map-get($picross, square-false-hover);
+}
+
+
+.picross__square:nth-child(5n+6):not(:last-child)::after  {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-right: 1px solid map-get($picross, square-separation);
+}
+
+.picross__square:nth-child(5n+7):not(:last-child)::after  {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-left: 1px solid map-get($picross, square-separation);
+}
+
+
+.picross__row:nth-child(5n+6):not(:last-child) .picross__square::after {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-bottom: 1px solid map-get($picross, square-separation);
+}
+
+.picross__row:nth-child(5n+7):not(:last-child) .picross__square::after {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-top: 1px solid map-get($picross, square-separation);
+}

@@ -1,3 +1,7 @@
-@import "picross.scss";
+// @import "picross.scss";
+@import "./picross/picross.scss";
+@import "./picross/values.scss";
+@import "./picross/timer.scss";
+@import "./picross/squares.scss";
 @import "settings.scss";
 @import "win-modal.scss";
