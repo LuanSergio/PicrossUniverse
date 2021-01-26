@@ -1,8 +1,7 @@
-
 .picross__table {
   background-color: rgba($color: map-get($colors, base), $alpha: 0.94);
-  width: 44vw;
-  height: 40vw;
+  width: 48.40vw;
+  height: 44vw;
   display: block;
   margin-right: rem(40);
   border-collapse: separate;
@@ -14,7 +13,8 @@
   -webkit-box-shadow: rem(3) rem(3) rem(3) rem(5) rgba(0,0,0,0.45);
   -moz-box-shadow: rem(3) rem(3) rem(3) rem(5) rgba(0,0,0,0.45);
   box-shadow: rem(3) rem(3) rem(3) rem(5) rgba(0,0,0,0.45);
-
+  overflow-y: auto;
+  overflow-x: auto;
   transition: 0.15s;
   transition-timing-function: linear;
   animation-name: popIn;
@@ -27,7 +27,7 @@
   width: 100%;
   height: 100%;
   border-radius: rem(20);
-  overflow:auto;
+  overflow-y: auto;
   overflow-x: auto;
 }
 
