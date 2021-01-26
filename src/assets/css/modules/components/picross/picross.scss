@@ -13,8 +13,6 @@
   -webkit-box-shadow: rem(3) rem(3) rem(3) rem(5) rgba(0,0,0,0.45);
   -moz-box-shadow: rem(3) rem(3) rem(3) rem(5) rgba(0,0,0,0.45);
   box-shadow: rem(3) rem(3) rem(3) rem(5) rgba(0,0,0,0.45);
-  overflow-y: auto;
-  overflow-x: auto;
   transition: 0.15s;
   transition-timing-function: linear;
   animation-name: popIn;
@@ -29,6 +27,36 @@
   border-radius: rem(20);
   overflow-y: auto;
   overflow-x: auto;
+
+  //firefox custom scrollbar
+  scrollbar-color: map-get($colors, contrast) map-get($colors, base);
+  scrollbar-width: auto;
+
+  // ie and edge custom scroll bar
+  scrollbar-face-color: map-get($colors, basse);
+  scrollbar-track-color: map-get($colors, contrast);
+  scrollbar-arrow-color: map-get($colors, base);
+  scrollbar-shadow-color: map-get($colors, base); //border
+}
+
+.picross__table tbody::-webkit-scrollbar {
+  width: rem(10);
+  height: 0;
+}
+
+.picross__table tbody::-webkit-scrollbar-track {
+  background-color: map-get($colors, base);
+  border-radius: 0;
+}
+
+.picross__table tbody::-webkit-scrollbar-thumb {
+  background-color: map-get($colors, contrast);
+  border-radius: 0;
+  border-radius: rem(30);
+}
+
+.picross__table tbody::-webkit-scrollbar-corner {
+  background-color: map-get($colors, contrast);
 }
 
 .picross__row {
