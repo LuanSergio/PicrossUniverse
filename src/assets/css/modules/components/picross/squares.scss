@@ -40,7 +40,7 @@
   position: relative;
 }
 
-.picross__square--false::after {
+.picross__square--false::before {
   content: '\e998';
   font-family: 'icon';
   font-size: rem(26);
