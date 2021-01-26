@@ -45,7 +45,7 @@
   flex-grow: 1;
   flex-basis: 0;
   border: rem(1) solid map-get($colors, base);
-
+  box-sizing: border-box;
   transition: 0.10s;
   transition-timing-function: linear;
   animation-name: popIn;
@@ -111,6 +111,7 @@
   background-color: map-get($picross, values-1);
   flex-grow: 1;
   justify-content: flex-end;
+  box-sizing: border-box; 
 
   transition: 0.15s;
   transition-timing-function: linear;
@@ -187,4 +188,37 @@
   justify-content: center;
   align-items: center;
   color: map-get($colors, white);;
+}
+
+.picross__square:nth-child(5n+6):not(:last-child)::after  {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-right: 1px solid map-get($picross, square-separation);
+}
+
+.picross__square:nth-child(5n+7):not(:last-child)::after  {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-left: 1px solid map-get($picross, square-separation);
+}
+
+
+.picross__row:nth-child(5n+6):not(:last-child) .picross__square::after {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-bottom: 1px solid map-get($picross, square-separation);
+}
+
+.picross__row:nth-child(5n+7):not(:last-child) .picross__square::after {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-top: 1px solid map-get($picross, square-separation);
 }
