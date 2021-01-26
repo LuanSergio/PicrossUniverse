@@ -8,7 +8,8 @@
   
   background-color: map-get($picross, values-1);
   border: rem(1) solid map-get($colors, base);
-  font-size: rem(26);
+  // font-size: 0.67em;
+  font-size: rem(17);
   letter-spacing: 0;
 
   transition: 0.15s;
@@ -52,7 +53,7 @@
 }
 
 .picross__numbers {
-  font-size: 0.67em;
+  // font-size: 0.67em;
   letter-spacing: 0;
   flex-grow: 0;
   flex-basis: 0;
@@ -61,4 +62,27 @@
   justify-content: center;
   align-items: center;
   color: map-get($colors, white);;
+}
+
+// .picross__values {
+
+// }
+.picross__values-size--10 {
+  font-size: rem(18);
+}
+
+.picross__values-size--15 {
+  font-size: rem(16);
+}
+
+.picross__values-size--20 {
+  font-size: rem(15);
+}
+
+.picross__values-size--25 {
+  font-size: rem(12);
+}
+
+.picross__values-size--30 {
+  font-size: rem(12);
 }
