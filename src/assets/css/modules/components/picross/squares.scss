@@ -58,10 +58,10 @@
   background-color: map-get($picross, square-highlight-false);
 }
 
-.picross__square--false:hover {
-  background-color: map-get($picross, square-false-hover);
+.picross__square--active-hover.picross__square--false, 
+.picross__square--active-hover.picross__square--true {
+  opacity: 0.6;
 }
-
 
 .picross__square:nth-child(5n+6):not(:last-child)::after  {
   content: '';
@@ -78,7 +78,6 @@
   width: 100%;
   border-left: 1px solid map-get($picross, square-separation);
 }
-
 
 .picross__row:nth-child(5n+6):not(:last-child) .picross__square::after {
   content: '';
