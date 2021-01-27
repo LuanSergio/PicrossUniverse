@@ -1,7 +1,7 @@
 .picross__table {
   background-color: rgba($color: map-get($colors, base), $alpha: 0.94);
   width: 48.40vw;
-  height: 44vw;
+  height: 93.61vh;
   display: block;
   margin-right: rem(40);
   border-collapse: separate;
@@ -40,23 +40,27 @@
 }
 
 .picross__table tbody::-webkit-scrollbar {
-  width: rem(10);
-  height: 0;
+  width: rem(13);
+  height: rem(13);
 }
 
 .picross__table tbody::-webkit-scrollbar-track {
   background-color: map-get($colors, base);
-  border-radius: 0;
 }
 
 .picross__table tbody::-webkit-scrollbar-thumb {
   background-color: map-get($colors, contrast);
-  border-radius: 0;
   border-radius: rem(30);
 }
 
 .picross__table tbody::-webkit-scrollbar-corner {
-  background-color: map-get($colors, contrast);
+  background-color: map-get($colors, base);
+}
+
+.picross__row:nth-child(1) {
+  position: sticky;
+  z-index: 10;
+  top: 0;
 }
 
 .picross__row {

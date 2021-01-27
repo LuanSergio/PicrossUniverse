@@ -4,7 +4,8 @@
   justify-content: center;
   align-items: center;
   color: map-get($colors, contrast);
-  background-color: rgba($color: map-get($colors, base), $alpha: 0.0);
+  background-color: rgba($color: map-get($colors, base), $alpha: 1);
+  min-width: 96px;
 }
 
 .picross__timer {
@@ -20,13 +21,13 @@
 }
 
 .picross__timer--20 {
-  font-size: rem(16);
+  font-size: rem(17);
 }
 
 .picross__timer--25 {
-  font-size: rem(15);
+  font-size: rem(17);
 }
 
 .picross__timer--30 {
-  font-size: rem(15);
+  font-size: rem(17);
 }
