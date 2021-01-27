@@ -26,10 +26,6 @@ export default function timer() {
     minutes = parseInt(minutes);
     hours = parseInt(hours);
 
-    if (seconds < 10) {
-      seconds = '0' + seconds;
-    }
-
     if (seconds == 60) {
       minutes = minutes + 1;
       if (minutes < 10) {
@@ -48,7 +44,9 @@ export default function timer() {
       minutes = 0;
       seconds = 0;
     }
-
+    if (seconds < 10) {
+      seconds = '0' + seconds;
+    }
     secondsHolder.innerHTML = seconds;
     
     if (!(modal.classList.contains('hidden'))) {
@@ -56,7 +54,6 @@ export default function timer() {
       minutesHolder.innerHTML = ":" + '00' + ":";
       hoursHolder.innerHTML = '00';
     }
-
 
     seconds++;
 
