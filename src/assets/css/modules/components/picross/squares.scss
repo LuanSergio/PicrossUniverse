@@ -2,15 +2,17 @@
   background-color: map-get($picross, square);
   flex-grow: 1;
   flex-basis: 0;
+  
   border: rem(1) solid map-get($colors, base);
   box-sizing: border-box;
+  cursor: pointer;
+  min-width: rem(36);
+  min-height: rem(34);
+
   transition: 0.10s;
   transition-timing-function: linear;
   animation-name: popIn;
   animation-duration: 0.3s;
-
-  min-width: rem(36);
-  min-height: rem(34);
 }
 
 .picross__square:hover {

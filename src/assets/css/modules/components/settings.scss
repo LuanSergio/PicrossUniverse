@@ -73,8 +73,10 @@
   margin-top: rem(20);
   align-self: flex-end;
   font-family: 'Roboto';
+  cursor: pointer;
 }
 
-.settings__button:hover, .settings__option:hover {
+.settings__button:hover, .settings__button:focus, 
+.settings__option:hover, .settings__option:focus {
   background-color: rgba($color: #fff, $alpha: 0.15);
 }
