@@ -52,7 +52,7 @@ svg:not(:root) {
 //chrome custom scroll bar
 body::-webkit-scrollbar {
   width: rem(15);
-  height: 0;
+  height: rem(15);
 }
 
 body::-webkit-scrollbar-track {
