@@ -8,13 +8,10 @@ export default function setClickOrientation(square, states, clickInteractions) {
       if(isTheSameRow || isTheSameColumn){
         if(isTheSameRow) {
           if(clickInteractions.orientation != 'x') {
-            console.log('its done Y')
             clickInteractions.orientation = 'y';
           }
         } else if (isTheSameColumn) {
           if(clickInteractions.orientation != 'y') {
-            console.log('its done x')
-
             clickInteractions.orientation = 'x';
           }
         }

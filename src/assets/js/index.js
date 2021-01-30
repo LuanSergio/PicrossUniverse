@@ -12,7 +12,6 @@ import validatePicrossSize from './modules/picrossSettings/validatePicrossSize'
 let matrix = createMatrix(5, 5);
 let stopTime = false;
 
-console.log(matrix);
 validatePicrossSize();
 
 alocatePicrossValues(5, 5, matrix, 5);

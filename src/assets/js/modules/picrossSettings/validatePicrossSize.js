@@ -1,7 +1,6 @@
 export default function validatePicrossSize() {
   const inputs = document.querySelectorAll('[data-select-width],[data-select-height]');
   const maxLength = 30;
-  console.log('inputs', inputs);
 
   inputs.forEach(input => {
     input.addEventListener('change', () => {
