@@ -18,6 +18,7 @@ export default function squareMouseUp(clickInteractions, hoveredSquares, states)
       clickInteractions.behavior
     );
   });
-
+  // fade here
+  console.log('hoveredSquares', hoveredSquares);
   clearArray(hoveredSquares);
 }

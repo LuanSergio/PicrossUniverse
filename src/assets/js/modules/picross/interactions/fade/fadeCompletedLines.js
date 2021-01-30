@@ -1,5 +1,5 @@
 import checkIfLineIsCompleted from './checkIfLineIsCompleted';
-import fadeLine from './fadeLine';
+import fadeLine from './fadeHeader';
 
 export default function fadeCompletedLines() {
   const squares = document.querySelectorAll('[data-picross-square]');
