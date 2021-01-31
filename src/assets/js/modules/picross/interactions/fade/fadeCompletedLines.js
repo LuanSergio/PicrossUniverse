@@ -1,19 +1,37 @@
-import checkIfLineIsCompleted from './checkIfLineIsCompleted';
-import fadeLine from './fadeHeader';
+import checkIfArraysAreIdentical from './checkIfArraysAreIdentical';
+import countArraysTrueValue from './countArraysTrueValue';
+import fadeHeader from './fadeHeader';
+import removeFadeFromHeader from './removeFadeFromHeader';
+import getHeaderValues from './getHeaderValues';
+import getLineArray from './getLineArray';
 
-export default function fadeCompletedLines() {
-  const squares = document.querySelectorAll('[data-picross-square]');
+export default function checkIfLineIsCompleted(square, orientation) {
+  let dataAttributeSquare;
+  let dataAttributeHeader;
 
-  squares.forEach(square => {
-    const clickEvents = ['click', 'contenxtmenu', 'mouseup', 'mousedown']
+  if (orientation === 'vertical') {
+    dataAttributeSquare = 'data-x';
+    dataAttributeHeader = 'data-numbers-y'
+  } else if (orientation === 'horizontal') {
+    dataAttributeSquare = 'data-y';
+    dataAttributeHeader = 'data-numbers-x'
+  } else {
+    console.log('not a valid orientation parameter on CheckIfLineIsCompleted');
+  }
 
-    clickEvents.forEach((clickEvent) => {
-      square.addEventListener(clickEvent, event => {
-        setTimeout(function () { 
-          checkIfLineIsCompleted(square, 'vertical');
-          checkIfLineIsCompleted(square, 'horizontal');
-        }, 100);
-      });
-    })
-  });
+  const position = square.getAttribute(dataAttributeSquare);
+  
+  const line = document.querySelectorAll(`[${dataAttributeSquare}="${position}"]`);
+  const header = document.querySelector(`[${dataAttributeHeader}="${position}"]`);
+
+  const lineArray = getLineArray(line);
+  const lineValues = countArraysTrueValue(lineArray);
+  
+  const headerValues = getHeaderValues(position, orientation);
+  
+  if (checkIfArraysAreIdentical(lineValues, headerValues)) {
+    fadeHeader(header);
+  } else {
+    removeFadeFromHeader(header);
+  }
 }

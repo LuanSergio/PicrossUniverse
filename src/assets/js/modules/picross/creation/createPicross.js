@@ -1,11 +1,10 @@
 import printPicrossNumbers from './printPicrossNumbers';
 import picrossValidator from './picrossValidator';
 import interactions from '../interactions/interactions'
-import fadeCompletedLines from '../interactions/fade/fadeCompletedLines';
 import picrossNumberCounter from './picrossNumberCounter';
 import timer from '../../timer/timer';
 import changePicrossClassBasedOnSize from './changePicrossClassBasedOnSize';
-
+import fadeLineWhenValueIsZero from '../interactions/fade/fadeLineWhenValueIsZero';
 export default function createPicross(width, height, matrix) {
   const picross = document.querySelector('[data-picross]');
   const horizontalNumbersArray = picrossNumberCounter(width, height, matrix, 'row');
@@ -65,7 +64,7 @@ export default function createPicross(width, height, matrix) {
   printPicrossNumbers(width, height, "column", verticalNumbersArray);
   interactions();
   timer();
+  fadeLineWhenValueIsZero();
   changePicrossClassBasedOnSize(width, height);
-  fadeCompletedLines(width, height, matrix);
   picrossValidator(width, height, matrix);
 }

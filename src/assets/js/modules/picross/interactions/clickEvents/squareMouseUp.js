@@ -1,5 +1,6 @@
 import clearArray from '../../../../utils/clearArray';
 import fillSquare from '../fillSquare';
+import fadeCompletedLines from '../fade/fadeCompletedLines';
 
 export default function squareMouseUp(clickInteractions, hoveredSquares, states) {
   clickInteractions.initialSquare = null;
@@ -17,8 +18,9 @@ export default function squareMouseUp(clickInteractions, hoveredSquares, states)
       clickInteractions.buttonType, 
       clickInteractions.behavior
     );
+    fadeCompletedLines(square, 'vertical');
+    fadeCompletedLines(square, 'horizontal');
   });
-  // fade here
-  console.log('hoveredSquares', hoveredSquares);
+
   clearArray(hoveredSquares);
 }
