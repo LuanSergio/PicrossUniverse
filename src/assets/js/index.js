@@ -9,13 +9,14 @@ import closeModalWhenOverlayIsClicked from './modules/modal/closeModalWhenOverla
 import closeModalWhenButtonIsPressed from './modules/modal/closeModalWhenButtonIsPressed'
 import validatePicrossSize from './modules/picrossSettings/validatePicrossSize'
 
-const { width, height } = definePicrossSize();
-let matrix = createMatrix(width, height);
+let matrix = createMatrix(5, 5);
 let stopTime = false;
+const { width, height } = definePicrossSize();
 
 validatePicrossSize();
-alocatePicrossValues(width, height, matrix, 5);
+alocatePicrossValues(5, 5, matrix, 5);
 createPicross(width, height, matrix, stopTime);
+
 
 generateNewPicross(width, height);
 preventContextMenuOnPicross();
