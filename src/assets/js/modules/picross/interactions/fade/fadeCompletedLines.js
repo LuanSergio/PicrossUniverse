@@ -1,5 +1,5 @@
 import checkIfArraysAreIdentical from './checkIfArraysAreIdentical';
-import countArraysTrueValue from './countArraysTrueValue';
+import countArraysTrue from '../../../../utils/countArraysTrue';
 import fadeHeader from './fadeHeader';
 import removeFadeFromHeader from './removeFadeFromHeader';
 import getHeaderValues from './getHeaderValues';
@@ -25,7 +25,7 @@ export default function checkIfLineIsCompleted(square, orientation) {
   const header = document.querySelector(`[${dataAttributeHeader}="${position}"]`);
 
   const lineArray = getLineArray(line);
-  const lineValues = countArraysTrueValue(lineArray);
+  const lineValues = countArraysTrue(lineArray);
   
   const headerValues = getHeaderValues(position, orientation);
   

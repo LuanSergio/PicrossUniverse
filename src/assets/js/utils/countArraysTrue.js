@@ -1,4 +1,4 @@
-export default function countArraysTrueValue(array) {
+export default function countArraysTrue(array) {
   let counter = 0;
   const arrayValues = [0];
 

@@ -1,4 +1,4 @@
-export default function preventContextMenu() {
+export default function preventContextMenuOnPicross() {
  const picross = document.querySelector('[data-picross]');
 
  picross.addEventListener('contextmenu', event => {

@@ -2,7 +2,7 @@
 import createMatrix from './utils/createMatrix';
 import alocatePicrossValues from './modules/picross/creation/alocatePicrossValues';
 import createPicross from './modules/picross/creation/createPicross';
-import preventContextMenu from './utils/preventContextMenu'
+import preventContextMenuOnPicross from './modules/picross/interactions/preventContextMenuOnPicross'
 import definePicrossSize from './modules/picross/creation/definePicrossSize';
 import generateNewPicross from './modules/picrossSettings/generateNewPicross';
 import closeModalWhenOverlayIsClicked from './modules/modal/closeModalWhenOverlayIsClicked'
@@ -20,6 +20,6 @@ const { width, height } = definePicrossSize();
 
 createPicross(width, height, matrix, stopTime);
 generateNewPicross(width, height);
-preventContextMenu();
+preventContextMenuOnPicross();
 closeModalWhenButtonIsPressed();
 closeModalWhenOverlayIsClicked();
