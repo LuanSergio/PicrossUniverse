@@ -1,13 +1,33 @@
-.github-corner:hover .octo-arm {
+.github-corner:hover .github-corner__octocat{
+  fill: map-get($colors, contrast-hover);
+}
+
+.github-corner__octocat {
+  width: rem(80);
+  height: rem(80);
+  fill: map-get($colors, contrast); 
+  color: map-get($colors, neutral); 
+  position: absolute; 
+  top: 0; 
+  border: 0;
+  right: 0;
+  transition: 0.3s;
+}
+
+.github-corner:hover .github-corner__octo-arm {
   animation: octocat-wave 560ms ease-in-out
 }
 
 @media (max-width:500px) {
-  .github-corner:hover .octo-arm {
+  .github-corner__octocat {
+    color: map-get($colors, main-darker); 
+  }
+
+  .github-corner:hover .github-corner__octo-arm {
     animation: none
   }
 
-  .github-corner .octo-arm {
+  .github-corner .github-corner__octo-arm {
     animation: octocat-wave 560ms ease-in-out
   }
 }
