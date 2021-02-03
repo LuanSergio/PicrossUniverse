@@ -6,6 +6,8 @@
   color: map-get($colors, contrast);
   background-color: rgba($color: map-get($colors, base), $alpha: 1);
   min-width: 96px;
+  border-bottom-left-radius: rem(5);
+  border-top-left-radius: rem(5);
 }
 
 .picross__timer {

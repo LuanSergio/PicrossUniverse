@@ -12,7 +12,6 @@
   font-size: rem(17);
   letter-spacing: 0;
   min-width: rem(36);
-
   transition: 0.15s;
   transition-timing-function: linear;
   animation-name: popIn;
@@ -30,6 +29,8 @@
 .picross__values--horizontal {
   flex-direction: column;
   padding-top: rem(10);
+  border-top-right-radius: rem(5);
+  border-top-left-radius: rem(5);
 }
 
 .picross__values--horizontal .picross__numbers {
@@ -44,6 +45,8 @@
   flex-basis: 10%;
   padding-left: rem(5);
   min-width: rem(96);
+  border-bottom-left-radius: rem(5);
+  border-top-left-radius: rem(5);
 }
 
 .picross__values--vertical .picross__numbers {
@@ -87,4 +90,18 @@
 
 .picross__values--fade {
   opacity: 0.35;
+}
+
+.picross__values--horizontal.picross__values-size--20,
+.picross__values--horizontal.picross__values-size--25, 
+.picross__values--horizontal.picross__values-size--30 {
+  border-top-right-radius: rem(0);
+  border-top-left-radius: rem(0);
+}
+
+.picross__values--vertical.picross__values-size--20,
+.picross__values--vertical.picross__values-size--25,
+.picross__values--vertical.picross__values-size--30 {
+  border-bottom-left-radius: rem(0);
+  border-top-left-radius: rem(0);
 }
