@@ -1,6 +1,9 @@
-$break: (
-  mobile: 767px,
-  tablet: 768px,
-  notebook: 1024px,
-  desktop: 1366px, 
+$breakpoints: (
+  smartphone: em(767),
+  tablet: em(768),
+  mobile: em(1023),
+  notebook: em(1024),
+  desktop: em(1366), 
+  fullHD: em(1920),
+  quadHD: em(2560),
 )

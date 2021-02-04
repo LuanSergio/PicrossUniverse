@@ -1,10 +1,10 @@
 .settings {
-  background-color:rgba($color:  #110C40, $alpha: 0.90);
+  background-color:rgba($color:  map-get($colors, base), $alpha: 0.90);
   flex-grow: 1;
-  height: 35vw;
-  max-width: 20vw;
+  max-width: rem(272);
+
   border-radius: rem(20);
-  padding: 2vw 2vw;
+  padding: rem(27);
   -webkit-box-shadow: rem(3) rem(3) rem(3) rem(5) rgba(0,0,0,0.45);
   -moz-box-shadow: rem(3) rem(3) rem(3) rem(5) rgba(0,0,0,0.45);
   box-shadow: rem(3) rem(3) rem(3) rem(5) rgba(0,0,0,0.45);
@@ -29,54 +29,52 @@
 }
 
 .settings__title {
-  color: #FDCA17;
+  color: map-get($colors, contrast);
   flex-basis: 100%;
   margin-top: 0;
   margin-bottom: rem(10);
 }
 
 .settings__title-image {
-  max-width: 15vw;
+  max-width: rem(195);
 }
 
 .settings__label {
-  color: #FDCA17;
-  font-size: 1.8vw;
+  color: map-get($colors, contrast);
+  font-size: rem(24);
   font-weight: bold;
-  margin-bottom: rem(25);
-  max-height: 1vw;
+  margin-bottom: rem(10);
 }
 
 
 .settings__option {
+  font-size: rem(23);
+  color: map-get($colors, white);
   flex-basis: 100%;
   font-weight: bold;
   background-color: transparent;
-  border: rem(4) solid #fff;
+  border: rem(4) solid map-get($colors, white);
   border-radius: rem(10);
-  padding: 0.7vw 1vw;
+  padding: rem(9.5) rem(13.6);
   text-align: center;
-  color: #fff;
-  margin-bottom: rem(15);
-  max-height: 4vw;
-  font-size: 1.7vw;
+  margin-bottom: rem(25);
+  max-height: rem(54);
 }
 
 .settings__button {
+  cursor: pointer;
+  font-size: rem(23);
+  color: map-get($colors, white);
+  border: rem(4) solid map-get($colors, white);
   background-color: transparent;
-  border: rem(4) solid #fff;
   border-radius: rem(10);
-  padding: 0.9vw 1vw;
-  color: #fff;
-  font-size: 1.7vw;
+  padding: rem(12) rem(13);
   flex-basis: 100%;
   margin-top: rem(20);
   align-self: flex-end;
-  font-family: 'Roboto';
-  cursor: pointer;
 }
 
 .settings__button:hover, .settings__button:focus, 
 .settings__option:hover, .settings__option:focus {
-  background-color: rgba($color: #fff, $alpha: 0.15);
+  background-color: rgba($color: map-get($colors, white), $alpha: 0.15);
 }
