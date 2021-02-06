@@ -119,3 +119,10 @@
 .picross__square--false.picross__square-size--30::before {
   font-size: rem(16);
 }
+
+@include respond-to(smartphone) {
+  .picross__square {
+    min-width: rem(66);
+    min-height: rem(54);
+  }
+}

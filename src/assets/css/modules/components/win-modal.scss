@@ -86,3 +86,67 @@
   display: flex;
   justify-content: space-evenly;
 }
+
+@include respond-to(mobile) {
+  .modal__content {
+    max-width: rem(512);
+    max-height: rem(276.08);
+    border: rem(7) solid map-get($colors, contrast);
+  }
+
+  .modal__close {
+    right: rem(15);
+    top: rem(13);
+  }
+
+  .modal__close::before {
+    font-size: rem(30);
+  }
+
+  .modal__title {
+    font-size: rem(62);
+    margin-bottom: rem(28);
+    border-bottom: rem(7) dashed map-get($colors, contrast);
+  }
+
+  .modal__time {
+    font-size: rem(36);
+  }
+
+  .modal__size {
+    font-size: rem(30);
+  }
+}
+
+@include respond-to(smartphone) {
+  .modal__content {
+    max-width: rem(300);
+    max-height: rem(161.76);
+    padding: rem(15) rem(30);
+    border-radius: rem(15);
+  }
+
+  .modal__close {
+    right: rem(4);
+    top: rem(6);
+  }
+
+  .modal__close::before {
+    font-size: rem(19);
+  }
+
+  .modal__title {
+    font-size: rem(36);
+    margin-bottom: rem(13);
+    border-bottom: rem(4) dashed map-get($colors, contrast);
+  }
+
+  .modal__time {
+    font-size: rem(18);
+    margin-bottom: rem(7);
+  }
+
+  .modal__size {
+    font-size: rem(15);
+  }
+}

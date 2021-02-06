@@ -68,3 +68,30 @@
   flex-grow: 1;
   flex-basis: 0;
 }
+
+@include respond-to(mobile) {
+  .picross__table {
+    margin-right: 0;
+  }
+}
+
+@include respond-to(tablet) {
+  .picross__table {
+    width: rem(551.5);
+    height: rem(500);
+  }
+}
+
+@include respond-to(smartphone) {
+  .picross {
+    width: 100%;
+    padding: 0 rem(15);
+    display: flex;
+    justify-content: center;
+  }
+  .picross__table {
+    width: 100%;
+  margin-right: rem(0);
+    height: rem(420);
+  }
+}

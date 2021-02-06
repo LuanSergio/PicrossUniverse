@@ -33,3 +33,21 @@
 .picross__timer--30 {
   font-size: rem(17);
 }
+
+@include respond-to(notebook) {
+  .picross__timer {
+    font-size: rem(16);
+  }
+}
+
+
+@include respond-to(smartphone) {
+  .picross__values--timer {
+    flex-basis: auto;
+    max-width: rem(70);
+    min-width: rem(70);
+  }
+  .picross__timer {
+    font-size: rem(12);
+  }
+}

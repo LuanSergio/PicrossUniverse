@@ -89,7 +89,7 @@
 }
 
 .picross__values--fade {
-  opacity: 0.35;
+  opacity: 0.55;
 }
 
 .picross__values--horizontal.picross__values-size--20,
@@ -104,4 +104,25 @@
 .picross__values--vertical.picross__values-size--30 {
   border-bottom-left-radius: rem(0);
   border-top-left-radius: rem(0);
+}
+
+@include respond-to(notebook) {
+  .picross__values {
+    font-size: rem(14);
+  }
+}
+
+@include respond-to(smartphone) {
+  .picross__values {
+    font-size: rem(12);
+    min-width: rem(66);
+  }
+
+  .picross__values--vertical {
+    flex-basis: auto;
+    max-width: rem(80);
+    padding-left: rem(5);
+    min-width: rem(70);
+  }
+
 }
