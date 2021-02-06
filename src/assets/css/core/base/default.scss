@@ -83,6 +83,18 @@ textarea:focus {
   outline: none;
 }
 
+.noscript {
+  color: map-get($colors, contrast);;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.noscript__link {
+  color: map-get($colors, contrast);;
+}
+
 @include respond-to(fullHd) {
   html {
     font-size: $base-font-size*1.4;
