@@ -5,6 +5,7 @@
 }
 
 .toggle-settings-button__button {
+  cursor: pointer;
   position: absolute;
   left: 0;
   font-size: 0;
@@ -13,6 +14,10 @@
   background-color: map-get($colors,contrast);
   border: none;
   padding: rem(15) rem(25);
+}
+
+.toggle-settings-button__button:hover {
+  background-color: map-get($colors,contrast-hover);
 }
 
 .toggle-settings-button__button:before {
