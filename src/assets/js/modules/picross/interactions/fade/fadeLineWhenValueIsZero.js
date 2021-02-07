@@ -9,5 +9,5 @@ export default function fadeLineWhenValueIsZero() {
     if(value.innerHTML == '0') {
       fadeHeader(header);
     }
-  })
+  });
 }

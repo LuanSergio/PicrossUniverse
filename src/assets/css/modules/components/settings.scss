@@ -28,9 +28,14 @@
   flex-basis: 100%;
 }
 
+.settings__close {
+  display: none;
+}
+
 .settings__title {
   color: map-get($colors, contrast);
   flex-basis: 100%;
+  text-align: center;
   margin-top: 0;
   margin-bottom: rem(10);
 }
@@ -112,6 +117,68 @@
 
 @include respond-to(mobile) {
   .settings {
-    display: none;
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    border-radius: 0;
+    
+    width: 100vw;
+    max-width: 100%;
+    min-height: 100%;
+    min-height: -webkit-fill-available;
+  }
+
+  .settings__holder {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: rem(10) rem(27);
+    max-width: 100%;
+    width: 100%;
+    max-height: 85vh;
+  }
+
+  .settings__close {
+    display: block;
+    position: absolute;
+    right: rem(5);
+    top: rem(-5);
+    background-color: transparent;
+    border: 0;
+    font-size: 0;
+  }
+
+  .settings__close::before {
+    content: '\e997';
+    font-family: 'icon';
+    display: block;
+    font-size: rem(30);
+    color: map-get($colors, contrast);
+    cursor: pointer;
+  }
+
+  .settings__title-image {
+    max-width: rem(230);
+    margin-bottom: rem(10);
+  }
+
+  .settings__label {
+    font-size: rem(26);
+    margin-bottom: rem(5);
+  }
+
+
+  .settings__option {
+    font-size: rem(26);
+    padding: rem(20) rem(13);
+    margin-bottom: rem(15);
+  }
+
+  .settings__button {
+    cursor: pointer;
+    font-size: rem(26);
+    padding: rem(15) rem(13);
   }
 }

@@ -11,10 +11,10 @@ export default function checkIfLineIsCompleted(square, orientation) {
 
   if (orientation === 'vertical') {
     dataAttributeSquare = 'data-x';
-    dataAttributeHeader = 'data-numbers-y'
+    dataAttributeHeader = 'data-numbers-y';
   } else if (orientation === 'horizontal') {
     dataAttributeSquare = 'data-y';
-    dataAttributeHeader = 'data-numbers-x'
+    dataAttributeHeader = 'data-numbers-x';
   } else {
     console.log('not a valid orientation parameter on CheckIfLineIsCompleted');
   }

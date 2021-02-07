@@ -3,7 +3,7 @@ import squareMouseEnter from './clickEvents/squareMouseEnter';
 import squareMouseUp from './clickEvents/squareMouseUp';
 import highlightSquares from './highlightSquares'
 
-export default function interactions() {
+export default function interactions(width, height, matrix) {
   const states = {
     true: 'picross__square--true',
     false: 'picross__square--false',
@@ -37,7 +37,7 @@ export default function interactions() {
   });
 
   window.addEventListener('mouseup', event => {
-    squareMouseUp(clickInteractions, hoveredSquares, states);
+    squareMouseUp(clickInteractions, hoveredSquares, states, width, height, matrix);
   });
 
 }

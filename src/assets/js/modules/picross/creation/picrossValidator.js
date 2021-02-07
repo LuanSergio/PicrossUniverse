@@ -3,16 +3,13 @@ import compareMatrices from '../../../utils/compareMatrices'
 import toggleModal from '../../modal/toggleModal'
 import confetti from '../../../utils/confetti.js'
 
-export default function picrossValidator(columns, rows, matrix) {
+export default function picrossValidator(width, height, matrix) {
   const picross = document.querySelector('[data-picross]');
-  let picrossValues = [];
 
-  picross.addEventListener('click', function () {
-    picrossValues = getPicrossValues(columns, rows);
-    if (compareMatrices(columns, rows, matrix, picrossValues)) {
-      confetti.start();
-      toggleModal(columns, rows);
-    }
-  });
+  let picrossValues = getPicrossValues(width, height);
 
+  if (compareMatrices(width, height, matrix, picrossValues)) {
+    confetti.start();
+    toggleModal(width, height);
+  }
 }

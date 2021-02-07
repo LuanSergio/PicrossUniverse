@@ -85,7 +85,7 @@
 @include respond-to(smartphone) {
   .picross {
     width: 100%;
-    padding: 0 rem(15);
+    padding: 0 rem(10);
     display: flex;
     justify-content: center;
     margin-top: rem(10);

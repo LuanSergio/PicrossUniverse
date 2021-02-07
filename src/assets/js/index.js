@@ -1,4 +1,3 @@
-//picross
 import createMatrix from './utils/createMatrix';
 import alocatePicrossValues from './modules/picross/creation/alocatePicrossValues';
 import createPicross from './modules/picross/creation/createPicross';
@@ -8,10 +7,17 @@ import generateNewPicross from './modules/picrossSettings/generateNewPicross';
 import closeModalWhenOverlayIsClicked from './modules/modal/closeModalWhenOverlayIsClicked'
 import closeModalWhenButtonIsPressed from './modules/modal/closeModalWhenButtonIsPressed'
 import validatePicrossSize from './modules/picrossSettings/validatePicrossSize'
+import hidePicrossSettingsOnMobile from './modules/picrossSettings/hidePicrossSettingsOnMobile'
+import openSettingsWhenButtonIsClicked from './modules/picrossSettings/openSettingsWhenButtonIsClicked'
+import closeSettingsOnButtonClick from './modules/picrossSettings/closeSettingsOnButtonClick'
 
 let matrix = createMatrix(5, 5);
 let stopTime = false;
 const { width, height } = definePicrossSize();
+
+hidePicrossSettingsOnMobile();
+openSettingsWhenButtonIsClicked();
+closeSettingsOnButtonClick();
 
 validatePicrossSize();
 alocatePicrossValues(5, 5, matrix, 5);

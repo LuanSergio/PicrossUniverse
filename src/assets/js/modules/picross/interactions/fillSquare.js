@@ -1,5 +1,5 @@
-import clearSquare from './clearSquare'
-import setAttributeValue from './setAttributeValue'
+import clearSquare from './clearSquare';
+import setAttributeValue from './setAttributeValue';
 
 export default function fillSquare(square, states, buttonType, behavior) {
   if(behavior === true) {

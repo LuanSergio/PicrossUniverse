@@ -1,0 +1,25 @@
+.mobile-settings-button {
+  position: absolute; 
+  top: 0; 
+  left: 0;
+}
+
+.mobile-settings-button__button {
+  position: absolute;
+  left: 0;
+  font-size: 0;
+  z-index: 20;
+  border-bottom-right-radius: rem(6);
+  background-color: map-get($colors,contrast);
+  border: none;
+  padding: rem(15) rem(25);
+}
+
+.mobile-settings-button__button:before {
+  content: '\e901';
+  font-family: 'icon';
+  display: block;
+  font-size: rem(30);
+  color: map-get($colors, main-darker); 
+  font-weight: bold;
+}
