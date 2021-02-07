@@ -1,10 +1,10 @@
-.mobile-settings-button {
+.toggle-settings-button {
   position: absolute; 
   top: 0; 
   left: 0;
 }
 
-.mobile-settings-button__button {
+.toggle-settings-button__button {
   position: absolute;
   left: 0;
   font-size: 0;
@@ -15,7 +15,7 @@
   padding: rem(15) rem(25);
 }
 
-.mobile-settings-button__button:before {
+.toggle-settings-button__button:before {
   content: icon('settings');
   font-family: 'icons';
   display: block;
