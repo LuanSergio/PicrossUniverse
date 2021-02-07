@@ -118,7 +118,7 @@
 @include respond-to(mobile) {
   .settings {
     position: fixed;
-    z-index: 50;
+    z-index: z-index('lvl3');
     top: 0;
     border-radius: 0;
     

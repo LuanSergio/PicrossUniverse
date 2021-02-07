@@ -3,7 +3,7 @@
   width: 100vw;
   height: 100vh;
   position: fixed;
-  z-index: 100;
+  z-index: z-index('lvl4');
   transition: 0.15s;
 }
 
@@ -18,7 +18,7 @@
   position: fixed;
 	top: 50%;
   left: 50%;
-  z-index: 1000;
+  z-index: z-index('lvl5');
   border: rem(8) solid map-get($colors, contrast);
   border-radius: rem(30);
   padding: rem(20) rem(40);

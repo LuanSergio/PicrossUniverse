@@ -8,7 +8,7 @@
   position: absolute;
   left: 0;
   font-size: 0;
-  z-index: 20;
+  z-index: z-index('lvl2');
   border-bottom-right-radius: rem(6);
   background-color: map-get($colors,contrast);
   border: none;
