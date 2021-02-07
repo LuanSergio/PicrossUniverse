@@ -46,8 +46,8 @@
 }
 
 .picross__square--false::before {
-  content: '\e998';
-  font-family: 'icon';
+  content: icon('x');
+  font-family: 'icons';
   font-size: rem(26);
   display: block;
   color: map-get($colors, contrast);

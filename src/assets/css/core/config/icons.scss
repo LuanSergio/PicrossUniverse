@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'icon';
+  font-family: 'icons';
   src:  url('../fonts/icons/icomoon.eot?d5vve0');
   src:  url('../fonts/icons/icomoon.eot?d5vve0#iefix') format('embedded-opentype'),
     url('../fonts/icons/icomoon.ttf?d5vve0') format('truetype'),
@@ -9,3 +9,10 @@
   font-style: normal;
   font-display: block;
 }
+
+$icons: (
+  close: '\e997',
+  check: '\e900',
+  x: '\e998',
+  settings: '\e901',
+);

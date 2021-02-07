@@ -134,25 +134,25 @@
     top: 50%;
     transform: translate(-50%, -50%);
 
-    padding: rem(10) rem(27);
+    padding: rem(40) rem(27);
     max-width: 100%;
     width: 100%;
-    max-height: 85vh;
+    max-height: rem(600);
   }
 
   .settings__close {
     display: block;
     position: absolute;
     right: rem(5);
-    top: rem(-5);
+    top: rem(10);
     background-color: transparent;
     border: 0;
     font-size: 0;
   }
 
   .settings__close::before {
-    content: '\e997';
-    font-family: 'icon';
+    content: icon('close');
+    font-family: 'icons';
     display: block;
     font-size: rem(30);
     color: map-get($colors, contrast);

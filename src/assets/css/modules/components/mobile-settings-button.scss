@@ -16,8 +16,8 @@
 }
 
 .mobile-settings-button__button:before {
-  content: '\e901';
-  font-family: 'icon';
+  content: icon('settings');
+  font-family: 'icons';
   display: block;
   font-size: rem(30);
   color: map-get($colors, main-darker); 

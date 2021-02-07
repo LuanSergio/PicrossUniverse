@@ -40,8 +40,8 @@
 }
 
 .modal__close::before {
-  content: '\e997';
-  font-family: 'icon';
+  content: icon('close');
+  font-family: 'icons';
   display: block;
   font-size: rem(30);
   color: map-get($colors, contrast);
