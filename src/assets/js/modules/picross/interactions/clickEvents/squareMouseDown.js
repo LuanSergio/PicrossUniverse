@@ -1,11 +1,11 @@
 import fillSquare from '../fillSquare'
-import checkBehavior from '../checkBehavior';
+import checkClickBehavior from '../checkClickBehavior';
 
 export default function squareMouseDown(clickInteractions, event, hoveredSquares, states) {
   clickInteractions.buttonType = event.button;
   clickInteractions.initialSquare = event.target;
   clickInteractions.isPressed = true;
-  clickInteractions.behavior = checkBehavior(
+  clickInteractions.behavior = checkClickBehavior(
     clickInteractions.initialSquare,
     clickInteractions.buttonType,
     states

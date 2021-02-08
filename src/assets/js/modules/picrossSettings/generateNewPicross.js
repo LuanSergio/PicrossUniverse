@@ -1,7 +1,7 @@
 import createPicross from '../picross/creation/createPicross';
 import createMatrix from '../../utils/createMatrix';
 import alocatePicrossValues from '../picross/creation/alocatePicrossValues';
-import definePicrossSize from '../picross/creation/definePicrossSize';
+import getPicrossSize from '../picross/creation/getPicrossSize';
 import addMinimalValueToInputIfInputIsEmpty from '../picrossSettings/addMinimalValueToInputIfInputIsEmpty';
 
 export default function generateNewPicross(width, height) {
@@ -18,7 +18,7 @@ export default function generateNewPicross(width, height) {
       addMinimalValueToInputIfInputIsEmpty();
     }
 
-    const { width, height } = definePicrossSize();
+    const { width, height } = getPicrossSize();
     let matrix = createMatrix(width, height);
     
     alocatePicrossValues(width, height, matrix, width);

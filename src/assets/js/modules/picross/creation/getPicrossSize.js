@@ -1,4 +1,4 @@
-export default function definePicrossSize() {
+export default function getPicrossSize() {
   const x = document.querySelector('[data-select-width]');
   const width = parseInt(x.value);
 
