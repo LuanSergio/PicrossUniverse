@@ -158,6 +158,37 @@
 
     padding: rem(40) rem(27);
     width: 100%;
+
+    overflow-y: auto;
+    overflow-x: auto;
+
+    //firefox custom scrollbar
+    scrollbar-color: map-get($colors, contrast) map-get($colors, base);
+    scrollbar-width: auto;
+
+    // ie and edge custom scroll bar
+    scrollbar-face-color: map-get($colors, basse);
+    scrollbar-track-color: map-get($colors, contrast);
+    scrollbar-arrow-color: map-get($colors, base);
+    scrollbar-shadow-color: map-get($colors, base); //border
+  }
+
+  .settings__holder::-webkit-scrollbar {
+    width: rem(12);
+    height: rem(12);
+  }
+
+  .settings__holder::-webkit-scrollbar-track {
+    background-color: map-get($colors, base);
+  }
+
+  .settings__holder::-webkit-scrollbar-thumb {
+    background-color: map-get($colors, contrast);
+    border-radius: rem(30);
+  }
+
+  .settings__holder::-webkit-scrollbar-corner {
+    background-color: map-get($colors, base);
   }
 
   .settings__title-image {
