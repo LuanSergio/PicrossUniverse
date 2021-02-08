@@ -14,7 +14,7 @@
   }
 
   @else if $media == tablet {
-    @media only screen and (min-width: map-get($breakpoints, tablet)) and (max-width: map-get($breakpoints, notebook)) {
+    @media only screen and (min-width: map-get($breakpoints, tablet)) and (max-width: map-get($breakpoints, mobile)) {
       @content;
     }
   }

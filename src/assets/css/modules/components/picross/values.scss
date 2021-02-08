@@ -110,7 +110,63 @@
 
 @include respond-to(notebook) {
   .picross__values {
-    font-size: rem(14);
+    font-size: rem(13);
+  }
+
+  .picross__values--horizontal.picross__values-size--10 {
+    font-size: rem(12);
+  }
+
+  .picross__values--horizontal.picross__values-size--15,
+  .picross__values--horizontal.picross__values-size--20,
+  .picross__values--horizontal.picross__values-size--25,
+  .picross__values--horizontal.picross__values-size--30 {
+    font-size: rem(10);
+    min-width: rem(36);
+  }
+}
+
+@include respond-to(mobile) {
+  .picross__values--horizontal
+  .picross__values-size--10 {
+    border-top-right-radius: rem(0);
+    border-top-left-radius: rem(0);
+  }
+
+  .picross__values--vertical
+  .picross__values-size--10 {
+    border-bottom-left-radius: rem(0);
+    border-top-left-radius: rem(0);
+  }
+}
+
+@include respond-to(tablet) {
+  .picross__values {
+    font-size: rem(12);
+  }
+
+  .picross__values--horizontal.picross__values-size--10 {
+    min-width: rem(45);
+  }
+
+  .picross__values--horizontal.picross__values-size--15,
+  .picross__values--horizontal.picross__values-size--20,
+  .picross__values--horizontal.picross__values-size--25,
+  .picross__values--horizontal.picross__values-size--30 {
+    min-width: rem(36);
+  }
+
+  .picross__values-size--15,
+  .picross__values-size--20,
+  .picross__values-size--25,
+  .picross__values-size--30 {
+    font-size: rem(10);
+  }
+
+  .picross__values--vertical {
+    min-width: rem(90);
+    border-bottom-left-radius: rem(0);
+    border-top-left-radius: rem(0);
   }
 }
 
@@ -126,8 +182,15 @@
     padding-top: rem(7);
   }
 
-  .picross__values-size--10 {
+  .picross__values--horizontal.picross__values-size--10 {
     min-width: rem(55);
+  }
+
+  .picross__values--horizontal.picross__values-size--15,
+  .picross__values--horizontal.picross__values-size--20,
+  .picross__values--horizontal.picross__values-size--25,
+  .picross__values--horizontal.picross__values-size--30 {
+    min-width: rem(36);
   }
 
   .picross__values-size--15,
@@ -135,7 +198,6 @@
   .picross__values-size--25,
   .picross__values-size--30 {
     font-size: rem(10);
-    min-width: rem(46);
   }
 
   .picross__values--vertical {

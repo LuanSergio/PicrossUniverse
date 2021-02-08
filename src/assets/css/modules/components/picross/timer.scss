@@ -38,12 +38,25 @@
   .picross__timer {
     font-size: rem(16);
   }
+
+   .picross__values--timer {
+    border-bottom-left-radius: rem(0);
+    border-top-left-radius: rem(0);
+  }  
+}
+
+@include respond-to(tablet) {
+  .picross__values--timer {
+    min-width: rem(90); 
+  }
+  .picross__timer {
+    font-size: rem(14);
+  }
 }
 
 
 @include respond-to(smartphone) {
   .picross__values--timer {
-    flex-basis: auto;
     max-width: rem(80);
     min-width: rem(80);
     border-bottom-left-radius: rem(0);

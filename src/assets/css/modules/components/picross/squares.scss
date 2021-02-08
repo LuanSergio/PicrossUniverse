@@ -120,6 +120,32 @@
   font-size: rem(16);
 }
 
+@include respond-to(notebook) {
+  .picross__square-size--15,
+  .picross__square-size--20, 
+  .picross__square-size--25, 
+  .picross__square-size--30 {
+    min-width: rem(36);
+    min-height: rem(32);
+  }
+}
+
+@include respond-to(tablet) {
+  .picross__square-size--10 {
+    min-width: rem(45);
+    min-height: rem(42);
+  }
+
+  .picross__square-size--15,
+  .picross__square-size--20, 
+  .picross__square-size--25, 
+  .picross__square-size--30 {
+    min-width: rem(36);
+    min-height: rem(33);
+  }
+}
+
+
 @include respond-to(smartphone) {
   .picross__square {
     min-width: rem(69);
@@ -135,7 +161,7 @@
   .picross__square-size--20, 
   .picross__square-size--25, 
   .picross__square-size--30 {
-    min-width: rem(46);
-    min-height: rem(42);
+    min-width: rem(36);
+    min-height: rem(32);
   }
 }

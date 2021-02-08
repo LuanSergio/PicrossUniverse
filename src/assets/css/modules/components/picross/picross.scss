@@ -69,6 +69,13 @@
   flex-basis: 0;
 }
 
+@include respond-to(notebook) {
+  .picross__table {
+    width: rem(530);
+    height: rem(460);
+  }
+}
+
 @include respond-to(mobile) {
   .picross__table {
     margin-right: 0;
@@ -77,8 +84,8 @@
 
 @include respond-to(tablet) {
   .picross__table {
-    width: rem(551.5);
-    height: rem(500);
+    width: rem(540);
+    height: rem(480);
   }
 }
 

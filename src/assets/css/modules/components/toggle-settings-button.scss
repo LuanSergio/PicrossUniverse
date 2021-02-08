@@ -24,7 +24,13 @@
   content: icon('settings');
   font-family: 'icons';
   display: block;
-  font-size: rem(30);
+  font-size: rem(36);
   color: map-get($colors, main-darker); 
   font-weight: bold;
+}
+
+@include respond-to(smartphone) {
+  .toggle-settings-button__button:before {
+    font-size: rem(30);
+  }
 }

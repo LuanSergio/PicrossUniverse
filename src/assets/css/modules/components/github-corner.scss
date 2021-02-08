@@ -7,8 +7,8 @@
 }
 
 .github-corner__octocat {
-  width: rem(80);
-  height: rem(80);
+  width: rem(100);
+  height: rem(100);
   fill: map-get($colors, contrast); 
   color: map-get($colors, neutral); 
   position: absolute; 
@@ -22,9 +22,21 @@
   animation: octocat-wave 560ms ease-in-out
 }
 
+@include respond-to(notebook) {
+  .github-corner__octocat {
+    width: rem(80);
+    height: rem(80);
+  }
+}
+
 @include respond-to(mobile) {
   .github-corner__octocat {
     color: map-get($colors, main-darker); 
+  }
+
+  .github-corner__octocat {
+    width: rem(80);
+    height: rem(80);
   }
 
   .github-corner:hover .github-corner__octo-arm {
