@@ -128,22 +128,10 @@
     min-height: -webkit-fill-available;
   }
 
-  .settings__holder {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-
-    padding: rem(40) rem(27);
-    max-width: 100%;
-    width: 100%;
-    max-height: rem(600);
-  }
-
   .settings__close {
     display: block;
     position: absolute;
-    right: rem(5);
+    right: rem(10);
     top: rem(10);
     background-color: transparent;
     border: 0;
@@ -159,8 +147,17 @@
     cursor: pointer;
   }
 
+  .settings__holder {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: rem(40) rem(27);
+    width: 100%;
+  }
+
   .settings__title-image {
-    max-width: rem(230);
     margin-bottom: rem(10);
   }
 
@@ -169,16 +166,64 @@
     margin-bottom: rem(5);
   }
 
-
   .settings__option {
     font-size: rem(26);
-    padding: rem(20) rem(13);
     margin-bottom: rem(15);
   }
 
   .settings__button {
-    cursor: pointer;
     font-size: rem(26);
-    padding: rem(15) rem(13);
+  }
+}
+
+@include respond-to(tablet) {
+  .settings__close {
+    right: rem(20);
+    top: rem(20);
+  }
+
+  .settings__close::before {
+    font-size: rem(46);
+  }
+  
+  .settings__holder {
+    max-width: rem(600);
+    max-height: 80vh;
+  }
+
+  .settings__title-image {
+    max-width: rem(300);
+  }
+
+  .settings__option {
+    padding-top: rem(32);
+    padding-bottom: rem(32);
+  }
+
+  .settings__button {
+    padding-top: rem(26);
+    padding-bottom: rem(26);
+  }
+
+}
+
+@include respond-to(smartphone) {
+  .settings__holder  {
+    max-width: 100%;
+    max-height: rem(600);
+  }
+
+  .settings__title-image {
+    max-width: rem(230);
+  }
+
+  .settings__option {
+    padding-top: rem(20);
+    padding-bottom: rem(20);
+  }
+
+  .settings__button {
+    padding-top: rem(15);
+    padding-bottom: rem(15);
   }
 }
