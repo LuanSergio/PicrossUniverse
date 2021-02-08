@@ -1,3 +1,7 @@
+.github-corner {
+  z-index: z-index('lvl2');
+}
+
 .github-corner:hover .github-corner__octocat{
   fill: map-get($colors, contrast-hover);
 }

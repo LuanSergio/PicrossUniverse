@@ -131,6 +131,8 @@
   .settings__close {
     display: block;
     position: absolute;
+    z-index: z-index('lvl4');
+
     right: rem(10);
     top: rem(10);
     background-color: transparent;
@@ -141,6 +143,7 @@
   .settings__close::before {
     content: icon('close');
     font-family: 'icons';
+    z-index: z-index('lvl4');
     display: block;
     font-size: rem(30);
     color: map-get($colors, contrast);

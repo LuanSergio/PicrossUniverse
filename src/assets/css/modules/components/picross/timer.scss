@@ -44,8 +44,8 @@
 @include respond-to(smartphone) {
   .picross__values--timer {
     flex-basis: auto;
-    max-width: rem(70);
-    min-width: rem(70);
+    max-width: rem(80);
+    min-width: rem(80);
     border-bottom-left-radius: rem(0);
     border-top-left-radius: rem(0);
   }

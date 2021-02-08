@@ -122,7 +122,20 @@
 
 @include respond-to(smartphone) {
   .picross__square {
-    min-width: rem(66);
-    min-height: rem(54);
+    min-width: rem(69);
+    min-height: rem(62);
+  }
+
+  .picross__square-size--10 {
+    min-width: rem(55);
+    min-height: rem(52);
+  }
+
+  .picross__square-size--15,
+  .picross__square-size--20, 
+  .picross__square-size--25, 
+  .picross__square-size--30 {
+    min-width: rem(46);
+    min-height: rem(42);
   }
 }

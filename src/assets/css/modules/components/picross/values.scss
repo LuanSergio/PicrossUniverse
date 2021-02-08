@@ -19,11 +19,11 @@
 }
 
 .picross__values--horizontal:nth-child(odd) {
-    background-color: map-get($picross, values-2);
+  background-color: map-get($picross, values-2);
 }
 
 .picross__row:nth-child(even) .picross__values--vertical{
-    background-color: map-get($picross, values-2);
+  background-color: map-get($picross, values-2);
 }
 
 .picross__values--horizontal {
@@ -117,21 +117,47 @@
 @include respond-to(smartphone) {
   .picross__values {
     font-size: rem(12);
-    min-width: rem(66);
+    min-width: rem(69);
   }
 
   .picross__values--horizontal {
     border-top-right-radius: rem(0);
     border-top-left-radius: rem(0);
+    padding-top: rem(7);
+  }
+
+  .picross__values-size--10 {
+    min-width: rem(55);
+  }
+
+  .picross__values-size--15,
+  .picross__values-size--20,
+  .picross__values-size--25,
+  .picross__values-size--30 {
+    font-size: rem(10);
+    min-width: rem(46);
   }
 
   .picross__values--vertical {
-    flex-basis: auto;
-    max-width: rem(80);
-    padding-left: rem(5);
-    min-width: rem(70);
+    min-width: rem(80);
     border-bottom-left-radius: rem(0);
     border-top-left-radius: rem(0);
+  }
+
+  .picross__values--vertical .picross__numbers {
+    margin-right: 5%;
+  }
+
+  .picross__values--vertical .picross__numbers:last-child {
+    margin-right: 7%;
+  }
+
+  .picross__values--horizontal .picross__numbers {
+    margin-bottom: 5%;
+  }
+
+  .picross__values--horizontal .picross__numbers:last-child {
+    margin-bottom: 7%;
   }
 
 }
