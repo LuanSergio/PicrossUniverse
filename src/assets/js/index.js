@@ -4,27 +4,34 @@ import createPicross from './modules/picross/creation/createPicross';
 import preventContextMenuOnPicross from './modules/picross/interactions/preventContextMenuOnPicross'
 import definePicrossSize from './modules/picross/creation/definePicrossSize';
 import generateNewPicross from './modules/picrossSettings/generateNewPicross';
-import closeModalWhenOverlayIsClicked from './modules/modal/closeModalWhenOverlayIsClicked'
-import closeModalWhenButtonIsPressed from './modules/modal/closeModalWhenButtonIsPressed'
-import validatePicrossSize from './modules/picrossSettings/validatePicrossSize'
-import hidePicrossSettingsOnMobile from './modules/picrossSettings/hidePicrossSettingsOnMobile'
-import openSettingsWhenButtonIsClicked from './modules/picrossSettings/openSettingsWhenButtonIsClicked'
-import closeSettingsOnButtonClick from './modules/picrossSettings/closeSettingsOnButtonClick'
+import closeModalWhenOverlayIsClicked from './modules/modal/closeModalWhenOverlayIsClicked';
+import closeModalWhenButtonIsPressed from './modules/modal/closeModalWhenButtonIsPressed';
+import validatePicrossSize from './modules/picrossSettings/validatePicrossSize';
+import hidePicrossSettingsOnMobile from './modules/picrossSettings/hidePicrossSettingsOnMobile';
+import openSettingsWhenButtonIsClicked from './modules/picrossSettings/openSettingsWhenButtonIsClicked';
+import closeSettingsOnButtonClick from './modules/picrossSettings/closeSettingsOnButtonClick';
+import clearInputOnFocus from './modules/picrossSettings/clearInputOnFocusOn';
+
+const screenWidth = screen.width;
 
 let matrix = createMatrix(5, 5);
 let stopTime = false;
+
 const { width, height } = definePicrossSize();
 
 hidePicrossSettingsOnMobile();
 openSettingsWhenButtonIsClicked();
 closeSettingsOnButtonClick();
+if (screenWidth < 1024) {
+  clearInputOnFocus();
+}
 
 validatePicrossSize();
 alocatePicrossValues(5, 5, matrix, 5);
 createPicross(width, height, matrix, stopTime);
 
-
 generateNewPicross(width, height);
 preventContextMenuOnPicross();
+
 closeModalWhenButtonIsPressed();
 closeModalWhenOverlayIsClicked();
