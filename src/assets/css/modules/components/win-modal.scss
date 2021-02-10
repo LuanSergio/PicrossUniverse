@@ -121,32 +121,33 @@
 @include respond-to(smartphone) {
   .modal__content {
     max-width: rem(300);
-    max-height: rem(161.76);
+    max-height: rem(185);
     padding: rem(15) rem(30);
     border-radius: rem(15);
+    border-width: rem(6);
   }
 
   .modal__close {
     right: rem(4);
-    top: rem(6);
+    top: rem(8);
   }
 
   .modal__close::before {
-    font-size: rem(19);
+    font-size: rem(22);
   }
 
   .modal__title {
-    font-size: rem(36);
-    margin-bottom: rem(13);
+    font-size: rem(35);
+    margin-bottom: rem(16);
     border-bottom: rem(4) dashed map-get($colors, contrast);
   }
 
   .modal__time {
-    font-size: rem(18);
-    margin-bottom: rem(7);
+    font-size: rem(19);
+    margin-bottom: rem(10);
   }
 
   .modal__size {
-    font-size: rem(15);
+    font-size: rem(16);
   }
 }
