@@ -1,6 +1,6 @@
 import fillSquare from '../fillSquare'
 import checkClickBehavior from '../checkClickBehavior';
-import checkSlideInputBehavior from '../checkSlideInputBehavior';
+import checkTouchInputBehavior from '../checkTouchInputBehavior';
 
 export default function squareMouseDown(clickInteractions, event, hoveredSquares, states) {
   const screenWidth = screen.width;
@@ -8,10 +8,7 @@ export default function squareMouseDown(clickInteractions, event, hoveredSquares
   if (screenWidth >= 1024) {
   clickInteractions.buttonType = event.button;
   } else {
-    clickInteractions.buttonType = checkSlideInputBehavior(
-      clickInteractions.initialSquare,
-      states
-    );
+    clickInteractions.buttonType = checkTouchInputBehavior();
   }
   clickInteractions.initialSquare = event.target;
   clickInteractions.isPressed = true;

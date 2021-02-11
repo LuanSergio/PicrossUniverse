@@ -1,10 +1,10 @@
-.click-type-slide {
+.touch-type-slide {
   position: absolute;
   bottom: rem(10);
   z-index: z-index('lvl3');
 }
 
-.click-type-slide__container {
+.touch-type-slide__container {
   position: relative;
   display: inline-block;
   width: rem(80);
@@ -12,13 +12,13 @@
   bottom: 0;
 }
 
-.click-type-slide__input { 
+.touch-type-slide__input { 
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-.click-type-slide__slide {
+.touch-type-slide__slide {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -29,13 +29,13 @@
   border-radius: rem(34);
 }
 
-.click-type-slide__input + .click-type-slide__slide::after {
+.touch-type-slide__input + .touch-type-slide__slide::after {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.click-type-slide__input:checked + .click-type-slide__slide::after {
+.touch-type-slide__input:checked + .touch-type-slide__slide::after {
   content: icon('check');
   font-family: 'icons';
   color: map-get($colors, contrast);
@@ -43,7 +43,7 @@
   font-size: rem(20);
 }
 
-.click-type-slide__input:not(:checked) + .click-type-slide__slide::after {
+.touch-type-slide__input:not(:checked) + .touch-type-slide__slide::after {
   content: icon('x');
   font-family: 'icons';
   color: map-get($picross, square-true);
@@ -51,7 +51,7 @@
   right: rem(12);
 }
 
-.click-type-slide__slide::before {
+.touch-type-slide__slide::before {
   position: absolute;
   content: "";
   height: rem(22);
@@ -64,21 +64,21 @@
   border-radius: 100%;
 }
 
-.click-type-slide__input:checked + .click-type-slide__slide {
+.touch-type-slide__input:checked + .touch-type-slide__slide {
   background-color: map-get($picross, square-true);
 }
 
-.click-type-slide__input:focus + .click-type-slide__slide {
+.touch-type-slide__input:focus + .touch-type-slide__slide {
   border: rem(1) solid map-get($picross, square-separation);
   box-shadow: 0 0 rem(7) map-get($picross, square-separation);
 }
 
-.click-type-slide__input:checked:focus + .click-type-slide__slide {
+.touch-type-slide__input:checked:focus + .touch-type-slide__slide {
   border: rem(1) solid map-get($picross, square-true);
   box-shadow: 0 0 rem(7) map-get($picross, square-true);
 }
 
-.click-type-slide__input:checked + .click-type-slide__slide::before {
+.touch-type-slide__input:checked + .touch-type-slide__slide::before {
   background-color: map-get($colors, contrast);
   transform: translate(180%, -50%);
 }

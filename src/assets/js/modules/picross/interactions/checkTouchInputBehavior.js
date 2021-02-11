@@ -1,4 +1,4 @@
-export default function checkSlideInputBehavior(initialSquare, states) {
+export default function checkTouchInputBehavior() {
   const touchBehavior = document.querySelector('[data-touch-behavior]');
 
   if (touchBehavior.checked) {

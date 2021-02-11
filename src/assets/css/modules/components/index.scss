@@ -1,9 +1,9 @@
 @import "github-corner.scss";
+@import "settings.scss";
 @import "./picross/picross.scss";
 @import "./picross/values.scss";
 @import "./picross/timer.scss";
 @import "./picross/squares.scss";
-@import "settings.scss";
 @import "win-modal.scss";
 @import "toggle-settings-button.scss";
-@import "click-type-slide.scss";
+@import "touch-type-slide.scss";
