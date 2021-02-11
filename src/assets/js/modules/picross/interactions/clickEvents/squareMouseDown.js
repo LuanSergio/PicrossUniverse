@@ -5,21 +5,22 @@ import checkSlideInputBehavior from '../checkSlideInputBehavior';
 export default function squareMouseDown(clickInteractions, event, hoveredSquares, states) {
   const screenWidth = screen.width;
 
+  if (screenWidth >= 1024) {
   clickInteractions.buttonType = event.button;
+  } else {
+    clickInteractions.buttonType = checkSlideInputBehavior(
+      clickInteractions.initialSquare,
+      states
+    );
+  }
   clickInteractions.initialSquare = event.target;
   clickInteractions.isPressed = true;
-  if (screenWidth > 1024) {
+
     clickInteractions.behavior = checkClickBehavior(
       clickInteractions.initialSquare,
       clickInteractions.buttonType,
       states
     );
-  } else if (screenWidth < 1024) {
-    clickInteractions.behavior = checkSlideInputBehavior(
-      clickInteractions.initialSquare,
-      states
-    );
-  }
 
 
   hoveredSquares.push(clickInteractions.initialSquare);
