@@ -1,0 +1,84 @@
+.click-type-slide {
+  position: absolute;
+  bottom: rem(10);
+  z-index: z-index('lvl3');
+}
+
+.click-type-slide__container {
+  position: relative;
+  display: inline-block;
+  width: rem(80);
+  height: rem(37);
+  bottom: 0;
+}
+
+.click-type-slide__input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.click-type-slide__slide {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0; 
+  bottom: 0;
+  background-color: map-get($colors, contrast);
+  border-radius: rem(34);
+}
+
+.click-type-slide__input + .click-type-slide__slide::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.click-type-slide__input:checked + .click-type-slide__slide::after {
+  content: icon('check');
+  font-family: 'icons';
+  color: map-get($colors, contrast);
+  left: rem(12);
+  font-size: rem(20);
+}
+
+.click-type-slide__input:not(:checked) + .click-type-slide__slide::after {
+  content: icon('x');
+  font-family: 'icons';
+  color: map-get($picross, square-true);
+  font-size: rem(18);
+  right: rem(12);
+}
+
+.click-type-slide__slide::before {
+  position: absolute;
+  content: "";
+  height: rem(22);
+  width: rem(22);
+  top: 50%;
+  transform: translateY(-50%);
+  left: rem(8);
+  background-color: map-get($picross, square-true);
+  transition: .4s;
+  border-radius: 100%;
+}
+
+.click-type-slide__input:checked + .click-type-slide__slide {
+  background-color: map-get($picross, square-true);
+}
+
+.click-type-slide__input:focus + .click-type-slide__slide {
+  border: rem(1) solid map-get($picross, square-separation);
+  box-shadow: 0 0 rem(7) map-get($picross, square-separation);
+}
+
+.click-type-slide__input:checked:focus + .click-type-slide__slide {
+  border: rem(1) solid map-get($picross, square-true);
+  box-shadow: 0 0 rem(7) map-get($picross, square-true);
+}
+
+.click-type-slide__input:checked + .click-type-slide__slide::before {
+  background-color: map-get($colors, contrast);
+  transform: translate(180%, -50%);
+}

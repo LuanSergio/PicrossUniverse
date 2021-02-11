@@ -20,7 +20,7 @@
   background-color: map-get($colors,contrast-hover);
 }
 
-.toggle-settings-button__button:before {
+.toggle-settings-button__button::before {
   content: icon('settings');
   font-family: 'icons';
   display: block;
@@ -30,7 +30,7 @@
 }
 
 @include respond-to(smartphone) {
-  .toggle-settings-button__button:before {
+  .toggle-settings-button__button::before {
     font-size: rem(30);
   }
 }

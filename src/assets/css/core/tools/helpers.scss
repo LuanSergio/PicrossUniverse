@@ -1,3 +1,13 @@
 .hidden {
   display:  none;
 }
+
+.mobile-on {
+  display:  none;
+}
+
+@include respond-to(mobile) {
+  .mobile-on {
+    display:  initial;
+  }
+}

@@ -21,7 +21,7 @@
   z-index: z-index('lvl5');
   border: rem(10) solid map-get($colors, contrast);
   border-radius: rem(30);
-  // padding: rem(20) rem(40);
+  padding: rem(20) rem(40);
   text-align: center;
   transform: translateX(-50%) translateY(-50%);
 
@@ -122,14 +122,13 @@
   .modal__content {
     max-width: rem(300);
     max-height: rem(190);
-    // padding: rem(15) rem(30);
     border-radius: rem(15);
     border-width: rem(6);
   }
 
   .modal__close {
-    right: rem(4);
-    top: rem(8);
+    right: rem(2);
+    top: rem(6);
   }
 
   .modal__close::before {
