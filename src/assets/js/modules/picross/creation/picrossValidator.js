@@ -4,8 +4,6 @@ import toggleModal from '../../modal/toggleModal'
 import confetti from '../../../utils/confetti.js'
 
 export default function picrossValidator(width, height, matrix) {
-  const picross = document.querySelector('[data-picross]');
-
   let picrossValues = getPicrossValues(width, height);
 
   if (compareMatrices(width, height, matrix, picrossValues)) {

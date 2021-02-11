@@ -1,4 +1,4 @@
-import checkIfArraysAreIdentical from './checkIfArraysAreIdentical';
+import checkIfArraysAreIdentical from '../../../../utils/checkIfArraysAreIdentical';
 import countArraysTrue from '../../../../utils/countArraysTrue';
 import fadeHeader from './fadeHeader';
 import removeFadeFromHeader from './removeFadeFromHeader';

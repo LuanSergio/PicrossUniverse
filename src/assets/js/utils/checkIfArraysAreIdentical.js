@@ -5,7 +5,6 @@ export default function checkIfArraysAreIdentical(baseArray, secondArray) {
   }
   for (var i = baseArray.length; i--;) {
     if (baseArray[i] !== secondArray[i]) {
-
       return false;
     }
   }
