@@ -1,10 +1,9 @@
-export default function checkIfArraysAreIdentical(baseArray, secondArray) {
-  if (baseArray.length !== secondArray.length) {
-
+export default function checkIfArraysAreIdentical(baseArray, secondaryArray) {
+  if (baseArray.length !== secondaryArray.length) {
     return false;
   }
   for (var i = baseArray.length; i--;) {
-    if (baseArray[i] !== secondArray[i]) {
+    if (baseArray[i] !== secondaryArray[i]) {
       return false;
     }
   }

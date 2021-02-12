@@ -9,17 +9,46 @@ export default function countArraysTrue(array) {
     }
   }
 
-  array.forEach(item => {
-    if (item) {
+  // array.forEach(item => {
+  //   if (item) {
+  //     counter++;
+  //   } else if (counter > 0) {
+  //     if (arrayValues.length == 1) {
+  //       removeZeroFromArray() 
+  //     }
+  //     arrayValues.push(counter);
+  //     counter = 0;
+  //   }
+  // })
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i]) {
       counter++;
     } else if (counter > 0) {
       if (arrayValues.length == 1) {
-        removeZeroFromArray() 
+        removeZeroFromArray()
       }
       arrayValues.push(counter);
       counter = 0;
     }
-  })
+  }
+
+  // for (let i = 0; i < array.length; i++) {
+  //   for (let j = 0; j < array.length; j++) {
+  //     // if (array[j][i]) {
+  //     //   counter++;
+  //     // } else if (counter > 0) {
+  //     //   if (arrayValues.length == 1) {
+  //     //     removeZeroFromArray()
+  //     //   }
+  //     //   arrayValues.push(counter);
+  //     //   counter = 0;
+  //     // }
+  //     console.log(`array[${j}] [${i}]`, array)
+
+  //   }
+
+  // }
 
   if (counter > 0) {
     if (arrayValues.length == 1) {
