@@ -10,14 +10,6 @@ export default function checkIfMatricesAreIdentical(baseMatrix, secondaryMatrix)
     }
   }
 
-  // for (let i = 0; i < length; i++) {
-  //   for (let j = 0; j < baseMatrix[i].length; j++) {
-  //     if (checkIfArraysAreIdentical(baseMatrix[i][j], secondaryMatrix[i])) {
-  //       counter++;
-  //     }  
-  //   }
-  // }
-
   if(length === counter) {
     return true;
   } else {

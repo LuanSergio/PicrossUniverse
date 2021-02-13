@@ -1,34 +1,15 @@
-import getPicrossValues from './getPicrossValues';
-import compareMatrices from '../../../utils/compareMatrices';
-import checkIfMatricesAreIdentical from '../../../utils/checkIfMatricesAreIdentical';
-import countArraysTrue from '../../../utils/countArraysTrue';
+import getPlayerPicrossValues from './getPlayerPicrossValues';
 import toggleModal from '../../modal/toggleModal';
 import confetti from '../../../utils/confetti.js';
+import validateHorizontalMatrixLine from './validateHorizontalMatrixLine';
+import validateVerticalMatrixLine from './validateVerticalMatrixLine';
 
 export default function picrossValidator(width, height, matrix) {
-  let picrossClickValuesMatrix = getPicrossValues(width, height);
-  
-  const picrossClickValuesArrays = [];
-  const matrixValuesArrays = []
+  let picrossPlayerValuesMatrix = getPlayerPicrossValues(width, height);
 
-  // if (checkIfMatricesAreIdentical(picrossClickValuesArrays, matrixValuesArrays)) {
-  //   confetti.start();
-  //   toggleModal(width, height);
-  // }
-
-
-  // console.log('matrix length', matrix.length);
-
-  // if (compareMatrices(width, height, matrix, picrossValues)) {
-  //   confetti.start();
-  //   toggleModal(width, height);
-  // }
-
-  // if (checkIfArraysAreIdentical()){
-
-  // }
-
-  // function checkIfMatrixAreIdentical() {
-  //   checkIfArraysAreIdentical
-  // };
+  if ((validateHorizontalMatrixLine(picrossPlayerValuesMatrix, matrix)) &&
+    (validateVerticalMatrixLine(picrossPlayerValuesMatrix, matrix))) {
+    confetti.start();
+    toggleModal(width, height);
+  }
 }

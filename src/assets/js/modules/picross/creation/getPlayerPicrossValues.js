@@ -1,6 +1,6 @@
 import createMatrix from '../../../utils/createMatrix';
 
-export default function getPicrossValues(columns, rows){
+export default function getPlayerPicrossValues(columns, rows){
 
   const square = document.querySelectorAll('[data-picross-square]');
   let matrix = createMatrix(columns, rows);
