@@ -1,7 +1,7 @@
 import clearArray from '../../../../utils/clearArray';
 import fillSquare from '../fillSquare';
 import fadeCompletedLines from '../fade/fadeCompletedLines';
-import picrossValidator from '../../validateMatch/picrossValidator';
+import validatePicrossMatch from '../../validateMatch/validatePicrossMatch';
 
 export default function squareMouseUp(clickInteractions, hoveredSquares, states, width, height, matrix) {
   clickInteractions.initialSquare = null;
@@ -21,7 +21,7 @@ export default function squareMouseUp(clickInteractions, hoveredSquares, states,
     );
     fadeCompletedLines(square, 'vertical');
     fadeCompletedLines(square, 'horizontal');
-    picrossValidator(width, height, matrix);
+    validatePicrossMatch(width, height, matrix);
   });
 
   clearArray(hoveredSquares);
