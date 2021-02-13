@@ -69,6 +69,7 @@
 .settings__button {
   cursor: pointer;
   font-size: rem(23);
+  font-weight: bold;
   color: map-get($colors, white);
   border: rem(4) solid map-get($colors, white);
   background-color: transparent;
