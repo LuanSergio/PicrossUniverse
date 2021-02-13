@@ -100,6 +100,9 @@
   border-top: rem(1) solid map-get($picross, square-separation);
 }
 
+.picross__square-size--15 {
+}
+
 .picross__square--false.picross__square-size--10::before {
   font-size: rem(20);
 }

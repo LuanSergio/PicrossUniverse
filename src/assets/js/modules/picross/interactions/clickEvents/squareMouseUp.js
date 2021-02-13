@@ -1,7 +1,7 @@
 import clearArray from '../../../../utils/clearArray';
 import fillSquare from '../fillSquare';
 import fadeCompletedLines from '../fade/fadeCompletedLines';
-import picrossValidator from '../../creation/picrossValidator'
+import picrossValidator from '../../validateMatch/picrossValidator';
 
 export default function squareMouseUp(clickInteractions, hoveredSquares, states, width, height, matrix) {
   clickInteractions.initialSquare = null;
