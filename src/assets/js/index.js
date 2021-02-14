@@ -4,8 +4,8 @@ import createPicross from './modules/picross/creation/createPicross';
 import preventContextMenuOnPicross from './modules/picross/interactions/preventContextMenuOnPicross'
 import getPicrossSize from './modules/picross/creation/getPicrossSize';
 import generateNewPicross from './modules/picrossSettings/generateNewPicross';
-import closeModalWhenOverlayIsClicked from './modules/modal/closeModalWhenOverlayIsClicked';
-import closeModalWhenButtonIsPressed from './modules/modal/closeModalWhenButtonIsPressed';
+import closeModalWhenOverlayIsClicked from './modules/winModal/closeModalWhenOverlayIsClicked';
+import closeModalWhenButtonIsPressed from './modules/winModal/closeModalWhenButtonIsPressed';
 import validatePicrossSize from './modules/picrossSettings/validatePicrossSize';
 import hidePicrossSettingsOnMobile from './modules/picrossSettings/hidePicrossSettingsOnMobile';
 import openSettingsWhenButtonIsClicked from './modules/picrossSettings/openSettingsWhenButtonIsClicked';

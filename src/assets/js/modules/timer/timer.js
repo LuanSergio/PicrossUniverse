@@ -1,4 +1,4 @@
-import addTimeToModal from '../modal/addTimeToModal';
+import addTimeToModal from '../winModal/addTimeToModal';
 
 export default function timer() {
   let hours = 0;
