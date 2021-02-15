@@ -1,9 +1,11 @@
 import checkIfArraysAreIdentical from '../../../../utils/checkIfArraysAreIdentical';
 import countArraysTrue from '../../../../utils/countArraysTrue';
-import fadeHeader from './fadeHeader';
-import removeFadeFromHeader from './removeFadeFromHeader';
+import fadeElement from './fadeElement';
+import removeFadeFromElement from './removeFadeFromElement';
 import getHeaderValues from './getHeaderValues';
 import getLineArray from './getLineArray';
+import fadeLine from './fadeLine';
+import removeFadeFromLine from './removeFadeFromLine';
 
 export default function checkIfLineIsCompleted(square, orientation) {
   let dataAttributeSquare;
@@ -30,8 +32,10 @@ export default function checkIfLineIsCompleted(square, orientation) {
   const headerValues = getHeaderValues(position, orientation);
   
   if (checkIfArraysAreIdentical(lineValues, headerValues)) {
-    fadeHeader(header);
+    fadeElement(header);
+    fadeLine(header);
   } else {
-    removeFadeFromHeader(header);
+    removeFadeFromElement(header);
+    removeFadeFromLine(header);
   }
 }
