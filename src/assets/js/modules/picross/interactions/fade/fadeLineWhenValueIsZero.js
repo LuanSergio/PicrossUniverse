@@ -1,4 +1,5 @@
 import fadeElement from './fadeElement';
+import fadeLine from './fadeLine';
 
 export default function fadeLineWhenValueIsZero() {
   const headers = document.querySelectorAll('[data-numbers-y],[data-numbers-x]');
@@ -8,6 +9,7 @@ export default function fadeLineWhenValueIsZero() {
 
     if(value.innerHTML == '0') {
       fadeElement(header);
+      fadeLine(header);
     }
   });
 }

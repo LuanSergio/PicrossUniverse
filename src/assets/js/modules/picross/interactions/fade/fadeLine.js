@@ -14,5 +14,9 @@ export default function fadeLine(header) {
 
   const squares = document.querySelectorAll(`[${squareAttribute}="${attributeValue}"]`);
 
-  squares.forEach(square => fadeElement(square));
+  squares.forEach(square => {
+    if(!(square.getAttribute('data-picross-square'))) {
+      fadeElement(square)
+    }
+  });
 }

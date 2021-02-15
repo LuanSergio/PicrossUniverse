@@ -60,6 +60,8 @@ export default function createPicross(width, height, matrix) {
     }
   }
 
+  picross.setAttribute('data-picross', "false");
+
   printPicrossNumbers(width, height, "row", horizontalNumbersArray);
   printPicrossNumbers(width, height, "column", verticalNumbersArray);
   interactions(width, height, matrix);
