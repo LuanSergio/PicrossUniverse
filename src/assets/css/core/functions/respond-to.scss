@@ -19,26 +19,32 @@
     }
   }
 
-  @else if $media == notebook {
-    @media only screen and (min-width: map-get($breakpoints, notebook)) and (max-width: map-get($breakpoints, desktop)) {
+  @else if $media == laptop {
+    @media only screen and (min-width: map-get($breakpoints, laptop)) and (max-width: map-get($breakpoints, desktop)) {
       @content;
     }
   }
 
   @else if $media == desktop {
-    @media only screen and (min-width: map-get($breakpoints, desktop)){
+    @media only screen and (min-width: map-get($breakpoints, desktop)) and (max-width: map-get($breakpoints, fullHD)) {
       @content;
     }
   }
 
   @else if $media == fullHD {
-    @media only screen and (min-width: map-get($breakpoints, fullHD)){
+    @media only screen and (min-width: map-get($breakpoints, fullHD)) and (max-width: map-get($breakpoints, quadHD)) {
       @content;
     }
   }
 
-    @else if $media == quadHD {
-    @media only screen and (min-width: map-get($breakpoints, quadHD)){
+  @else if $media == quadHD {
+    @media only screen and (min-width: map-get($breakpoints, quadHD))  and (max-width: map-get($breakpoints, ultraHD)) {
+      @content;
+    }
+  }
+
+  @else if $media == ultraHD {
+    @media only screen and (min-width: map-get($breakpoints, ultraHD)) {
       @content;
     }
   }
