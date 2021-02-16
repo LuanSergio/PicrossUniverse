@@ -31,7 +31,7 @@ export default function interactions(width, height, matrix) {
     });
 
     square.addEventListener('mouseover', event => {
-      highlightSquares(event.target, hoveredSquares, states, clickInteractions);
+      highlightSquares(event.target, states, clickInteractions);
     });
 
   });

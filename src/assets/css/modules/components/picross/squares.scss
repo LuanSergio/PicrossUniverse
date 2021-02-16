@@ -14,12 +14,13 @@
   animation-duration: 0.3s;
 }
 
-
-
 .picross__square:hover {
   background-color: map-get($picross, square-hover);
 }
 
+.picross__square--highlight {
+  background-color: map-get($picross, square-highlight);
+}
 
 .picross__square--true {
   background-color: map-get($picross, square-true);
