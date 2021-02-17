@@ -9,6 +9,7 @@ export default function createPicross(width, height, matrix) {
   const picross = document.querySelector('[data-picross]');
   const horizontalNumbersArray = picrossNumberCounter(width, height, matrix, 'row');
   const verticalNumbersArray = picrossNumberCounter(width, height, matrix, 'column');
+  const isAutoFillChecked = document.querySelector('[checkbox-auto-fill-completed-lines]').checked;
 
   let row = picross.insertRow();
   let header = document.createElement("TH");
@@ -62,6 +63,8 @@ export default function createPicross(width, height, matrix) {
 
   picross.setAttribute('data-picross', "false");
 
+  picross.setAttribute('auto-fill-completed-lines', isAutoFillChecked);
+  
   printPicrossNumbers(width, height, "row", horizontalNumbersArray);
   printPicrossNumbers(width, height, "column", verticalNumbersArray);
   interactions(width, height, matrix);

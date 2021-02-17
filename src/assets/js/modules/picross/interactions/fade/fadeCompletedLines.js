@@ -10,6 +10,7 @@ import removeFadeFromLine from './removeFadeFromLine';
 export default function checkIfLineIsCompleted(square, orientation) {
   let dataAttributeSquare;
   let dataAttributeHeader;
+  const isAutoFillChecked = document.querySelector('[auto-fill-completed-lines]').getAttribute('auto-fill-completed-lines');
 
   if (orientation === 'vertical') {
     dataAttributeSquare = 'data-x';
@@ -33,9 +34,13 @@ export default function checkIfLineIsCompleted(square, orientation) {
   
   if (checkIfArraysAreIdentical(lineValues, headerValues)) {
     fadeElement(header);
-    fadeLine(header);
+    if (isAutoFillChecked === "true") {
+      fadeLine(header);
+    }
   } else {
     removeFadeFromElement(header);
-    removeFadeFromLine(header);
+    if (isAutoFillChecked === "true") {
+      removeFadeFromLine(header);
+    }
   }
 }
