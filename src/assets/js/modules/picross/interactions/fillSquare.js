@@ -1,19 +1,20 @@
 import clearSquare from './clearSquare';
 import setAttributeValue from './setAttributeValue';
+import states from './states';
 
-export default function fillSquare(square, states, buttonType, behavior) {
+export default function fillSquare(square, buttonType, behavior) {
   if(behavior === true) {
     if(buttonType === 0) {
       square.classList.add(states.true);
       square.classList.remove(states.false);
-      setAttributeValue(square, states);
+      setAttributeValue(square);
     } else if(buttonType === 2) {
       square.classList.add(states.false);
       square.classList.remove(states.true);
-      setAttributeValue(square, states);
+      setAttributeValue(square);
     }
   } else if(behavior === false) {
-    clearSquare(square, states);
-    setAttributeValue(square, states);
+    clearSquare(square);
+    setAttributeValue(square);
   }
 }

@@ -10,6 +10,7 @@ import validatePicrossSize from './modules/picrossSettings/validatePicrossSize';
 import hidePicrossSettingsOnMobile from './modules/picrossSettings/hidePicrossSettingsOnMobile';
 import openSettingsWhenButtonIsClicked from './modules/picrossSettings/openSettingsWhenButtonIsClicked';
 import closeSettingsOnButtonClick from './modules/picrossSettings/closeSettingsOnButtonClick';
+// import clearPicrossValues from './modules/picrossSettings/clearPicrossValues';
 import clearInputOnFocus from './modules/picrossSettings/clearInputOnFocusOn';
 
 const screenWidth = screen.width;

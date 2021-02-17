@@ -1,4 +1,7 @@
-export default function checkClickBehavior(square, clickSide, states) {
+import states from './states';
+
+export default function checkClickBehavior(square, clickSide) {
+
   if(clickSide === 0) {
     if(square.classList.contains(states.true)) {
       return false;

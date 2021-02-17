@@ -2,8 +2,9 @@ import clearArray from '../../../../utils/clearArray';
 import fillSquare from '../fillSquare';
 import fadeCompletedLines from '../fade/fadeCompletedLines';
 import validatePicrossMatch from '../../validateMatch/validatePicrossMatch';
+import states from '../states';
 
-export default function squareMouseUp(clickInteractions, hoveredSquares, states, width, height, matrix) {
+export default function squareMouseUp(clickInteractions, hoveredSquares, width, height, matrix) {
   clickInteractions.initialSquare = null;
   clickInteractions.isPressed = false;
   clickInteractions.orientation = null;
@@ -14,8 +15,7 @@ export default function squareMouseUp(clickInteractions, hoveredSquares, states,
     square.dataset.picrossSquare = true;
 
     fillSquare(
-      square, 
-      states, 
+      square,
       clickInteractions.buttonType, 
       clickInteractions.behavior
     );

@@ -1,6 +1,7 @@
+import states from './states';
 import setClickOrientation from './setClickOrientation';
 
-export default function highlightSquares(target, states, clickInteractions){
+export default function highlightSquares(target, clickInteractions){
   const screenWidth = screen.width;
 
   if (screenWidth >= 1024) {
@@ -14,7 +15,7 @@ export default function highlightSquares(target, states, clickInteractions){
 
     squares.forEach(square => {
 
-      setClickOrientation(target, states, clickInteractions);
+      setClickOrientation(target, clickInteractions);
 
       if (isPressed === false) {
         if ((target.getAttribute('data-x')) === (square.getAttribute('data-x')) ||

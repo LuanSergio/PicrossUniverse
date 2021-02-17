@@ -4,12 +4,6 @@ import squareMouseUp from './clickEvents/squareMouseUp';
 import highlightSquares from './highlightSquares'
 
 export default function interactions(width, height, matrix) {
-  const states = {
-    true: 'picross__square--true',
-    false: 'picross__square--false',
-    trueHover: 'picross__square--active-hover',
-    highlight: 'picross__square--highlight'
-  };
 
   const squares = document.querySelectorAll('[data-picross-square]');
   const hoveredSquares = [];
@@ -23,21 +17,21 @@ export default function interactions(width, height, matrix) {
 
   squares.forEach(square => {
     square.addEventListener('mousedown', event => {
-      squareMouseDown(clickInteractions, event, hoveredSquares, states);
+      squareMouseDown(clickInteractions, event, hoveredSquares);
     });
 
     square.addEventListener('mouseenter', event => {
-      squareMouseEnter(clickInteractions, event.target, hoveredSquares, states);
+      squareMouseEnter(clickInteractions, event.target, hoveredSquares);
     });
 
     square.addEventListener('mouseover', event => {
-      highlightSquares(event.target, states, clickInteractions);
+      highlightSquares(event.target, clickInteractions);
     });
 
   });
 
-  window.addEventListener('mouseup', event => {
-    squareMouseUp(clickInteractions, hoveredSquares, states, width, height, matrix);
+  window.addEventListener('mouseup', () => {
+    squareMouseUp(clickInteractions, hoveredSquares, width, height, matrix);
   });
 
 }

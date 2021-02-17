@@ -1,4 +1,6 @@
-export default function squareMouseEnter(clickInteractions, target, hoveredSquares, states) {
+import states from '../states';
+
+export default function squareMouseEnter(clickInteractions, target, hoveredSquares) {
   const initialSquare = clickInteractions.initialSquare;
   const orientation = clickInteractions.orientation;
 

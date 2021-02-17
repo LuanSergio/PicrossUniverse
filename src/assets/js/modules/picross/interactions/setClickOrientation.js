@@ -1,4 +1,6 @@
-export default function setClickOrientation(square, states, clickInteractions) {
+import states from './states';
+
+export default function setClickOrientation(square, clickInteractions) {
 
   if(clickInteractions.isPressed === true) {
     if(!(square.classList.contains(states.trueHover))) {

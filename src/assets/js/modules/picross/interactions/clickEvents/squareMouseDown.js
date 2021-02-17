@@ -1,8 +1,9 @@
 import fillSquare from '../fillSquare'
 import checkClickBehavior from '../checkClickBehavior';
 import checkTouchInputBehavior from '../checkTouchInputBehavior';
+import states from '../states';
 
-export default function squareMouseDown(clickInteractions, event, hoveredSquares, states) {
+export default function squareMouseDown(clickInteractions, event, hoveredSquares) {
   const screenWidth = screen.width;
 
   if (screenWidth >= 1024) {
