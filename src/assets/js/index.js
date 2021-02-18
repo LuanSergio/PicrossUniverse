@@ -10,7 +10,7 @@ import validatePicrossSize from './modules/picrossSettings/validatePicrossSize';
 import hidePicrossSettingsOnMobile from './modules/picrossSettings/hidePicrossSettingsOnMobile';
 import openSettingsWhenButtonIsClicked from './modules/picrossSettings/openSettingsWhenButtonIsClicked';
 import closeSettingsOnButtonClick from './modules/picrossSettings/closeSettingsOnButtonClick';
-// import clearPicrossValues from './modules/picrossSettings/clearPicrossValues';
+import clearPicrossValues from './modules/picrossSettings/clearPicrossValues';
 import clearInputOnFocus from './modules/picrossSettings/clearInputOnFocusOn';
 
 const screenWidth = screen.width;
@@ -23,6 +23,7 @@ const { width, height } = getPicrossSize();
 hidePicrossSettingsOnMobile();
 openSettingsWhenButtonIsClicked();
 closeSettingsOnButtonClick();
+
 if (screenWidth < 1024) {
   clearInputOnFocus();
 }
@@ -30,6 +31,8 @@ if (screenWidth < 1024) {
 validatePicrossSize();
 alocatePicrossValues(5, 5, matrix, 5);
 createPicross(width, height, matrix, stopTime);
+
+clearPicrossValues();
 
 generateNewPicross(width, height);
 preventContextMenuOnPicross();

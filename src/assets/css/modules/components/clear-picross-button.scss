@@ -1,9 +1,11 @@
 .clear-picross-button {
   position: absolute; 
-  top: 100px; 
+  top: rem(80); 
   left: 0;
   overflow: hidden;
+  z-index: z-index('lvl2');
 }
+
 
 .clear-picross-button__button {
   cursor: pointer;
@@ -13,19 +15,16 @@
   border-bottom-right-radius: rem(6);
   border-top-right-radius: rem(6);
   border: none;
-  border-top: 2px solid map-get($colors, contrast);
-  border-bottom: 2px solid map-get($colors, contrast);
-  border-right: 2px solid map-get($colors, contrast);
-  background-color: map-get($colors, main);
+  background-color: map-get($colors, accent);
   padding: rem(15) rem(25);
 }
 
 .clear-picross-button__button:hover {
-  background-color: map-get($colors, neutral);
+  background-color: map-get($colors, main-hover);
 }
 
 .clear-picross-button__button::before {
-  content: icon('settings');
+  content: icon('reset');
   font-family: 'icons';
   display: block;
   font-size: rem(36);
@@ -33,8 +32,22 @@
   font-weight: bold;
 }
 
-// @include respond-to(smartphone) {
-//   .clear-picross-button__button::before {
-//     font-size: rem(30);
-//   }
-// }
+@include respond-to(smartphone) {
+  .clear-picross-button {
+    top: 0; 
+    left: rem(75);
+  }
+
+  .clear-picross-button__button {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: rem(6);
+    border-bottom-left-radius: rem(6);
+    border-top: none;
+    background-color: map-get($colors, main);
+    padding: rem(15);
+  }
+
+  .clear-picross-button__button::before {
+    font-size: rem(30);
+  }
+}

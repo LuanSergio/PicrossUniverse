@@ -11,6 +11,7 @@ export default function fadeLineWhenValueIsZero() {
     if(value.innerHTML == '0') {
       fadeElement(header);
       if (isAutoFillChecked === "true") {
+        console.log('fade nos quadrados');
         fadeLine(header);
       }
     }

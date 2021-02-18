@@ -3,9 +3,7 @@
   flex-basis: 0;
   flex-grow: 1;
   justify-content: flex-end;
-  position: relative;
   box-sizing: border-box; 
-  position: sticky; 
   top: 0;
   background-color: map-get($picross, values-1);
   border: rem(1) solid map-get($colors, base);
