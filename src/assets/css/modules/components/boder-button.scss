@@ -1,0 +1,67 @@
+.border-button {
+  position: absolute; 
+  left: 0;
+}
+
+.border-button--toggle-settings {
+  top: 0; 
+}
+
+.border-button--clear-picross {
+  top: rem(80); 
+}
+
+.border-button__button {
+  cursor: pointer;
+  font-size: 0;
+  border-bottom-right-radius: rem(6);
+  background-color: map-get($colors, contrast);
+  border: none;
+  padding: rem(15) rem(25);
+}
+
+.border-button__button--clear-picross {
+  border-top-right-radius: rem(6);
+}
+
+.border-button__button:hover {
+  background-color: map-get($colors, contrast-hover);
+}
+
+.border-button__button::before {
+  font-family: 'icons';
+  display: block;
+  font-size: rem(36);
+  color: map-get($colors, main-darker); 
+  font-weight: bold;
+}
+
+.border-button__button--clear-picross::before {
+  content: icon('reset');
+}
+
+.border-button__button--toggle-settings::before {
+  content: icon('settings');
+}
+
+@include respond-to(smartphone) {
+  .border-button__button {
+    padding: rem(15); 
+  }
+
+  .border-button__button::before {
+    font-size: rem(30);
+  }
+
+  .border-button--clear-picross {
+    top: 0; 
+    left: rem(75);
+  }
+
+  .border-button__button--clear-picross {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: rem(6);
+    border-bottom-left-radius: rem(6);
+    border-top: none;
+  }
+}
