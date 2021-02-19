@@ -15,12 +15,12 @@
   border-bottom-right-radius: rem(6);
   border-top-right-radius: rem(6);
   border: none;
-  background-color: map-get($colors, accent);
+  background-color: map-get($colors, contrast);
   padding: rem(15) rem(25);
 }
 
 .clear-picross-button__button:hover {
-  background-color: map-get($colors, main-hover);
+  background-color: map-get($colors, contrast-hover);
 }
 
 .clear-picross-button__button::before {
@@ -28,7 +28,7 @@
   font-family: 'icons';
   display: block;
   font-size: rem(36);
-  color: map-get($colors, contrast); 
+  color: map-get($colors, main-darker); 
   font-weight: bold;
 }
 

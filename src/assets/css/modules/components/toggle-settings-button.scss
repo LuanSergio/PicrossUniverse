@@ -9,13 +9,13 @@
   font-size: 0;
   z-index: z-index('lvl2');
   border-bottom-right-radius: rem(6);
-  background-color: map-get($colors,contrast);
+  background-color: map-get($colors, contrast);
   border: none;
   padding: rem(15) rem(25);
 }
 
 .toggle-settings-button__button:hover {
-  background-color: map-get($colors,contrast-hover);
+  background-color: map-get($colors, contrast-hover);
 }
 
 .toggle-settings-button__button::before {
