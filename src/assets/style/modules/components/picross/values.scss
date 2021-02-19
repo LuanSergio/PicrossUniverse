@@ -140,7 +140,7 @@
 
 @include respond-to(tablet) {
   .picross__values {
-    font-size: rem(12);
+    font-size: rem(14);
   }
 
   .picross__values--horizontal.picross__values-size--10 {
@@ -154,6 +154,7 @@
     min-width: rem(36);
   }
 
+  .picross__values-size--10,
   .picross__values-size--15,
   .picross__values-size--20,
   .picross__values-size--25,
@@ -190,7 +191,8 @@
   .picross__values--horizontal.picross__values-size--30 {
     min-width: rem(36);
   }
-
+  
+  .picross__values-size--10,
   .picross__values-size--15,
   .picross__values-size--20,
   .picross__values-size--25,

@@ -16,7 +16,7 @@ $base-font-size: 1em;
 }
 
 html {
-  font-size: 1em;
+  font-size: $base-font-size;
 }
 
 html,
@@ -69,6 +69,10 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-corner {
   background-color: map-get($colors, contrast);
+}
+
+button {
+  cursor: pointer;
 }
 
 button:focus,

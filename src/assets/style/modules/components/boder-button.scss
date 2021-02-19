@@ -12,7 +12,6 @@
 }
 
 .border-button__button {
-  cursor: pointer;
   font-size: 0;
   border-bottom-right-radius: rem(6);
   background-color: map-get($colors, contrast);

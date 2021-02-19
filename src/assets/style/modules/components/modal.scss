@@ -31,7 +31,6 @@
 }
 
 .modal__close {
-  cursor: pointer;
   position: absolute;
   right: rem(20);
   width: rem(35);
@@ -112,7 +111,6 @@
 }
 
 .modal__button {
-  cursor: pointer;
   background-color: map-get($colors, contrast);
   border: none;
   color: map-get($colors, main);
