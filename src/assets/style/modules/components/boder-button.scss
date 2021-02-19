@@ -18,6 +18,7 @@
   background-color: map-get($colors, contrast);
   border: none;
   padding: rem(15) rem(25);
+  transition: 0.25s;
 }
 
 .border-button__button--clear-picross {
