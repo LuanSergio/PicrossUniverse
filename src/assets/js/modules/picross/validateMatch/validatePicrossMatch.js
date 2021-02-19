@@ -1,5 +1,7 @@
 import getPlayerPicrossValues from './getPlayerPicrossValues';
-import toggleModal from '../../winModal/toggleModal';
+import toggleModal from '../../modal/toggleModal';
+import addSizeToModal from '../../modal/addSizeToModal';
+import addTimeToModal from '../../modal/addTimeToModal';
 import confetti from '../../../utils/confetti.js';
 import validateHorizontalMatrixLine from './validateHorizontalMatrixLine';
 import validateVerticalMatrixLine from './validateVerticalMatrixLine';
@@ -14,8 +16,11 @@ export default function picrossValidator(width, height, matrix) {
     const picross = document.querySelector('[data-picross]');
 
     if (picross.getAttribute('data-picross') !== "won") {
+        const modal = document.querySelector('[data-modal-winning-screen]');
         confetti.start();
-        toggleModal(width, height);
+        addTimeToModal();
+        addSizeToModal(width, height);
+        toggleModal(modal);
         stopGame();
     }
   }

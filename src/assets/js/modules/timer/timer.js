@@ -2,7 +2,7 @@ export default function timer() {
   let hours = 0;
   let minutes = 0;
   let seconds = 0;
-  const modal = document.querySelector('[data-modal]');
+  const modal = document.querySelector('[data-modal-winning-screen]');
   const secondsHolder = document.querySelector('[data-timer-seconds');
   const minutesHolder = document.querySelector('[data-timer-minutes');
   const hoursHolder = document.querySelector('[data-timer-hours');

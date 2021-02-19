@@ -1,0 +1,196 @@
+.modal__overlay {
+  background-color: rgba($color: map-get($colors, black), $alpha: 0.6);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: z-index('lvl4');
+  transition: 0.15s;
+}
+
+.modal__content {
+  margin: 0 auto;
+  max-width: rem(612);
+  width: 100%;
+  max-height: rem(330);
+  height: 100%;
+  
+  background-color: map-get($colors, main);
+  position: fixed;
+	top: 50%;
+  left: 50%;
+  z-index: z-index('lvl5');
+  border: rem(10) solid map-get($colors, contrast);
+  border-radius: rem(30);
+  padding: rem(20) rem(15);
+  text-align: center;
+  transform: translateX(-50%) translateY(-50%);
+
+  transition-timing-function: linear;
+  animation-name: popInTranslate;
+  animation-duration: 0.5s;
+}
+
+.modal__close {
+  cursor: pointer;
+  position: absolute;
+  right: rem(20);
+  width: rem(35);
+  height: rem(35);
+  top: rem(15);
+  padding-left: 0;
+  padding-right: 0;
+  background-color: transparent;
+  border: 0;
+  font-size: 0;
+}
+
+.modal__close::before {
+  cursor: pointer;
+  content: icon('close');
+  font-family: 'icons';
+  display: block;
+  font-size: rem(30);
+  color: map-get($colors, contrast);
+}
+
+.modal__close:hover::before {
+  color: map-get($colors, contrast-hover);
+}
+
+.modal__content-container {
+  width: 85%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal__title {
+  color: map-get($colors, contrast);
+  font-size: rem(79);
+  letter-spacing: 7pt;
+  margin-top: 0;
+  margin-bottom: rem(34);
+  border-bottom: rem(8) dashed map-get($colors, contrast);
+}
+
+.modal__sub-title {
+  color: map-get($colors, contrast);
+  font-size: rem(56);
+  letter-spacing: 3pt;
+  text-transform: capitalize;
+  margin-top: 0;
+  margin-bottom: rem(26);
+  line-height: 1.6;
+  border-bottom: rem(6) dashed map-get($colors, contrast);
+}
+
+.modal__text {
+  color: map-get($colors, white);
+  font-size: rem(23);
+  margin-top: 0;
+  margin-bottom: rem(32);
+  line-height: 1;
+}
+
+.modal__time {
+  color: map-get($colors, white);
+  font-size: rem(40);
+  display: block;
+  font-weight: bold;
+  letter-spacing: 3pt;
+  margin-bottom: rem(15);
+}
+
+.modal__size {
+  color: map-get($colors, white);
+  font-size: rem(34);
+  font-weight: bold;
+  letter-spacing: 3pt;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.modal__button {
+  cursor: pointer;
+  background-color: map-get($colors, contrast);
+  border: none;
+  color: map-get($colors, main);
+  font-size: rem(34);
+  font-weight: bold;
+  border-radius: rem(6);
+  padding: rem(12) rem(25);
+  min-width: rem(115);
+}
+
+.modal__button:not(:last-child) {
+  margin-right: rem(50);
+}
+
+.modal__button:hover {
+  background-color: map-get($colors, contrast-hover);
+}
+
+@include respond-to(mobile) {
+  .modal__content {
+    max-width: rem(512);
+    max-height: rem(276.08);
+    border: rem(7) solid map-get($colors, contrast);
+  }
+
+  .modal__close {
+    right: rem(15);
+    top: rem(13);
+  }
+
+  .modal__close::before {
+    font-size: rem(30);
+  }
+
+  .modal__title {
+    font-size: rem(62);
+    margin-bottom: rem(28);
+    border-bottom: rem(7) dashed map-get($colors, contrast);
+  }
+
+  .modal__time {
+    font-size: rem(36);
+  }
+
+  .modal__size {
+    font-size: rem(30);
+  }
+}
+
+@include respond-to(smartphone) {
+  .modal__content {
+    max-width: rem(300);
+    max-height: rem(190);
+    border-radius: rem(15);
+    border-width: rem(6);
+  }
+
+  .modal__close {
+    right: rem(2);
+    top: rem(6);
+  }
+
+  .modal__close::before {
+    font-size: rem(23);
+  }
+
+  .modal__title {
+    font-size: rem(35);
+    margin-bottom: rem(16);
+    border-bottom: rem(4) dashed map-get($colors, contrast);
+  }
+
+  .modal__time {
+    font-size: rem(19);
+    margin-bottom: rem(10);
+  }
+
+  .modal__size {
+    font-size: rem(16);
+  }
+}

@@ -3,18 +3,12 @@ import clearAttribute from '../picross/interactions/clearAttribute';
 import clearFade from '../picross/interactions/fade/clearFade';
 
 export default function clearPicrossValues() {
-  const clearButton = document.querySelector('[data-clear-picross-button]');
+  const squares = document.querySelectorAll('[data-picross-square]');
 
-  clearButton.addEventListener('click', () => {
-    const squares = document.querySelectorAll('[data-picross-square]');
-    resetSquare(squares);
-    clearFade();
-  })
+  squares.forEach(square => {
+    clearSquare(square);
+    clearAttribute(square);
+  });
 
-  function resetSquare(squares) {
-    squares.forEach(square => {
-      clearSquare(square);
-      clearAttribute(square);
-    });
-  }
+  clearFade();
 }

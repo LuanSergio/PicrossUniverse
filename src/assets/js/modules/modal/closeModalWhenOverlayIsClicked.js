@@ -2,12 +2,11 @@ import toogleModal from './toggleModal'
 import confetti from '../../utils/confetti';
 import toggleSettings from '../picrossSettings/toggleSettings';
 
-export default function closeModalWhenOverlayIsClicked() {
-  const overlay = document.querySelector('[data-modal-overlay]');
+export default function closeModalWhenOverlayIsClicked(modal, overlay) {
 
   overlay.addEventListener('click', () => {
     confetti.stop();
-    toogleModal();
+    toogleModal(modal);
 
     const screenWidth = screen.width;
 
