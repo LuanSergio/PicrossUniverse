@@ -1,4 +1,3 @@
-import states from './states';
 import setClickOrientation from './setClickOrientation';
 
 export default function highlightSquares(target, clickInteractions){
