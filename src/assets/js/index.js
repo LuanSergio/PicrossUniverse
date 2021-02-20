@@ -28,7 +28,7 @@ if (screenWidth < 1024) {
 }
 
 validatePicrossSize();
-alocatePicrossValues(5, 5, matrix, 5);
+alocatePicrossValues(width, height, matrix, 5);
 createPicross(width, height, matrix, stopTime);
 
 openClearPicrossValuesModal();
