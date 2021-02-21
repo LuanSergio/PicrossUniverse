@@ -67,19 +67,6 @@
   max-height: rem(54);
 }
 
-.settings__button {
-  font-size: rem(22);
-  font-weight: bold;
-  color: map-get($colors, white);
-  border: rem(4) solid map-get($colors, white);
-  background-color: transparent;
-  border-radius: rem(10);
-  padding: rem(12) rem(13);
-  flex-basis: 100%;
-  margin-top: rem(20);
-  align-self: flex-end;
-}
-
 .settings__button:hover, .settings__button:focus, 
 .settings__option:hover, .settings__option:focus {
   background-color: rgba($color: map-get($colors, white), $alpha: 0.15);
@@ -150,6 +137,19 @@
 
 .settings__checkbox-container:hover .settings__checkbox-checkmark:after {
   border-color: map-get($colors, main);
+}
+
+.settings__button {
+  font-size: rem(22);
+  font-weight: bold;
+  color: map-get($colors, white);
+  border: rem(4) solid map-get($colors, white);
+  background-color: transparent;
+  border-radius: rem(10);
+  padding: rem(12) rem(13);
+  flex-basis: 100%;
+  margin-top: rem(20);
+  align-self: flex-end;
 }
 
 @include respond-to(notebook) {
