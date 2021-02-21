@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   color: map-get($colors, contrast);
-  background-color: rgba($color: map-get($colors, base), $alpha: 1);
+  background-color: map-get($colors, base);
   min-width: rem(96);
   border-bottom-left-radius: rem(3);
   border-top-left-radius: rem(3);
