@@ -11,6 +11,10 @@
   top: rem(80); 
 }
 
+.border-button--install-pwa {
+  top: rem(160); 
+}
+
 .border-button__button {
   border-bottom-right-radius: rem(6);
   background-color: map-get($colors, contrast);
@@ -19,7 +23,8 @@
   transition: 0.25s;
 }
 
-.border-button__button--clear-picross {
+.border-button__button--clear-picross,
+.border-button__button--install-pwa {
   border-top-right-radius: rem(6);
 }
 
@@ -32,15 +37,21 @@
   display: block;
   font-size: rem(36);
   color: map-get($colors, main-darker); 
-  font-weight: bold;
 }
 
 .border-button__button--clear-picross::before {
   content: icon('reset');
+  font-weight: bold;
 }
 
 .border-button__button--toggle-settings::before {
   content: icon('settings');
+  font-weight: bold;
+}
+
+.border-button__button--install-pwa::before {
+  content: icon('install');
+  font-weight: normal;
 }
 
 @include respond-to(smartphone) {
@@ -57,7 +68,13 @@
     left: rem(75);
   }
 
-  .border-button__button--clear-picross {
+  .border-button--install-pwa {
+    top: 0; 
+    left: rem(150);
+  }
+
+  .border-button__button--clear-picross,
+  .border-button__button--install-pwa {
     border-top-right-radius: 0;
     border-bottom-right-radius: rem(6);
     border-bottom-left-radius: rem(6);
