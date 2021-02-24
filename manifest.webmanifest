@@ -9,6 +9,10 @@
   "orientation": "portrait",
   "scope": "/",
   "start_url": "/",
+  "related_applications": [{
+    "platform": "webapp",
+    "url": "https://picrossuniverse.netlify.app/manifest.webmanifest"
+  }],
   "icons": [{
     "src": "/src/assets/icons/icon-512x512.png",
     "type": "image/png",
