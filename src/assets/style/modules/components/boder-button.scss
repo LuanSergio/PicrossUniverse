@@ -17,10 +17,12 @@
 
 .border-button__button {
   border-bottom-right-radius: rem(6);
+  z-index: z-index(lvl3);
   background-color: map-get($colors, contrast);
   border: none;
   padding: rem(15) rem(25);
   transition: 0.25s;
+  position: sticky;
 }
 
 .border-button__button--clear-picross,
