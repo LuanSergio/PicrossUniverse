@@ -1,8 +1,7 @@
 const CACHE_NAME = 'service-static-cache';
 
 const FILES_TO_CACHE = [
-  '/index.html',
-  './src/assets/js/index.js'
+  '/index.html'
 ];
 
 
