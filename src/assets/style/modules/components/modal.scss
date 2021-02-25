@@ -150,6 +150,18 @@
     border-bottom: rem(7) dashed map-get($colors, contrast);
   }
 
+  .modal__sub-title {
+    font-size: rem(42);
+  }
+
+  .modal__text {
+    font-size: rem(20);
+  }
+
+  .modal__button {
+    font-size: rem(28);
+  }
+
   .modal__time {
     font-size: rem(36);
   }
@@ -167,6 +179,10 @@
     border-width: rem(6);
   }
 
+  .modal__content--clear-picross-confirm {
+    max-height: rem(270);
+  }
+
   .modal__close {
     right: rem(2);
     top: rem(6);
@@ -180,6 +196,29 @@
     font-size: rem(35);
     margin-bottom: rem(16);
     border-bottom: rem(4) dashed map-get($colors, contrast);
+  }
+
+
+  .modal__sub-title {
+    margin-top: rem(15);
+    font-size: rem(30);
+  }
+
+  .modal__text {
+    font-size: rem(17);
+    margin-bottom: rem(30);
+  }
+
+
+  .modal__button {
+    background-color: map-get($colors, contrast);
+    border: none;
+    color: map-get($colors, main);
+    font-size: rem(22);
+    font-weight: bold;
+    border-radius: rem(6);
+    padding: rem(8) rem(25);
+    min-width: rem(80);
   }
 
   .modal__time {

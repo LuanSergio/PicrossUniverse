@@ -1,0 +1,88 @@
+@import "../core/config/colors.scss";
+@import "../core/tools/site-limit.scss";
+@import "../core/functions/em.scss";
+
+html,
+body {
+  width: 100%;
+  margin: 0;
+  font-family: 'Roboto';
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+
+  //firefox custom scrollbar
+  scrollbar-color: map-get($colors, contrast) map-get($colors, base);
+  scrollbar-width: auto;
+
+  // ie and edge custom scroll bar
+  scrollbar-face-color: map-get($colors, basse);
+  scrollbar-track-color: map-get($colors, contrast);
+  scrollbar-arrow-color: map-get($colors, base);
+  scrollbar-shadow-color: map-get($colors, base); //border
+}
+
+body {
+  background-color: map-get($colors, base);
+}
+
+body::-webkit-scrollbar {
+  width: rem(15);
+  height: rem(15);
+}
+
+body::-webkit-scrollbar-track {
+  background-color: map-get($colors, base);
+  border-radius: 0;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: map-get($colors, contrast);
+  border-radius: 0;
+}
+
+body::-webkit-scrollbar-corner {
+  background-color: map-get($colors, contrast);
+}
+
+.main {
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 85%;
+  padding-bottom: rem(40);
+}
+
+.offline__logo {
+  // max-width: 95%;
+  // padding-left: 40px;
+  // padding-right: 40px;
+}
+
+.offline__logo-image {
+  // padding: 40px;
+  max-width: rem(340);
+  width: 100%;
+}
+
+.offline__title {
+  font-size: rem(92);
+  margin-top: 0;
+  margin-bottom: rem(15);
+  color: map-get($colors, contrast );
+}
+
+.offline__text {
+  font-size: rem(18);
+  color: map-get($colors, white);
+  max-width: rem(350);
+  text-align: center;
+  margin-top: rem(15);
+  margin-bottom: rem(0);
+}
+
+.offline__text-highlight {
+  font-weight: bold;
+  color: map-get($colors, contrast );
+}

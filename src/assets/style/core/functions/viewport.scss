@@ -1,9 +1,0 @@
-@function vw($value, $viewport: 1360) {
-  $unit: ($value / $viewport) * 100 + vw;
-  @return $unit;
-}
-
-@function vh($value, $viewport: 639) {
-  $unit: ($value / $viewport) * 100 + vh;
-  @return $unit;
-}
