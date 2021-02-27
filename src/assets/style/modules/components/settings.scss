@@ -186,7 +186,7 @@
 @include respond-to(mobile) {
   .settings {
     position: fixed;
-    z-index: z-index('lvl3');
+    z-index: index-level('lvl3');
     top: 0;
     border-radius: 0;
     
@@ -199,7 +199,7 @@
   .settings__close {
     display: block;
     position: absolute;
-    z-index: z-index('lvl4');
+    z-index: index-level('lvl4');
 
     right: rem(10);
     top: rem(10);
@@ -211,7 +211,7 @@
   .settings__close::before {
     content: icon('close');
     font-family: 'icons';
-    z-index: z-index('lvl4');
+    z-index: index-level('lvl4');
     display: block;
     font-size: rem(30);
     color: map-get($colors, contrast);

@@ -1,7 +1,7 @@
 .touch-type-slide {
   position: absolute;
   bottom: rem(10);
-  z-index: z-index('lvl3');
+  z-index: index-level('lvl3');
 }
 
 .touch-type-slide__container {
