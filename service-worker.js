@@ -1,7 +1,7 @@
 const CACHE_NAME = 'service-static-cache';
 
 const FILES_TO_CACHE = [
-  '/src/views/pages/offline.html'
+  'offline.html'
 ];
 
 
