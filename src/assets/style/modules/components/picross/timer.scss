@@ -34,7 +34,7 @@
   font-size: rem(17);
 }
 
-@include respond-to(notebook) {
+@include respond-to(laptop) {
   .picross__timer {
     font-size: rem(16);
   }

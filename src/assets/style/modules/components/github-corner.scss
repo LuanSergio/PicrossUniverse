@@ -22,7 +22,7 @@
   animation: octocat-wave 560ms ease-in-out
 }
 
-@include respond-to(notebook) {
+@include respond-to(laptop) {
   .github-corner__octocat {
     width: rem(80);
     height: rem(80);

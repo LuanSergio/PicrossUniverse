@@ -69,7 +69,7 @@
   flex-basis: 0;
 }
 
-@include respond-to(notebook) {
+@include respond-to(laptop) {
   .picross__table {
     width: rem(530);
     height: rem(460);

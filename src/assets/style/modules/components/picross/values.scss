@@ -106,7 +106,7 @@
   border-top-left-radius: rem(0);
 }
 
-@include respond-to(notebook) {
+@include respond-to(laptop) {
   .picross__values {
     font-size: rem(13);
   }
