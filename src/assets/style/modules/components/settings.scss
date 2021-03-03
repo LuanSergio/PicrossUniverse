@@ -48,10 +48,54 @@
 .settings__label {
   color: map-get($colors, contrast);
   font-size: rem(22);
+  line-height: 1;
   font-weight: bold;
-  margin-bottom: rem(10);
+  margin-bottom: rem(13);
 }
 
+.settings__option-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.settings__label-minmax {
+  visibility: hidden;
+  color: map-get($colors, contrast);
+  font-weight: bold;
+  background-color: rgba($color:  map-get($colors, main), $alpha: .90);
+  width: rem(160);
+  border-radius: rem(6);
+  text-align: center;
+  padding: rem(7) rem(5);
+  font-size: rem(14);
+  position: absolute;
+  z-index: 1;
+  bottom: 83%;
+  left: 65%;
+  -webkit-box-shadow: rem(10) rem(10) rem(7) 0 rgba(0,0,0,0.39);
+  -moz-box-shadow: rem(10) rem(10) rem(7) 0 rgba(0,0,0,0.39);
+  box-shadow: rem(10) rem(10) rem(7) 0 rgba(0,0,0,0.39);
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.settings__label-minmax::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 20%;
+  border-width: rem(5);
+  border-style: solid;
+  border-color: rgba($color:  map-get($colors,main), $alpha: .90) transparent transparent transparent;
+}
+
+.settings__option-container:hover .settings__label-minmax,
+.settings__option-container:focus-within .settings__label-minmax {
+  visibility: visible;
+  opacity: 1;
+}
 
 .settings__option {
   font-size: rem(22);
@@ -276,6 +320,15 @@
   .settings__button {
     font-size: rem(26);
   }
+
+
+  .settings__label-minmax {
+    width: rem(200);
+    padding: rem(12) rem(5);
+    font-size: rem(16);
+    left: 60%;
+  }
+
 }
 
 @include respond-to(tablet) {
