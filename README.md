@@ -28,19 +28,11 @@
 - <strong>Generate random picross games:</strong> You can generate games from 5x5 up to 30x30 with random values, you are totally free to match any number between 5 and 30.<br>
 For example: You can create a 12x24 game.
 
-<br>
-
 - <strong>Auto fill completed lines:</strong> If the option is checked, lines that have the requirements completed, will be automatic filled with crossed squares, making things easy to see.
-
-<br>
 
 - <strong>Clear Picross Values:</strong> Clear all the marked squares and try again from scratch.
 
-<br>
-
 - <strong>PWA:</strong> This project has progressive web app support, so you can install it on your phone and computer, this will allow you to launch it from your home screen. If you wish to install it, just click on the third button on the left (the one with the downside arrow).
-
-<br>
 
 - <strong>Responsive layout:</strong> Even thought the game was first made to be played on a computer's screen, the layout was optimized for mobile users. It will be a little harder to play bigger size games on a small screen because there will be a lot of squares to take note of, but it is still totally viable.
 
@@ -81,7 +73,7 @@ You can duplicate this layout to own Figma account and use it as you wish by **[
 
 <p>Tools: </p>
 
--  [VSCode](https://code.visualstudio.com/)
+-  [VS Code](https://code.visualstudio.com/)
 -  [Normalize](https://necolas.github.io/normalize.css/)
 -  [IconMoon](https://icomoon.io/)
 -  [Figma](https://www.figma.com/)
