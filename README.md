@@ -22,7 +22,9 @@
   <a href="#memo-License"><strong>License</strong></a>
 </p>
 
-<img src="/readme-images/icon.png" align="right" />
+<a href="https://picrossuniverse.netlify.app/">	
+  <img src="/readme-images/icon.png" align="right" />
+</a>
 
 ##  :star2: Features:
 - <strong>Generate random picross games:</strong> You can generate games from 5x5 up to 30x30 with random values, you are totally free to match any number between 5 and 30.<br>
@@ -42,7 +44,9 @@ For example: You can create a 12x24 game.
 
 ## :speech_balloon: About:
 
-<img src="/readme-images/layout-preview.png" />
+<a href="https://picrossuniverse.netlify.app/">	
+  <img src="/readme-images/layout-preview.png" />
+</a>
 
 ### What is a picross?
 
@@ -65,7 +69,9 @@ While thinking about my options, I notice that I had no idea how it was to work 
 
 I created the base layout using Figma. 
 
-<img src="/readme-images/layout-figma.png" />
+<a href="https://www.figma.com/file/bgFxNN47lpezdBnIxyQPSK/Picross-Universe?node-id=332%3A10">	
+  <img src="/readme-images/layout-figma.png" />
+</a>
 
 You can **[click here](https://www.figma.com/file/bgFxNN47lpezdBnIxyQPSK/Picross-Universe?node-id=332%3A10)** to see the layout on Figma.
 <br>
