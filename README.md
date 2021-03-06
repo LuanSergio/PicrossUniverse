@@ -57,7 +57,7 @@ While thinking about my options, I notice that I had no idea how it was to work 
 
 I created the base layout using Figma. 
 
-<img src="/readme-images/figma-layout.png" />
+<img src="/readme-images/layout-figma.png" />
 
 You can **[click here](https://www.figma.com/file/bgFxNN47lpezdBnIxyQPSK/Picross-Universe?node-id=332%3A10)** to see the layout on Figma.
 <br>
