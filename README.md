@@ -71,8 +71,8 @@ You can **[click here](https://www.figma.com/file/bgFxNN47lpezdBnIxyQPSK/Picross
 <br>
 You can duplicate this layout to own Figma account and use it as you wish by **[clicking here](https://www.figma.com/file/bgFxNN47lpezdBnIxyQPSK/Picross-Universe/duplicate)**. Just remember you must have a Figma account and be logged in.
 
-## :robot: All technologies and tools I used during development
-<p>Technologies that I used:</p>
+## :robot: Technologies
+<p>All technologies and tools I used during development</p>
 
 -  HTML, CSS, JS
 -  [Yarn](https://yarnpkg.com/)
