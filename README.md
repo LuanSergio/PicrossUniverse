@@ -22,7 +22,9 @@
   <a href="#memo-License"><strong>License</strong></a>
 </p>
 
-<img src="/readme-images/icon.png" align="right" />
+<a href="https://picrossuniverse.netlify.app/">	
+  <img src="/readme-images/icon.png" align="right" />
+</a>
 
 ##  :star2: Features:
 - <strong>Generate random picross games:</strong> You can generate games from 5x5 up to 30x30 with random values, you are totally free to match any number between 5 and 30.<br>
@@ -36,9 +38,15 @@ For example: You can create a 12x24 game.
 
 - <strong>Responsive layout:</strong> Even thought the game was first made to be played on a computer's screen, the layout was optimized for mobile users. It will be a little harder to play bigger size games on a small screen because there will be a lot of squares to take note of, but it is still totally viable.
 
+<div align="center">
+  <img  src="/readme-images/division.png" />
+</div>
+
 ## :speech_balloon: About:
 
-<img src="/readme-images/layout-preview.png" />
+<a href="https://picrossuniverse.netlify.app/">	
+  <img src="/readme-images/layout-preview.png" />
+</a>
 
 ### What is a picross?
 
@@ -53,15 +61,25 @@ Since I really wanted to do something that could be challenging and could help m
 <br>
 While thinking about my options, I notice that I had no idea how it was to work with mouse events on JS (aside from the vanilla click), so the Picross seemed like a good way to take a real challenge.
 
+<div align="center">
+  <img  src="/readme-images/division.png" />
+</div>
+
 ## :art: Layout:
 
 I created the base layout using Figma. 
 
-<img src="/readme-images/figma-layout.png" />
+<a href="https://www.figma.com/file/bgFxNN47lpezdBnIxyQPSK/Picross-Universe?node-id=332%3A10">	
+  <img src="/readme-images/layout-figma.png" />
+</a>
 
 You can **[click here](https://www.figma.com/file/bgFxNN47lpezdBnIxyQPSK/Picross-Universe?node-id=332%3A10)** to see the layout on Figma.
 <br>
 You can duplicate this layout to own Figma account and use it as you wish by **[clicking here](https://www.figma.com/file/bgFxNN47lpezdBnIxyQPSK/Picross-Universe/duplicate)**. Just remember you must have a Figma account and be logged in.
+
+<div align="center">
+  <img  src="/readme-images/division.png" />
+</div>
 
 ## :robot: Technologies
 <p>All technologies and tools I used during development</p>
@@ -79,6 +97,10 @@ You can duplicate this layout to own Figma account and use it as you wish by **[
 -  [Figma](https://www.figma.com/)
 -  [PWAbuilder](https://www.pwabuilder.com/imageGenerator)
 -  [RealFaviconGenerator](https://realfavicongenerator.net/)
+
+<div align="center">
+  <img  src="/readme-images/division.png" />
+</div>
 
 ## :man_technologist: Running Locally
 <p>You must have <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Git</a>, <a href="https://nodejs.org/en/">Node</a> and <a href="https://yarnpkg.com/">Yarn</a> installed.
@@ -104,8 +126,9 @@ $ yarn start
 # Build the aplication for production
 $ yarn build
 ```
+
 <div align="center">
-  <img  src="https://i.imgur.com/TNe6eZG.png" />
+  <img  src="/readme-images/division.png" />
 </div>
 
 ## :memo: License
