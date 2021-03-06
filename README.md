@@ -8,9 +8,12 @@
 
 <p align="center">
   <strong >
-    A random generate Picross game web application.
-  </strong>
+    A random generate Picross game web application. <br>
+    <a href="https://picrossuniverse.netlify.app/">Click here</a> for a live version
+  </strong>  
 </p>
+<br>
+
 <br>
 
 <p align="center">
