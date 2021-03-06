@@ -28,9 +28,9 @@
 - <strong>Generate random picross games:</strong> You can generate games from 5x5 up to 30x30 with random values, you are totally free to match any number between 5 and 30.<br>
 For example: You can create a 12x24 game.
 
-- <strong>Auto fill completed lines:</strong> If the option is checked, lines that have the requirements completed, will be automatic filled with crossed squares, making things easy to see.
-
 - <strong>Clear Picross Values:</strong> Clear all the marked squares and try again from scratch.
+
+- <strong>Auto fill completed lines:</strong> If the option is checked, lines that have the requirements completed, will be automatic filled with crossed squares, making things easy to see.
 
 - <strong>PWA:</strong> This project has progressive web app support, so you can install it on your phone and computer, this will allow you to launch it from your home screen. If you wish to install it, just click on the third button on the left (the one with the downside arrow).
 
