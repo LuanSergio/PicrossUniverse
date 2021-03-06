@@ -12,9 +12,6 @@
     <a href="https://picrossuniverse.netlify.app/">Click here</a> for a live version
   </strong>  
 </p>
-<br>
-
-<br>
 
 <p align="center">
   <a href="#star2-Features"><strong>Features</strong></a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
