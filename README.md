@@ -9,9 +9,10 @@
 <p align="center">
   <strong >
     A random generate Picross game web application. <br>
-    <a href="https://picrossuniverse.netlify.app/">Click here</a> for a live version
+    <a href="https://picrossuniverse.netlify.app/">Click here</a> for a live version.
   </strong>  
 </p>
+<br>
 
 <p align="center">
   <a href="#star2-Features"><strong>Features</strong></a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -81,8 +82,8 @@ You can duplicate this layout to own Figma account and use it as you wish by **[
   <img  src="/readme-images/division.png" />
 </div>
 
-## :robot: Technologies
-<p>All technologies and tools I used during development</p>
+## :robot: Technologies and Tools
+<p>Technologies:</p>
 
 -  HTML, CSS, JS
 -  [Yarn](https://yarnpkg.com/)
