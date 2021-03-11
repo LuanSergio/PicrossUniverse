@@ -23,6 +23,24 @@
   padding: rem(15) rem(25);
   transition: 0.25s;
   position: sticky;
+  animation-name: slideInFromLeft;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  transform: translateX(-100%);
+}
+
+.border-button__button--toggle-settings{
+  animation-delay: 0.3s;
+}
+
+.border-button__button--clear-picross {
+  animation-delay: 0.5s;
+}
+
+.border-button__button--install-pwa {
+  animation-delay: 0.7s;
 }
 
 .border-button__button--clear-picross,
