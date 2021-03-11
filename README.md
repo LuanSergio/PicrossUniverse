@@ -99,6 +99,8 @@ You can duplicate this layout to own Figma account and use it as you wish by **[
 -  [PWAbuilder](https://www.pwabuilder.com/imageGenerator)
 -  [RealFaviconGenerator](https://realfavicongenerator.net/)
 
+For the confetti animation on the winning screen, I used the [confetti.js](https://github.com/mathusummut/confetti.js) created by [mathusummut](https://github.com/mathusummut).
+
 <div align="center">
   <img  src="/readme-images/division.png" />
 </div>
