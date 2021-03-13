@@ -1,14 +1,14 @@
 .settings {
-  background-color:rgba($color:  map-get($colors, base), $alpha: 0.90);
+  background-color: rgba($color: map-get($colors, base), $alpha: 0.9);
   flex-grow: 1;
   max-width: rem(272);
 
   border-radius: rem(20);
   padding: rem(27);
-  -webkit-box-shadow: rem(3) rem(3) rem(3) rem(5) rgba(0,0,0,0.45);
-  -moz-box-shadow: rem(3) rem(3) rem(3) rem(5) rgba(0,0,0,0.45);
-  box-shadow: rem(3) rem(3) rem(3) rem(5) rgba(0,0,0,0.45);
-  
+  -webkit-box-shadow: rem(3) rem(3) rem(3) rem(5) rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: rem(3) rem(3) rem(3) rem(5) rgba(0, 0, 0, 0.45);
+  box-shadow: rem(3) rem(3) rem(3) rem(5) rgba(0, 0, 0, 0.45);
+
   transition: 0.15s;
   transition-timing-function: linear;
   animation-name: popIn;
@@ -20,7 +20,7 @@
   flex-grow: 1;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content:start;
+  justify-content: start;
   height: 100%;
 }
 
@@ -59,12 +59,11 @@
   flex-direction: column;
 }
 
-
 .settings__label-minmax {
   visibility: hidden;
   color: map-get($colors, contrast);
   font-weight: bold;
-  background-color: rgba($color:  map-get($colors, main), $alpha: .90);
+  background-color: rgba($color: map-get($colors, main), $alpha: 0.9);
   width: rem(160);
   border-radius: rem(6);
   text-align: center;
@@ -74,9 +73,9 @@
   z-index: 1;
   bottom: 83%;
   left: 65%;
-  -webkit-box-shadow: rem(10) rem(10) rem(7) 0 rgba(0,0,0,0.39);
-  -moz-box-shadow: rem(10) rem(10) rem(7) 0 rgba(0,0,0,0.39);
-  box-shadow: rem(10) rem(10) rem(7) 0 rgba(0,0,0,0.39);
+  -webkit-box-shadow: rem(10) rem(10) rem(7) 0 rgba(0, 0, 0, 0.39);
+  -moz-box-shadow: rem(10) rem(10) rem(7) 0 rgba(0, 0, 0, 0.39);
+  box-shadow: rem(10) rem(10) rem(7) 0 rgba(0, 0, 0, 0.39);
   opacity: 0;
   transition: opacity 0.25s;
 }
@@ -88,7 +87,8 @@
   left: 20%;
   border-width: rem(5);
   border-style: solid;
-  border-color: rgba($color:  map-get($colors,main), $alpha: .90) transparent transparent transparent;
+  border-color: rgba($color: map-get($colors, main), $alpha: 0.9) transparent
+    transparent transparent;
 }
 
 .settings__option-container:hover .settings__label-minmax,
@@ -111,8 +111,10 @@
   max-height: rem(54);
 }
 
-.settings__button:hover, .settings__button:focus, 
-.settings__option:hover, .settings__option:focus {
+.settings__button:hover,
+.settings__button:focus,
+.settings__option:hover,
+.settings__option:focus {
   background-color: rgba($color: map-get($colors, white), $alpha: 0.15);
 }
 
@@ -149,7 +151,9 @@
   border-radius: rem(3);
 }
 
-.settings__checkbox-container:hover .settings__checkbox-input ~ .settings__checkbox-checkmark {
+.settings__checkbox-container:hover
+  .settings__checkbox-input
+  ~ .settings__checkbox-checkmark {
   background-color: map-get($colors, contrast);
 }
 
@@ -238,16 +242,15 @@
     padding: rem(9.5) rem(13);
     margin-top: rem(15);
   }
-
 }
 
 @include respond-to(mobile) {
   .settings {
     position: fixed;
-    z-index: index-level('lvl3');
+    z-index: index-level("lvl3");
     top: 0;
     border-radius: 0;
-    
+
     width: 100vw;
     max-width: 100%;
     min-height: 100%;
@@ -257,7 +260,7 @@
   .settings__close {
     display: block;
     position: absolute;
-    z-index: index-level('lvl4');
+    z-index: index-level("lvl4");
 
     right: rem(10);
     top: rem(10);
@@ -267,9 +270,9 @@
   }
 
   .settings__close::before {
-    content: icon('close');
-    font-family: 'icons';
-    z-index: index-level('lvl4');
+    content: icon("close");
+    font-family: "icons";
+    z-index: index-level("lvl4");
     display: block;
     font-size: rem(30);
     color: map-get($colors, contrast);
@@ -286,7 +289,7 @@
     width: 100%;
 
     overflow-y: auto;
-    overflow-x: auto;
+    overflow-x: hidden;
 
     //firefox custom scrollbar
     scrollbar-color: map-get($colors, contrast) map-get($colors, base);
@@ -335,14 +338,12 @@
     font-size: rem(26);
   }
 
-
   .settings__label-minmax {
     width: rem(200);
     padding: rem(12) rem(5);
     font-size: rem(16);
     left: 60%;
   }
-
 }
 
 @include respond-to(tablet) {
@@ -354,7 +355,7 @@
   .settings__close::before {
     font-size: rem(46);
   }
-  
+
   .settings__holder {
     max-width: rem(600);
     max-height: 80vh;
@@ -374,11 +375,10 @@
     padding-top: rem(26);
     padding-bottom: rem(26);
   }
-
 }
 
 @include respond-to(smartphone) {
-  .settings__holder  {
+  .settings__holder {
     max-width: 100%;
     max-height: rem(600);
   }
