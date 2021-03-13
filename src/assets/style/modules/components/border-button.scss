@@ -1,18 +1,18 @@
 .border-button {
-  position: absolute; 
+  position: absolute;
   left: 0;
 }
 
 .border-button--toggle-settings {
-  top: 0; 
+  top: 0;
 }
 
 .border-button--clear-picross {
-  top: rem(80); 
+  top: rem(80);
 }
 
 .border-button--install-pwa {
-  top: rem(160); 
+  top: rem(160);
 }
 
 .border-button__button {
@@ -31,7 +31,7 @@
   transform: translateX(-100%);
 }
 
-.border-button__button--toggle-settings{
+.border-button__button--toggle-settings {
   animation-delay: 0.3s;
 }
 
@@ -53,30 +53,32 @@
 }
 
 .border-button__button::before {
-  font-family: 'icons';
+  font-family: "icons";
   display: block;
   font-size: rem(36);
-  color: map-get($colors, main-darker); 
+  color: map-get($colors, main-darker);
 }
 
 .border-button__button--clear-picross::before {
-  content: icon('reset');
+  content: icon("reset");
   font-weight: bold;
 }
 
 .border-button__button--toggle-settings::before {
-  content: icon('settings');
+  content: icon("settings");
   font-weight: bold;
 }
 
 .border-button__button--install-pwa::before {
-  content: icon('install');
+  content: icon("install");
   font-weight: normal;
 }
 
 @include respond-to(smartphone) {
   .border-button__button {
-    padding: rem(15); 
+    padding: rem(15);
+    animation-name: slideInFromTop;
+    transform: translate(0%, -100%);
   }
 
   .border-button__button::before {
@@ -84,12 +86,12 @@
   }
 
   .border-button--clear-picross {
-    top: 0; 
+    top: 0;
     left: rem(75);
   }
 
   .border-button--install-pwa {
-    top: 0; 
+    top: 0;
     left: rem(150);
   }
 
