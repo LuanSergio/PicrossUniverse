@@ -87,6 +87,14 @@
     transform: translate(0%, -100%);
   }
 
+  .border-button__button:focus {
+    border-top: none;
+    border-right: rem(3) solid  map-get($colors, white);
+    border-left: rem(3) solid  map-get($colors, white);
+    border-bottom: rem(3) solid  map-get($colors, white);
+  }
+
+
   .border-button__button::before {
     font-size: rem(30);
   }
