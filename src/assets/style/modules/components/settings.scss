@@ -111,6 +111,10 @@
   max-height: rem(54);
 }
 
+.settings__option:focus {
+  border: rem(4) solid  map-get($colors, contrast);
+}
+
 .settings__button:hover,
 .settings__button:focus,
 .settings__option:hover,
@@ -159,7 +163,6 @@
 
 .settings__checkbox-input:checked ~ .settings__checkbox-checkmark {
   background-color: map-get($colors, main);
-  // border: 1px solid red
 }
 
 .settings__checkbox-checkmark::after {
@@ -198,6 +201,10 @@
   flex-basis: 100%;
   margin-top: rem(20);
   align-self: flex-end;
+}
+
+.settings__button:focus {
+  border: rem(4) solid  map-get($colors, contrast);
 }
 
 @include respond-to(laptop) {

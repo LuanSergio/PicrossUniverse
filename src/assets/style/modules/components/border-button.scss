@@ -31,6 +31,12 @@
   transform: translateX(-100%);
 }
 
+.border-button__button:focus {
+  border-right: rem(3) solid  map-get($colors, white);
+  border-top: rem(3) solid  map-get($colors, white);
+  border-bottom: rem(3) solid  map-get($colors, white);
+}
+
 .border-button__button--toggle-settings {
   animation-delay: 0.3s;
 }

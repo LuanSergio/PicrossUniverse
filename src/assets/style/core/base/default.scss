@@ -85,7 +85,7 @@ textarea:focus {
 }
 
 .noscript {
-  color: map-get($colors, contrast);;
+  color: map-get($colors, contrast);
   font-size: 26px;
   font-weight: bold;
   text-align: center;
@@ -93,7 +93,7 @@ textarea:focus {
 }
 
 .noscript__link {
-  color: map-get($colors, contrast);;
+  color: map-get($colors, contrast);
 }
 
 @include respond-to(fullHD) {

@@ -42,6 +42,11 @@
   border: 0;
 }
 
+
+.modal__close:focus {
+  border: rem(1) solid map-get($colors, white);
+}
+
 .modal__close::before {
   cursor: pointer;
   content: icon('close');
@@ -111,13 +116,18 @@
 
 .modal__button {
   background-color: map-get($colors, contrast);
-  border: none;
+  border: rem(3) solid transparent;
+  box-sizing: border-box;
   color: map-get($colors, main);
   font-size: rem(34);
   font-weight: bold;
   border-radius: rem(6);
   padding: rem(12) rem(25);
   min-width: rem(115);
+}
+
+.modal__button:focus {
+  border: rem(3) solid map-get($colors, white);
 }
 
 .modal__button:not(:last-child) {
