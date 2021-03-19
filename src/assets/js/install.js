@@ -1,5 +1,4 @@
 let deferredInstallPrompt = null;
-const screenWidth = screen.width;
 const installButton = document.querySelector('[data-install-pwa-button]');
 const installButtonContainer = document.querySelector('[data-install-pwa-button-container]');
 
