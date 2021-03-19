@@ -183,14 +183,14 @@
 
 @include respond-to(smartphone) {
   .modal__content {
-    max-width: rem(300);
+    max-width: 90%;
     max-height: rem(190);
     border-radius: rem(15);
     border-width: rem(6);
   }
 
   .modal__content--clear-picross-confirm {
-    max-height: rem(270);
+    max-height: rem(300);
   }
 
   .modal__close {
@@ -211,12 +211,15 @@
 
   .modal__sub-title {
     margin-top: rem(15);
-    font-size: rem(30);
+    font-size: rem(33);
+    margin-bottom: rem(30);
+    line-height: 1.2;
   }
 
   .modal__text {
-    font-size: rem(17);
+    font-size: rem(20);
     margin-bottom: rem(30);
+    line-height: 1.5;
   }
 
 
@@ -228,8 +231,13 @@
     font-weight: bold;
     border-radius: rem(6);
     padding: rem(8) rem(25);
-    min-width: rem(80);
+    min-width: rem(100);
   }
+
+  .modal__button:not(:last-child) {
+    margin-right: rem(20);
+  }
+
 
   .modal__time {
     font-size: rem(19);
