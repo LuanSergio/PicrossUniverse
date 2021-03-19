@@ -40,8 +40,8 @@ const modalWinning = document.querySelector('[data-modal-winning-screen]');
 const closeButtonModalWinning = document.querySelector('[data-modal-winning-screen-close]');
 const overlayModalWinning = document.querySelector('[data-modal-winning-screen-overlay]');
 
-closeModalWhenButtonIsPressed(modalWinning, closeButtonModalWinning);
-closeModalWhenOverlayIsClicked(modalWinning, overlayModalWinning);
+closeModalWhenButtonIsPressed(modalWinning, closeButtonModalWinning, true);
+closeModalWhenOverlayIsClicked(modalWinning, overlayModalWinning, true);
 
 const modalClearPicross = document.querySelector('[data-modal-clear-picross]');
 const closeButtonModalClearPicross = document.querySelector('[data-modal-clear-picross-overlay]');

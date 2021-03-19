@@ -2,7 +2,7 @@ import toggleModal from './toggleModal'
 import confetti from '../../utils/confetti';
 import toggleSettings from '../picrossSettings/toggleSettings';
 
-export default function closeModalWhenButtonIsPressed(modal, closeButton) {
+export default function closeModalWhenButtonIsPressed(modal, closeButton, won = undefined) {
 
   closeButton.addEventListener('click', () => {
     confetti.stop();
@@ -11,7 +11,10 @@ export default function closeModalWhenButtonIsPressed(modal, closeButton) {
     const screenWidth = screen.width;
 
     if (screenWidth < 1024) {
-      toggleSettings();
+      if(won) {
+        console.log('true')
+        toggleSettings();
+      }
     }
   });
 }
