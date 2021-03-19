@@ -208,7 +208,6 @@
     border-bottom: rem(4) dashed map-get($colors, contrast);
   }
 
-
   .modal__sub-title {
     margin-top: rem(15);
     font-size: rem(33);
@@ -221,7 +220,6 @@
     margin-bottom: rem(30);
     line-height: 1.5;
   }
-
 
   .modal__button {
     background-color: map-get($colors, contrast);
