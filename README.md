@@ -85,7 +85,7 @@ You can duplicate this layout to own Figma account and use it as you wish by **[
 ## :robot: Technologies and Tools
 <p>Technologies:</p>
 
--  HTML, CSS, JS
+-  HTML, CSS and JS
 -  [Yarn](https://yarnpkg.com/)
 -  [Parcel Bundler](https://parceljs.org/)
 -  [Sass](https://sass-lang.com/)
