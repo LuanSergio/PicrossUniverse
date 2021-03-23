@@ -1,3 +1,10 @@
+@use '../../core/config/colors.scss' as *;
+@use '../../core/config/z-index.scss' as *;
+@use '../../core/functions/em.scss' as *;
+@use '../../core/functions/respond-to.scss' as *;
+@use '../../core/functions/index-level.scss' as *;
+@use  '../../core/functions/get-icon.scss' as *;
+
 .touch-type-slide {
   position: absolute;
   bottom: rem(10);
@@ -37,7 +44,7 @@
 }
 
 .touch-type-slide__input:checked + .touch-type-slide__slide::after {
-  content: icon('check');
+  content: get-icon('check');
   font-family: 'icons';
   color: map-get($colors, contrast);
   left: rem(12);
@@ -45,7 +52,7 @@
 }
 
 .touch-type-slide__input:not(:checked) + .touch-type-slide__slide::after {
-  content: icon('x');
+  content: get-icon('x');
   font-family: 'icons';
   color: map-get($picross, square-true);
   font-size: rem(18);

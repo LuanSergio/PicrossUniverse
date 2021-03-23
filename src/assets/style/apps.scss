@@ -1,3 +1,15 @@
-@import './normalize';
-@import "core/index.scss";
-@import "modules/index.scss";
+@use "./normalize";
+@use "./core//config/font-family.scss";
+@use './core/tools/helpers.scss';
+@use './core/tools/site-limit.scss';
+@use './core/base/default.scss';
+
+@use "./modules/components/github-corner.scss";
+@use "./modules/components/modal.scss";
+@use "./modules/components/settings.scss";
+@use "./modules/components/touch-type-slide.scss";
+@use "./modules/components/picross/picross.scss";
+@use "./modules/components/picross/squares.scss";
+@use "./modules/components/picross/values.scss";
+@use "./modules/components/picross/timer.scss";
+@use "./modules/components/border-button.scss";

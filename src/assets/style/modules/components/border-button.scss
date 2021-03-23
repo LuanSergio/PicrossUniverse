@@ -1,3 +1,12 @@
+@use '../../core/config/colors.scss' as *;
+@use '../../core/config/z-index.scss' as *;
+@use '../../core/functions/em.scss' as *;
+@use '../../core/functions/respond-to.scss' as *;
+@use '../../core/functions/index-level.scss' as *;
+@use '../../core/functions/get-icon.scss' as *;
+@use '../animation/slide-in-from-left.scss' as *;
+@use '../animation/slide-in-from-top.scss' as *;
+
 .border-button {
   position: absolute;
   left: 0;
@@ -32,9 +41,9 @@
 }
 
 .border-button__button:focus {
-  border-right: rem(3) solid  map-get($colors, white);
-  border-top: rem(3) solid  map-get($colors, white);
-  border-bottom: rem(3) solid  map-get($colors, white);
+  border-right: rem(3) solid map-get($colors, white);
+  border-top: rem(3) solid map-get($colors, white);
+  border-bottom: rem(3) solid map-get($colors, white);
 }
 
 .border-button__button--toggle-settings {
@@ -66,17 +75,17 @@
 }
 
 .border-button__button--clear-picross::before {
-  content: icon("reset");
+  content: get-icon("reset");
   font-weight: bold;
 }
 
 .border-button__button--toggle-settings::before {
-  content: icon("settings");
+  content: get-icon("settings");
   font-weight: bold;
 }
 
 .border-button__button--install-pwa::before {
-  content: icon("install");
+  content: get-icon("install");
   font-weight: normal;
 }
 
@@ -89,11 +98,10 @@
 
   .border-button__button:focus {
     border-top: none;
-    border-right: rem(3) solid  map-get($colors, white);
-    border-left: rem(3) solid  map-get($colors, white);
-    border-bottom: rem(3) solid  map-get($colors, white);
+    border-right: rem(3) solid map-get($colors, white);
+    border-left: rem(3) solid map-get($colors, white);
+    border-bottom: rem(3) solid map-get($colors, white);
   }
-
 
   .border-button__button::before {
     font-size: rem(30);

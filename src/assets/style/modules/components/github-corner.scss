@@ -1,25 +1,31 @@
+@use '../../core/config/colors.scss' as *;
+@use '../../core/config/z-index.scss' as *;
+@use '../../core/functions/em.scss' as *;
+@use '../../core/functions/respond-to.scss' as *;
+@use '../../core/functions/index-level.scss' as *;
+
 .github-corner {
-  z-index: index-level('lvl2');
+  z-index: index-level("lvl2");
 }
 
-.github-corner:hover .github-corner__octocat{
+.github-corner:hover .github-corner__octocat {
   fill: map-get($colors, contrast-hover);
 }
 
 .github-corner__octocat {
   width: rem(100);
   height: rem(100);
-  fill: map-get($colors, contrast); 
-  color: map-get($colors, neutral); 
-  position: absolute; 
-  top: 0; 
+  fill: map-get($colors, contrast);
+  color: map-get($colors, neutral);
+  position: absolute;
+  top: 0;
   border: 0;
   right: 0;
   transition: 0.3s;
 }
 
 .github-corner:hover .github-corner__octo-arm {
-  animation: octocat-wave 560ms ease-in-out
+  animation: octocat-wave 560ms ease-in-out;
 }
 
 @include respond-to(laptop) {
@@ -31,7 +37,7 @@
 
 @include respond-to(mobile) {
   .github-corner__octocat {
-    color: map-get($colors, main-darker); 
+    color: map-get($colors, main-darker);
   }
 
   .github-corner__octocat {

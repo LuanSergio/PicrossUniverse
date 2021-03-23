@@ -1,0 +1,5 @@
+@use '../../core/config/icons.scss';
+
+@function get-icon($iconName) {
+  @return map-get(icons.$iconList, $iconName);
+}

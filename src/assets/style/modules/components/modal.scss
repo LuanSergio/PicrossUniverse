@@ -1,3 +1,10 @@
+@use '../../core/config/colors.scss' as *;
+@use '../../core/config/z-index.scss' as *;
+@use '../../core/functions/em.scss' as *;
+@use '../../core/functions/respond-to.scss' as *;
+@use '../../core/functions/index-level.scss' as *;
+@use  '../../core/functions/get-icon.scss' as *;
+
 .modal__overlay {
   background-color: rgba($color: map-get($colors, black), $alpha: 0.6);
   width: 100vw;
@@ -49,7 +56,7 @@
 
 .modal__close::before {
   cursor: pointer;
-  content: icon('close');
+  content: get-icon('close');
   font-family: 'icons';
   display: block;
   font-size: rem(30);

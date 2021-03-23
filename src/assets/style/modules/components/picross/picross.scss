@@ -1,3 +1,9 @@
+@use '../../../core/config/colors.scss' as *;
+@use '../../../core/config/z-index.scss' as *;
+@use '../../../core/functions/em.scss' as *;
+@use '../../../core/functions/index-level.scss' as *;
+@use '../../../core/functions/respond-to.scss' as *;
+
 .picross__table {
   background-color: rgba($color: map-get($colors, base), $alpha: 0.94);
   width: rem(623);

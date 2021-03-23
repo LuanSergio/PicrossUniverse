@@ -1,3 +1,8 @@
+@use '../../../core/config/colors.scss' as *;
+@use '../../../core/functions/em.scss' as *;
+@use '../../../core/functions/respond-to.scss' as *;
+@use '../../../core/functions/get-icon.scss' as *;
+
 .picross__square {
   background-color: map-get($picross, square);
   flex-grow: 1;
@@ -51,7 +56,7 @@
 
 .picross__square--false::before,
 .picross__square.fade::before {
-  content: icon('x');
+  content: get-icon('x');
   font-family: 'icons';
   font-size: rem(26);
   display: block;

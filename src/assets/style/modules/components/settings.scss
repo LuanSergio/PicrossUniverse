@@ -1,3 +1,10 @@
+@use '../../core/config/colors.scss' as *;
+@use '../../core/config/z-index.scss' as *;
+@use '../../core/functions/em.scss' as *;
+@use '../../core/functions/respond-to.scss' as *;
+@use '../../core/functions/index-level.scss' as *;
+@use  '../../core/functions/get-icon.scss' as *;
+
 .settings {
   background-color: rgba($color: map-get($colors, base), $alpha: 0.9);
   flex-grow: 1;
@@ -277,7 +284,7 @@
   }
 
   .settings__close::before {
-    content: icon("close");
+    content: get-icon("close");
     font-family: "icons";
     z-index: index-level("lvl4");
     display: block;
