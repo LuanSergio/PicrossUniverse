@@ -1,12 +1,8 @@
-@use '../../core/config/colors.scss' as *;
-@use '../../core/config/z-index.scss' as *;
-@use '../../core/functions/em.scss' as *;
-@use '../../core/functions/respond-to.scss' as *;
-@use '../../core/functions/index-level.scss' as *;
-@use  '../../core/functions/get-icon.scss' as *;
+@use '../../core/config' as *;
+@use '../../core/functions' as *;
 
 .settings {
-  background-color: rgba($color: map-get($colors, base), $alpha: 0.9);
+  background-color: rgba($color: get-color(main, base), $alpha: 0.9);
   flex-grow: 1;
   max-width: rem(272);
 
@@ -40,7 +36,7 @@
 }
 
 .settings__title {
-  color: map-get($colors, contrast);
+  color: get-color(main, contrast);
   flex-basis: 100%;
   text-align: center;
   margin-top: 0;
@@ -53,7 +49,7 @@
 }
 
 .settings__label {
-  color: map-get($colors, contrast);
+  color: get-color(main, contrast);
   font-size: rem(22);
   line-height: 1;
   font-weight: bold;
@@ -68,9 +64,9 @@
 
 .settings__label-minmax {
   visibility: hidden;
-  color: map-get($colors, contrast);
+  color: get-color(main, contrast);
   font-weight: bold;
-  background-color: rgba($color: map-get($colors, main), $alpha: 0.9);
+  background-color: rgba($color: get-color(main, main), $alpha: 0.9);
   width: rem(160);
   border-radius: rem(6);
   text-align: center;
@@ -94,7 +90,7 @@
   left: 20%;
   border-width: rem(5);
   border-style: solid;
-  border-color: rgba($color: map-get($colors, main), $alpha: 0.9) transparent
+  border-color: rgba($color: get-color(main, main), $alpha: 0.9) transparent
     transparent transparent;
 }
 
@@ -106,11 +102,11 @@
 
 .settings__option {
   font-size: rem(22);
-  color: map-get($colors, white);
+  color: get-color(main, white);
   flex-basis: 100%;
   font-weight: bold;
   background-color: transparent;
-  border: rem(4) solid map-get($colors, white);
+  border: rem(4) solid get-color(main, white);
   border-radius: rem(10);
   padding: rem(9.5) rem(13.6);
   text-align: center;
@@ -119,14 +115,14 @@
 }
 
 .settings__option:focus {
-  border: rem(4) solid  map-get($colors, contrast);
+  border: rem(4) solid get-color(main, contrast);
 }
 
 .settings__button:hover,
 .settings__button:focus,
 .settings__option:hover,
 .settings__option:focus {
-  background-color: rgba($color: map-get($colors, white), $alpha: 0.15);
+  background-color: rgba($color: get-color(main, white), $alpha: 0.15);
 }
 
 .settings__checkbox-container {
@@ -139,7 +135,7 @@
   line-height: rem(21);
   cursor: pointer;
   font-size: rem(16);
-  color: map-get($colors, white);
+  color: get-color(main, white);
   user-select: none;
 }
 
@@ -157,7 +153,7 @@
   left: 0;
   height: rem(20);
   width: rem(20);
-  background-color: map-get($colors, white);
+  background-color: get-color(main, white);
   transition: 0.25s;
   border-radius: rem(3);
 }
@@ -165,11 +161,11 @@
 .settings__checkbox-container:hover
   .settings__checkbox-input
   ~ .settings__checkbox-checkmark {
-  background-color: map-get($colors, contrast);
+  background-color: get-color(main, contrast);
 }
 
 .settings__checkbox-input:checked ~ .settings__checkbox-checkmark {
-  background-color: map-get($colors, main);
+  background-color: get-color(main, main);
 }
 
 .settings__checkbox-checkmark::after {
@@ -187,21 +183,21 @@
   top: rem(3);
   width: rem(5);
   height: rem(8);
-  border: solid map-get($colors, contrast);
+  border: solid get-color(main, contrast);
   border-width: 0 rem(3) rem(3) 0;
   transform: rotate(45deg);
   box-sizing: content-box;
 }
 
 .settings__checkbox-container:hover .settings__checkbox-checkmark:after {
-  border-color: map-get($colors, main);
+  border-color: get-color(main, main);
 }
 
 .settings__button {
   font-size: rem(22);
   font-weight: bold;
-  color: map-get($colors, white);
-  border: rem(4) solid map-get($colors, white);
+  color: get-color(main, white);
+  border: rem(4) solid get-color(main, white);
   background-color: transparent;
   border-radius: rem(10);
   padding: rem(12) rem(13);
@@ -211,7 +207,7 @@
 }
 
 .settings__button:focus {
-  border: rem(4) solid  map-get($colors, contrast);
+  border: rem(4) solid get-color(main, contrast);
 }
 
 @include respond-to(laptop) {
@@ -231,7 +227,7 @@
 
   .settings__option {
     font-size: rem(17);
-    border: rem(3) solid map-get($colors, white);
+    border: rem(3) solid get-color(main, white);
     border-radius: rem(8);
     margin-bottom: rem(15);
     padding-top: rem(8);
@@ -251,7 +247,7 @@
 
   .settings__button {
     font-size: rem(18);
-    border: rem(3) solid map-get($colors, white);
+    border: rem(3) solid get-color(main, white);
     border-radius: rem(8);
     padding: rem(9.5) rem(13);
     margin-top: rem(15);
@@ -289,7 +285,7 @@
     z-index: index-level("lvl4");
     display: block;
     font-size: rem(30);
-    color: map-get($colors, contrast);
+    color: get-color(main, contrast);
     cursor: pointer;
   }
 
@@ -306,14 +302,14 @@
     overflow-x: hidden;
 
     //firefox custom scrollbar
-    scrollbar-color: map-get($colors, contrast) map-get($colors, base);
+    scrollbar-color: get-color(main, contrast) get-color(main, base);
     scrollbar-width: auto;
 
     // ie and edge custom scroll bar
-    scrollbar-face-color: map-get($colors, basse);
-    scrollbar-track-color: map-get($colors, contrast);
-    scrollbar-arrow-color: map-get($colors, base);
-    scrollbar-shadow-color: map-get($colors, base); //border
+    scrollbar-face-color: get-color(main, base);
+    scrollbar-track-color: get-color(main, contrast);
+    scrollbar-arrow-color: get-color(main, base);
+    scrollbar-shadow-color: get-color(main, base); //border
   }
 
   .settings__holder::-webkit-scrollbar {
@@ -322,16 +318,16 @@
   }
 
   .settings__holder::-webkit-scrollbar-track {
-    background-color: map-get($colors, base);
+    background-color: get-color(main, base);
   }
 
   .settings__holder::-webkit-scrollbar-thumb {
-    background-color: map-get($colors, contrast);
+    background-color: get-color(main, contrast);
     border-radius: rem(30);
   }
 
   .settings__holder::-webkit-scrollbar-corner {
-    background-color: map-get($colors, base);
+    background-color: get-color(main, base);
   }
 
   .settings__title-image {

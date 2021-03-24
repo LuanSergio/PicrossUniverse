@@ -1,16 +1,15 @@
-@use '../../../core/functions/em.scss' as *;
-@use '../../../core/functions/respond-to.scss' as *;
-@use '../../../core/config/colors.scss' as *;
+@use '../../../core/config' as *;
+@use '../../../core/functions' as *;
 
 .picross__values {
   display: flex;
   flex-basis: 0;
   flex-grow: 1;
   justify-content: flex-end;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   top: 0;
-  background-color: map-get($picross, values-1);
-  border: rem(1) solid map-get($colors, base);
+  background-color: get-color(picross, values-1);
+  border: rem(1) solid get-color(main, base);
   font-size: rem(17);
   letter-spacing: 0;
   min-width: rem(36);
@@ -21,11 +20,11 @@
 }
 
 .picross__values--horizontal:nth-child(odd) {
-  background-color: map-get($picross, values-2);
+  background-color: get-color(picross, values-2);
 }
 
-.picross__row:nth-child(even) .picross__values--vertical{
-  background-color: map-get($picross, values-2);
+.picross__row:nth-child(even) .picross__values--vertical {
+  background-color: get-color(picross, values-2);
 }
 
 .picross__values--horizontal {
@@ -67,7 +66,7 @@
   flex-basis: 0;
   justify-content: center;
   align-items: center;
-  color: map-get($colors, white);;
+  color: get-color(main, white);
 }
 
 .picross__values-size--10 {
@@ -96,7 +95,7 @@
 
 .picross__values--horizontal.picross__values-size--15,
 .picross__values--horizontal.picross__values-size--20,
-.picross__values--horizontal.picross__values-size--25, 
+.picross__values--horizontal.picross__values-size--25,
 .picross__values--horizontal.picross__values-size--30 {
   border-top-right-radius: rem(0);
   border-top-left-radius: rem(0);
@@ -129,14 +128,12 @@
 }
 
 @include respond-to(mobile) {
-  .picross__values--horizontal
-  .picross__values-size--10 {
+  .picross__values--horizontal .picross__values-size--10 {
     border-top-right-radius: rem(0);
     border-top-left-radius: rem(0);
   }
 
-  .picross__values--vertical
-  .picross__values-size--10 {
+  .picross__values--vertical .picross__values-size--10 {
     border-bottom-left-radius: rem(0);
     border-top-left-radius: rem(0);
   }
@@ -195,7 +192,7 @@
   .picross__values--horizontal.picross__values-size--30 {
     min-width: rem(36);
   }
-  
+
   .picross__values-size--10,
   .picross__values-size--15,
   .picross__values-size--20,

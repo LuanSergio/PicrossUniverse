@@ -1,0 +1,10 @@
+@use '../../core/config/colors';
+
+@function get-color($theme, $color) {
+  @if $theme == main {
+    @return map-get(colors.$main, $color);
+  } 
+  @if $theme == picross {
+    @return map-get(colors.$picross, $color);
+  } 
+}

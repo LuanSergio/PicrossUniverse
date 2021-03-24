@@ -1,14 +1,13 @@
-@use '../../../core/config/colors.scss' as *;
-@use '../../../core/functions/em.scss' as *;
-@use '../../../core/functions/respond-to.scss' as *;
+@use '../../../core/config' as *;
+@use '../../../core/functions' as *;
 
 .picross__values--timer {
   flex-basis: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: map-get($colors, contrast);
-  background-color: map-get($colors, base);
+  color: get-color(main, contrast);
+  background-color: get-color(main, base);
   min-width: rem(96);
   border-bottom-left-radius: rem(3);
   border-top-left-radius: rem(3);
@@ -43,21 +42,20 @@
     font-size: rem(16);
   }
 
-   .picross__values--timer {
+  .picross__values--timer {
     border-bottom-left-radius: rem(0);
     border-top-left-radius: rem(0);
-  }  
+  }
 }
 
 @include respond-to(tablet) {
   .picross__values--timer {
-    min-width: rem(90); 
+    min-width: rem(90);
   }
   .picross__timer {
     font-size: rem(14);
   }
 }
-
 
 @include respond-to(smartphone) {
   .picross__values--timer {
@@ -66,7 +64,7 @@
     border-bottom-left-radius: rem(0);
     border-top-left-radius: rem(0);
   }
-  
+
   .picross__timer {
     font-size: rem(12);
   }

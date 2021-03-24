@@ -1,5 +1,0 @@
-@use '../../core/config/z-index.scss';
-
-@function index-level($level) {
-  @return map-get(z-index.$levels, $level);
-}

@@ -1,14 +1,10 @@
-@use '../../core/config/colors.scss' as *;
-@use '../../core/config/z-index.scss' as *;
-@use '../../core/functions/em.scss' as *;
-@use '../../core/functions/respond-to.scss' as *;
-@use '../../core/functions/index-level.scss' as *;
-@use  '../../core/functions/get-icon.scss' as *;
+@use '../../core/config' as *;
+@use '../../core/functions' as *;
 
 .touch-type-slide {
   position: absolute;
   bottom: rem(10);
-  z-index: index-level('lvl3');
+  z-index: index-level("lvl3");
 }
 
 .touch-type-slide__container {
@@ -20,7 +16,7 @@
   font-size: 0;
 }
 
-.touch-type-slide__input { 
+.touch-type-slide__input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -31,9 +27,9 @@
   cursor: pointer;
   top: 0;
   left: 0;
-  right: 0; 
+  right: 0;
   bottom: 0;
-  background-color: map-get($colors, contrast);
+  background-color: get-color(main, white);
   border-radius: rem(34);
 }
 
@@ -44,17 +40,17 @@
 }
 
 .touch-type-slide__input:checked + .touch-type-slide__slide::after {
-  content: get-icon('check');
-  font-family: 'icons';
-  color: map-get($colors, contrast);
+  content: get-icon("check");
+  font-family: "icons";
+  color: get-color(main, white);
   left: rem(12);
   font-size: rem(20);
 }
 
 .touch-type-slide__input:not(:checked) + .touch-type-slide__slide::after {
-  content: get-icon('x');
-  font-family: 'icons';
-  color: map-get($picross, square-true);
+  content: get-icon("x");
+  font-family: "icons";
+  color: get-color(picross, square-true);
   font-size: rem(18);
   right: rem(12);
 }
@@ -67,26 +63,26 @@
   top: 50%;
   transform: translateY(-50%);
   left: rem(8);
-  background-color: map-get($picross, square-true);
-  transition: .4s;
+  background-color: get-color(picross, square-true);
+  transition: 0.4s;
   border-radius: 100%;
 }
 
 .touch-type-slide__input:checked + .touch-type-slide__slide {
-  background-color: map-get($picross, square-true);
+  background-color: get-color(picross, square-true);
 }
 
 .touch-type-slide__input:focus + .touch-type-slide__slide {
-  border: rem(1) solid map-get($picross, square-separation);
-  box-shadow: 0 0 rem(7) map-get($picross, square-separation);
+  border: rem(1) solid get-color(picross, square-separation);
+  box-shadow: 0 0 rem(7) get-color(picross, square-separation);
 }
 
 .touch-type-slide__input:checked:focus + .touch-type-slide__slide {
-  border: rem(1) solid map-get($picross, square-true);
-  box-shadow: 0 0 rem(7) map-get($picross, square-true);
+  border: rem(1) solid get-color(picross, square-true);
+  box-shadow: 0 0 rem(7) get-color(picross, square-true);
 }
 
 .touch-type-slide__input:checked + .touch-type-slide__slide::before {
-  background-color: map-get($colors, contrast);
+  background-color: get-color(main, white);
   transform: translate(180%, -50%);
 }

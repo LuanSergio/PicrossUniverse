@@ -1,67 +1,63 @@
-@use '../../../core/config/colors.scss' as *;
-@use '../../../core/functions/em.scss' as *;
-@use '../../../core/functions/respond-to.scss' as *;
-@use '../../../core/functions/get-icon.scss' as *;
+@use '../../../core/config' as *;
+@use '../../../core/functions' as *;
 
 .picross__square {
-  background-color: map-get($picross, square);
+  background-color: get-color(picross, square);
   flex-grow: 1;
   flex-basis: 0;
-  
-  border: rem(1) solid map-get($colors, base);
+  border: rem(1) solid get-color(main, base);
   box-sizing: border-box;
   cursor: pointer;
   min-width: rem(36);
   min-height: rem(34);
-  transition: 0.10s;
+  transition: 0.1s;
   transition-timing-function: linear;
   animation-name: popIn;
   animation-duration: 0.3s;
 }
 
 .picross__square:hover {
-  background-color: map-get($picross, square-hover);
+  background-color: get-color(picross, square-hover);
 }
 
 .picross__square--highlight {
-  background-color: map-get($picross, square-highlight);
+  background-color: get-color(picross, square-highlight);
 }
 
 .picross__square--true {
-  background-color: map-get($picross, square-true);
+  background-color: get-color(picross, square-true);
 }
 
 .picross__square--true.picross__square--highlight {
-  background-color: map-get($picross, square-highlight-true);
+  background-color: get-color(picross, square-highlight-true);
 }
 
 .picross__square--true.picross__square:hover {
-  background-color: map-get($picross, square-true-hover);
+  background-color: get-color(picross, square-true-hover);
 }
 
 .picross__square--active-hover {
-  background-color: map-get($picross, square-active);
+  background-color: get-color(picross, square-active);
 }
 
 .picross__square.fade {
   opacity: 0.85;
 }
 
-.picross__square--false ,
+.picross__square--false,
 .picross__square.fade {
-  background-color: map-get($picross, square-false);
+  background-color: get-color(picross, square-false);
   text-align: center;
   position: relative;
 }
 
 .picross__square--false::before,
 .picross__square.fade::before {
-  content: get-icon('x');
-  font-family: 'icons';
+  content: get-icon("x");
+  font-family: "icons";
   font-size: rem(26);
   display: block;
-  color: map-get($colors, contrast);
-  // font-weight: bold;
+  color: get-color(main, contrast);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -70,44 +66,44 @@
 }
 
 .picross__square--false.picross__square--highlight {
-  background-color: map-get($picross, square-highlight-false);
+  background-color: get-color(picross, square-highlight-false);
 }
 
-.picross__square--active-hover.picross__square--false, 
+.picross__square--active-hover.picross__square--false,
 .picross__square--active-hover.picross__square--true {
   opacity: 0.6;
 }
 
-.picross__square:nth-child(5n+6):not(:last-child)::after  {
-  content: '';
+.picross__square:nth-child(5n + 6):not(:last-child)::after {
+  content: "";
   display: block;
   height: 100%;
   width: 100%;
-  border-right: rem(1) solid map-get($picross, square-separation);
+  border-right: rem(1) solid get-color(picross, square-separation);
 }
 
-.picross__square:nth-child(5n+7):not(:last-child)::after  {
-  content: '';
+.picross__square:nth-child(5n + 7):not(:last-child)::after {
+  content: "";
   display: block;
   height: 100%;
   width: 100%;
-  border-left: rem(1) solid map-get($picross, square-separation);
+  border-left: rem(1) solid get-color(picross, square-separation);
 }
 
-.picross__row:nth-child(5n+6):not(:last-child) .picross__square::after {
-  content: '';
+.picross__row:nth-child(5n + 6):not(:last-child) .picross__square::after {
+  content: "";
   display: block;
   height: 100%;
   width: 100%;
-  border-bottom: rem(1) solid map-get($picross, square-separation);
+  border-bottom: rem(1) solid get-color(picross, square-separation);
 }
 
-.picross__row:nth-child(5n+7):not(:last-child) .picross__square::after {
-  content: '';
+.picross__row:nth-child(5n + 7):not(:last-child) .picross__square::after {
+  content: "";
   display: block;
   height: 100%;
   width: 100%;
-  border-top: rem(1) solid map-get($picross, square-separation);
+  border-top: rem(1) solid get-color(picross, square-separation);
 }
 
 .picross__square--false.picross__square-size--10::before,
@@ -137,8 +133,8 @@
 
 @include respond-to(laptop) {
   .picross__square-size--15,
-  .picross__square-size--20, 
-  .picross__square-size--25, 
+  .picross__square-size--20,
+  .picross__square-size--25,
   .picross__square-size--30 {
     min-width: rem(36);
     min-height: rem(32);
@@ -152,14 +148,13 @@
   }
 
   .picross__square-size--15,
-  .picross__square-size--20, 
-  .picross__square-size--25, 
+  .picross__square-size--20,
+  .picross__square-size--25,
   .picross__square-size--30 {
     min-width: rem(36);
     min-height: rem(33);
   }
 }
-
 
 @include respond-to(smartphone) {
   .picross__square {
@@ -173,8 +168,8 @@
   }
 
   .picross__square-size--15,
-  .picross__square-size--20, 
-  .picross__square-size--25, 
+  .picross__square-size--20,
+  .picross__square-size--25,
   .picross__square-size--30 {
     min-width: rem(36);
     min-height: rem(32);

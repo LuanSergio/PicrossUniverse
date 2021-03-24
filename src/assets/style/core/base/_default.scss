@@ -1,6 +1,4 @@
-@use '../functions/em.scss' as *;
-@use '../functions/respond-to.scss' as *;
-@use '../config/colors.scss' as *;
+@use '../functions' as  *;
 
 $base-font-size: 1em;
 
@@ -34,18 +32,18 @@ body {
   padding-top: 0;
 
   //firefox custom scrollbar
-  scrollbar-color: map-get($colors, contrast) map-get($colors, base);
+  scrollbar-color: get-color(main, contrast) get-color(main, base);
   scrollbar-width: auto;
 
   // ie and edge custom scroll bar
-  scrollbar-face-color: map-get($colors, basse);
-  scrollbar-track-color: map-get($colors, contrast);
-  scrollbar-arrow-color: map-get($colors, base);
-  scrollbar-shadow-color: map-get($colors, base); //border
+  scrollbar-face-color: get-color(main, base);
+  scrollbar-track-color: get-color(main, contrast);
+  scrollbar-arrow-color: get-color(main, base);
+  scrollbar-shadow-color: get-color(main, base); //border
 }
 
 body {
-  background-color: map-get($colors, main);
+  background-color: get-color(main, main);
   background-image: url("../img/body-background.svg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -62,17 +60,17 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background-color: map-get($colors, base);
+  background-color: get-color(main, base);
   border-radius: 0;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: map-get($colors, contrast);
+  background-color: get-color(main, contrast);
   border-radius: 0;
 }
 
 body::-webkit-scrollbar-corner {
-  background-color: map-get($colors, contrast);
+  background-color: get-color(main, contrast);
 }
 
 button {
@@ -89,7 +87,7 @@ textarea:focus {
 }
 
 .noscript {
-  color: map-get($colors, contrast);
+  color: get-color(main, contrast);
   font-size: 26px;
   font-weight: bold;
   text-align: center;
@@ -97,7 +95,7 @@ textarea:focus {
 }
 
 .noscript__link {
-  color: map-get($colors, contrast);
+  color: get-color(main, contrast);
 }
 
 @include respond-to(fullHD) {

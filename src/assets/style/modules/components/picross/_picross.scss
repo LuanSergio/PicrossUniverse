@@ -1,11 +1,8 @@
-@use '../../../core/config/colors.scss' as *;
-@use '../../../core/config/z-index.scss' as *;
-@use '../../../core/functions/em.scss' as *;
-@use '../../../core/functions/index-level.scss' as *;
-@use '../../../core/functions/respond-to.scss' as *;
+@use '../../../core/config' as *;
+@use '../../../core/functions' as *;
 
 .picross__table {
-  background-color: rgba($color: map-get($colors, base), $alpha: 0.94);
+  background-color: rgba(get-color(main, base), $alpha: 0.94);
   width: rem(623);
   height: rem(566);
   display: block;
@@ -16,9 +13,9 @@
   border-radius: rem(20);
   padding: rem(10);
 
-  -webkit-box-shadow: rem(3) rem(3) rem(3) rem(5) rgba(0,0,0,0.45);
-  -moz-box-shadow: rem(3) rem(3) rem(3) rem(5) rgba(0,0,0,0.45);
-  box-shadow: rem(3) rem(3) rem(3) rem(5) rgba(0,0,0,0.45);
+  -webkit-box-shadow: rem(3) rem(3) rem(3) rem(5) rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: rem(3) rem(3) rem(3) rem(5) rgba(0, 0, 0, 0.45);
+  box-shadow: rem(3) rem(3) rem(3) rem(5) rgba(0, 0, 0, 0.45);
   transition: 0.15s;
   transition-timing-function: linear;
   animation-name: popIn;
@@ -35,14 +32,14 @@
   overflow-x: auto;
 
   //firefox custom scrollbar
-  scrollbar-color: map-get($colors, contrast) map-get($colors, base);
+  scrollbar-color: get-color(main, contrast) get-color(main, base);
   scrollbar-width: auto;
 
   // ie and edge custom scroll bar
-  scrollbar-face-color: map-get($colors, basse);
-  scrollbar-track-color: map-get($colors, contrast);
-  scrollbar-arrow-color: map-get($colors, base);
-  scrollbar-shadow-color: map-get($colors, base); //border
+  scrollbar-face-color: get-color(main, base);
+  scrollbar-track-color: get-color(main, contrast);
+  scrollbar-arrow-color: get-color(main, base);
+  scrollbar-shadow-color: get-color(main, base); //border
 }
 
 .picross__table tbody::-webkit-scrollbar {
@@ -51,21 +48,21 @@
 }
 
 .picross__table tbody::-webkit-scrollbar-track {
-  background-color: map-get($colors, base);
+  background-color: get-color(main, base);
 }
 
 .picross__table tbody::-webkit-scrollbar-thumb {
-  background-color: map-get($colors, contrast);
+  background-color: get-color(main, contrast);
   border-radius: rem(30);
 }
 
 .picross__table tbody::-webkit-scrollbar-corner {
-  background-color: map-get($colors, base);
+  background-color: get-color(main, base);
 }
 
 .picross__row:nth-child(1) {
   position: sticky;
-  z-index: index-level('lvl1');
+  z-index: index-level("lvl1");
   top: 0;
 }
 
@@ -104,7 +101,7 @@
     justify-content: center;
     margin-top: rem(10);
   }
-  
+
   .picross__table {
     width: 100%;
     margin-right: 0;

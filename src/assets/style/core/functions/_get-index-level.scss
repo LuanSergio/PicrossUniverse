@@ -1,0 +1,5 @@
+@use '../../core/config/index-levels';
+
+@function index-level($level) {
+  @return map-get(index-levels.$levels, $level);
+}

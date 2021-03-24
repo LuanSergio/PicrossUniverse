@@ -1,9 +1,5 @@
-@use '../../core/config/colors.scss' as *;
-@use '../../core/config/z-index.scss' as *;
-@use '../../core/functions/em.scss' as *;
-@use '../../core/functions/respond-to.scss' as *;
-@use '../../core/functions/index-level.scss' as *;
-@use '../../core/functions/get-icon.scss' as *;
+@use '../../core/config' as *;
+@use '../../core/functions' as *;
 @use '../animation/slide-in-from-left.scss' as *;
 @use '../animation/slide-in-from-top.scss' as *;
 
@@ -27,7 +23,7 @@
 .border-button__button {
   border-bottom-right-radius: rem(6);
   z-index: index-level(lvl3);
-  background-color: map-get($colors, contrast);
+  background-color: get-color(main, contrast);
   border: none;
   padding: rem(15) rem(25);
   transition: 0.25s;
@@ -41,9 +37,9 @@
 }
 
 .border-button__button:focus {
-  border-right: rem(3) solid map-get($colors, white);
-  border-top: rem(3) solid map-get($colors, white);
-  border-bottom: rem(3) solid map-get($colors, white);
+  border-right: rem(3) solid get-color(main, white);
+  border-top: rem(3) solid get-color(main, white);
+  border-bottom: rem(3) solid get-color(main, white);
 }
 
 .border-button__button--toggle-settings {
@@ -64,14 +60,14 @@
 }
 
 .border-button__button:hover {
-  background-color: map-get($colors, contrast-hover);
+  background-color: get-color(main, contrast-hover);
 }
 
 .border-button__button::before {
   font-family: "icons";
   display: block;
   font-size: rem(36);
-  color: map-get($colors, main-darker);
+  color: get-color(main, main-darker);
 }
 
 .border-button__button--clear-picross::before {
@@ -98,9 +94,9 @@
 
   .border-button__button:focus {
     border-top: none;
-    border-right: rem(3) solid map-get($colors, white);
-    border-left: rem(3) solid map-get($colors, white);
-    border-bottom: rem(3) solid map-get($colors, white);
+    border-right: rem(3) solid get-color(main, white);
+    border-left: rem(3) solid get-color(main, white);
+    border-bottom: rem(3) solid get-color(main, white);
   }
 
   .border-button__button::before {
