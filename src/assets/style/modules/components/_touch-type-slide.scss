@@ -29,7 +29,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: get-color(main, white);
+  background-color: get-color(main, contrast);
   border-radius: rem(34);
 }
 
@@ -42,7 +42,7 @@
 .touch-type-slide__input:checked + .touch-type-slide__slide::after {
   content: get-icon("check");
   font-family: "icons";
-  color: get-color(main, white);
+  color: get-color(main, contrast);
   left: rem(12);
   font-size: rem(20);
 }
@@ -83,6 +83,6 @@
 }
 
 .touch-type-slide__input:checked + .touch-type-slide__slide::before {
-  background-color: get-color(main, white);
+  background-color: get-color(main, contrast);
   transform: translate(180%, -50%);
 }
