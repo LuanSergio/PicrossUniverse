@@ -1,5 +1,6 @@
 @use '../../core/config' as *;
 @use '../../core/functions' as *;
+@use '../animation/octocat-wave' as *;
 
 .github-corner {
   z-index: index-level("lvl2");
