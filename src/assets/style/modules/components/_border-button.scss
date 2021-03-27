@@ -38,8 +38,11 @@
 
 .border-button__button:focus {
   border-right: rem(3) solid get-color(main, white);
-  border-top: rem(3) solid get-color(main, white);
   border-bottom: rem(3) solid get-color(main, white);
+}
+
+.border-button:nth-child(n+2) .border-button__button:focus{
+  border-top: rem(3) solid get-color(main, white);
 }
 
 .border-button__button--toggle-settings {
@@ -94,10 +97,17 @@
 
   .border-button__button:focus {
     border-top: none;
-    border-right: rem(3) solid get-color(main, white);
     border-left: rem(3) solid get-color(main, white);
-    border-bottom: rem(3) solid get-color(main, white);
   }
+
+  .border-button:first-child .border-button__button:focus {
+    border-left: none;
+  }
+
+  .border-button:nth-child(n+2) .border-button__button:focus {
+    border-top: none;
+  }
+
 
   .border-button__button::before {
     font-size: rem(30);
