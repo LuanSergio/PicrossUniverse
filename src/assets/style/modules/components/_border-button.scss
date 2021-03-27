@@ -1,7 +1,7 @@
 @use '../../core/config' as *;
 @use '../../core/functions' as *;
-@use '../animation/slide-in-from-left.scss' as *;
-@use '../animation/slide-in-from-top.scss' as *;
+@use '../animation/slide-in-from-left' as *;
+@use '../animation/slide-in-from-top' as *;
 
 .border-button {
   position: absolute;

@@ -1,4 +1,4 @@
-@use '../../core/config/icons.scss';
+@use '../../core/config/icons';
 
 @function get-icon($iconName) {
   @return map-get(icons.$iconList, $iconName);
