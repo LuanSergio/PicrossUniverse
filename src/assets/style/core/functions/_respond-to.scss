@@ -1,36 +1,50 @@
-@use '../config/media';
+@use '../config/media' as *;
 
 @mixin respond-to($media) {
   @if $media == mobile {
-    @media only screen and (max-width: map-get(media.$breakpoints, mobile)) {
+    @media only screen and (max-width: map-get($breakpoints, mobile)) {
       @content;
     }
-  } @else if $media == smartphone {
-    @media only screen and (max-width: map-get(media.$breakpoints, smartphone)) {
+  } 
+  
+  @if $media == smartphone {
+    @media only screen and (max-width: map-get($breakpoints, smartphone)) {
       @content;
     }
-  } @else if $media == tablet {
-    @media only screen and (min-width: map-get(media.$breakpoints, tablet)) and (max-width: map-get(media.$breakpoints, mobile)) {
+  } 
+  
+  @if $media == tablet {
+    @media only screen and (min-width: map-get($breakpoints, tablet)) and (max-width: map-get($breakpoints, mobile)) {
       @content;
     }
-  } @else if $media == laptop {
-    @media only screen and (min-width: map-get(media.$breakpoints, laptop)) and (max-width: map-get(media.$breakpoints, desktop)) {
+  } 
+  
+  @if $media == laptop {
+    @media only screen and (min-width: map-get($breakpoints, laptop)) and (max-width: map-get($breakpoints, HD)) {
       @content;
     }
-  } @else if $media == desktop {
-    @media only screen and (min-width: map-get(media.$breakpoints, desktop)) and (max-width: map-get(media.$breakpoints, fullHD)) {
+  }
+  
+  @if $media == HD {
+    @media only screen and (min-width: map-get($breakpoints, HD)) {
       @content;
     }
-  } @else if $media == fullHD {
-    @media only screen and (min-width: map-get(media.$breakpoints, fullHD)) and (max-width: map-get(media.$breakpoints, quadHD)) {
+  } 
+  
+  @if $media == fullHD {
+    @media only screen and (min-width: map-get($breakpoints, fullHD)) {
       @content;
     }
-  } @else if $media == quadHD {
-    @media only screen and (min-width: map-get(media.$breakpoints, quadHD)) and (max-width: map-get(media.$breakpoints, ultraHD)) {
+  }
+
+  @if $media == quadHD {
+    @media only screen and (min-width: map-get($breakpoints, quadHD)) {
       @content;
     }
-  } @else if $media == ultraHD {
-    @media only screen and (min-width: map-get(media.$breakpoints, ultraHD)) {
+  }
+
+  @if $media == ultraHD {
+    @media only screen and (min-width: map-get($breakpoints, ultraHD)) {
       @content;
     }
   }
