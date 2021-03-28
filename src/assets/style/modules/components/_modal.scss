@@ -36,6 +36,7 @@
 
 .modal__close {
   position: absolute;
+  z-index: index-level("lvl1");
   right: rem(20);
   width: rem(35);
   height: rem(35);
