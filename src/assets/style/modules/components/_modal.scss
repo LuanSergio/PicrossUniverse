@@ -1,5 +1,6 @@
 @use '../../core/config' as *;
 @use '../../core/functions' as *;
+@use '../animation/pop-in' as *;
 
 .modal__overlay {
   background-color: rgba($color: get-color(main, black), $alpha: 0.6);
