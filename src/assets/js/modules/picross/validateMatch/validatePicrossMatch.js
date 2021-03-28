@@ -16,7 +16,7 @@ export default function picrossValidator(width, height, matrix) {
     const picross = document.querySelector('[data-picross]');
 
     if (picross.getAttribute('data-picross') !== "won") {
-        const modal = document.querySelector('[data-modal-winning-screen]');
+        const modal = document.querySelector('[data-modal-win-screen]');
         confetti.start();
         addTimeToModal();
         addSizeToModal(width, height);
