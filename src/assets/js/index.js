@@ -6,6 +6,7 @@ import getPicrossSize from './modules/picross/creation/getPicrossSize';
 import generateNewPicross from './modules/picrossSettings/generateNewPicross';
 import closeModalWhenOverlayIsClicked from './modules/modal/closeModalWhenOverlayIsClicked';
 import closeModalWhenButtonIsPressed from './modules/modal/closeModalWhenButtonIsPressed';
+import closeModalWhenEscIsPressed from './modules/modal/closeModalWhenEscIsPressed';
 import validatePicrossSize from './modules/picrossSettings/validatePicrossSize';
 import hidePicrossSettingsOnMobile from './modules/picrossSettings/hidePicrossSettingsOnMobile';
 import openSettingsWhenButtonIsClicked from './modules/picrossSettings/openSettingsWhenButtonIsClicked';
@@ -42,6 +43,7 @@ const overlayModalWinning = document.querySelector('[data-modal-winning-screen-o
 
 closeModalWhenButtonIsPressed(modalWinning, closeButtonModalWinning, true);
 closeModalWhenOverlayIsClicked(modalWinning, overlayModalWinning, true);
+closeModalWhenEscIsPressed(modalWinning);
 
 const modalClearPicross = document.querySelector('[data-modal-clear-picross]');
 const closeButtonModalClearPicross = document.querySelector('[data-modal-clear-picross-overlay]');
@@ -49,3 +51,4 @@ const overlayModalClearPicross = document.querySelector('[data-modal-clear-picro
 
 closeModalWhenButtonIsPressed(modalClearPicross, closeButtonModalClearPicross);
 closeModalWhenOverlayIsClicked(modalClearPicross, overlayModalClearPicross);
+closeModalWhenEscIsPressed(modalClearPicross);
