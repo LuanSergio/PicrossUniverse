@@ -3,7 +3,7 @@ import generateBooleanValue from '../../../utils/generateBooleanValue';
 import addValueToMatrix from '../../../utils/addValueToMatrix';
 import addPicrossNumberSpace from './addPicrossNumberSpace';
 
-export default function alocatePicrossValues(columns, rows, matrix, limit) {
+export default function allocatePicrossValues(columns, rows, matrix, limit) {
   let row = 0;
 
   while(row < rows){
