@@ -1,7 +1,7 @@
 {
   "name": "Picross Universe",
   "short_name": "Picross Universe",
-  "description": "A random generated Picross game",
+  "description": "A random Picross generator game!",
   "lang": "en-US",
   "theme_color": "#221A75",
   "background_color": "#221A75",
