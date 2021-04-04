@@ -1,9 +1,9 @@
-@use "./core/base/normalize";
-@use "./core/base/font-face";
 @use './core/tools/helpers';
 @use './core/tools/site-limit';
-@use './core/base/default';
 
+@use "./modules/base/normalize";
+@use "./modules/base/font-face";
+@use './modules/base/default';
 @use "./modules/components/github-corner";
 @use "./modules/components/modal";
 @use "./modules/components/settings";
