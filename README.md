@@ -8,7 +8,7 @@
 
 <p align="center">
   <strong >
-    A random Picross generator web application game!<br>
+    A random Picross generator application!<br>
     <a href="https://picrossuniverse.netlify.app/">Click here</a> for a live version.
   </strong>  
 </p>
@@ -27,9 +27,10 @@
   <img src="/docs/icon.png" align="right" />
 </a>
 
-##  :star2: Features:
+## :star2: Features:
+
 - <strong>Generate random picross games:</strong> You can generate games from 5x5 up to 30x30 with random values, you are totally free to match any number between 5 and 30.<br>
-For example: You can create a 12x24 game.
+  For example: You can create a 12x24 game.
 
 - <strong>Clear Picross Values:</strong> Clear all the marked squares and try again from scratch.
 
@@ -68,7 +69,7 @@ While thinking about my options, I notice that I had no idea how it was to work 
 
 ## :art: Layout:
 
-I created the base layout using Figma. 
+I created the base layout using Figma.
 
 <a href="https://www.figma.com/file/bgFxNN47lpezdBnIxyQPSK/Picross-Universe?node-id=332%3A10">	
   <img src="/docs/layout-figma.png" />
@@ -83,21 +84,22 @@ You can duplicate this layout to own Figma account and use it as you wish by **[
 </div>
 
 ## :robot: Technologies and Tools
+
 <p>Technologies:</p>
 
--  HTML, CSS and JS
--  [Yarn](https://yarnpkg.com/)
--  [Parcel Bundler](https://parceljs.org/)
--  [Sass](https://sass-lang.com/)
+- HTML, CSS and JS
+- [Yarn](https://yarnpkg.com/)
+- [Parcel Bundler](https://parceljs.org/)
+- [Sass](https://sass-lang.com/)
 
 <p>Tools: </p>
 
--  [VS Code](https://code.visualstudio.com/)
--  [Normalize](https://necolas.github.io/normalize.css/)
--  [IconMoon](https://icomoon.io/)
--  [Figma](https://www.figma.com/)
--  [PWAbuilder](https://www.pwabuilder.com/imageGenerator)
--  [RealFaviconGenerator](https://realfavicongenerator.net/)
+- [VS Code](https://code.visualstudio.com/)
+- [Normalize](https://necolas.github.io/normalize.css/)
+- [IconMoon](https://icomoon.io/)
+- [Figma](https://www.figma.com/)
+- [PWAbuilder](https://www.pwabuilder.com/imageGenerator)
+- [RealFaviconGenerator](https://realfavicongenerator.net/)
 
 For the confetti animation on the winning screen, I used the [confetti.js](https://github.com/mathusummut/confetti.js) created by [mathusummut](https://github.com/mathusummut).
 
@@ -106,6 +108,7 @@ For the confetti animation on the winning screen, I used the [confetti.js](https
 </div>
 
 ## :man_technologist: Running Locally
+
 <p>You must have <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Git</a>, <a href="https://nodejs.org/en/">Node</a> and <a href="https://yarnpkg.com/">Yarn</a> installed.
 
 On your favorite terminal, run the following commands:
@@ -121,7 +124,7 @@ $ git clone https://github.com/LuanSergio/PicrossUniverse.git
 $ cd PicrossUniverse
 
 # Install dependencies
-$ yarn install 
+$ yarn install
 
 # Run the aplication locally and have fun coding
 $ yarn start
@@ -135,5 +138,6 @@ $ yarn build
 </div>
 
 ## :memo: License
+
 This project is under the MIT license.
 **[Click here for more information](LICENSE)**.
