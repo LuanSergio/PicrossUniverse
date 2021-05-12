@@ -126,10 +126,10 @@ $ cd PicrossUniverse
 # Install dependencies
 $ yarn install
 
-# Run the aplication locally
+# Run the application locally
 $ yarn start
 
-# Build the aplication for production
+# Build the application for production
 $ yarn build
 ```
 
