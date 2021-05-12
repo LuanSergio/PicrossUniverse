@@ -126,7 +126,7 @@ $ cd PicrossUniverse
 # Install dependencies
 $ yarn install
 
-# Run the aplication locally and have fun coding
+# Run the aplication locally
 $ yarn start
 
 # Build the aplication for production
