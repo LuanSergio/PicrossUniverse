@@ -114,9 +114,6 @@ For the confetti animation on the winning screen, I used the [confetti.js](https
 On your favorite terminal, run the following commands:
 
 ```bash
-# Install Parcel Bundler:
-$ yarn global add parcel-bundler
-
 # Clone the repository
 $ git clone https://github.com/LuanSergio/PicrossUniverse.git
 
