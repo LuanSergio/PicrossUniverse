@@ -2,30 +2,55 @@
   <button class="settings__close" data-settings-close>Close</button>
   <div class="settings__holder">
     <h1 class="settings__title">
-      <img class="settings__title-image" src="/src/assets/img/logo.svg" alt="Picross Universe">
+      <img
+        class="settings__title-image"
+        src="/src/assets/img/logo.svg"
+        alt="Picross Universe"
+      />
     </h1>
     <div class="settings__option-container">
-      <label for="columns" class="settings__label">
-        Columns: 
-      </label>
-      <input type="number" data-input data-select-width value="5" id="columns" class="settings__option" min="5" max="30" step="5">
-      <span class="settings__label-minmax">(min: 5 - max: 30)</span>
+      <label for="columns" class="settings__label"> Columns: </label>
+      <input
+        type="number"
+        data-input
+        data-select-width
+        value="5"
+        id="columns"
+        class="settings__option"
+        min="5"
+        max="30"
+        step="5"
+      />
+      <span class="settings__tooltip">(min: 5 - max: 30)</span>
     </div>
 
     <div class="settings__option-container">
-      <label for="rows" class="settings__label">
-        Rows: 
-      </label>
-      <input type="number" data-input data-select-height value="5" id="rows" class="settings__option" min="5" max="30" step="5">  
-      <span class="settings__label-minmax">(min: 5 - max: 30)</span>
+      <label for="rows" class="settings__label"> Rows: </label>
+      <input
+        type="number"
+        data-input
+        data-select-height
+        value="5"
+        id="rows"
+        class="settings__option"
+        min="5"
+        max="30"
+        step="5"
+      />
+      <span class="settings__tooltip">(min: 5 - max: 30)</span>
     </div>
 
     <label class="settings__checkbox-container" for="autoFillCompletedLines">
-      <input checkbox-auto-fill-completed-lines name="autoFillCompletedLines" id="autoFillCompletedLines" type="checkbox" class="settings__checkbox-input">
+      <input
+        checkbox-auto-fill-completed-lines
+        name="autoFillCompletedLines"
+        id="autoFillCompletedLines"
+        type="checkbox"
+        class="settings__checkbox-input"
+      />
       <span class="settings__checkbox-checkmark"></span>
       Auto Fill completed lines
     </label>
     <button data-generate-picross class="settings__button">Create</button>
   </div>
 </div>
-
