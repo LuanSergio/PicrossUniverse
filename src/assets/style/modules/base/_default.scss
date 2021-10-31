@@ -1,4 +1,4 @@
-@use '../../core/functions/index' as  *;
+@use "../../core/functions/index" as *;
 
 $base-font-size: 1em;
 
@@ -101,17 +101,5 @@ textarea:focus {
 @include respond-to(fullHD) {
   html {
     font-size: $base-font-size * 1.4;
-  }
-}
-
-@include respond-to(quadHD) {
-  html {
-    font-size: $base-font-size * 2;
-  }
-}
-
-@include respond-to(ultraHD) {
-  html {
-    font-size: $base-font-size * 2.8;
   }
 }

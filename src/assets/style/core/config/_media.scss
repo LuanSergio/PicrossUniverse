@@ -1,4 +1,4 @@
-@use '../functions/em.scss' as *;
+@use "../functions/em.scss" as *;
 
 $breakpoints: (
   smartphone: em(767),
@@ -7,6 +7,4 @@ $breakpoints: (
   laptop: em(1024),
   HD: em(1280),
   fullHD: em(1920),
-  quadHD: em(2560),
-  ultraHD: em(3840),
 );
