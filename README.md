@@ -57,11 +57,7 @@ In this puzzle type, the numbers are a form of discrete tomography that measures
 
 ### Why did I decide to do this project?
 
-I always loved puzzle and logic related games like Sudoku, Sokoban and Picross.
-<br>
-Since I really wanted to do something that could be challenging and could help me improve my logic, JS and CSS skills, I decided to recreate a game that would use a bunch of logic and that would put me out of my comfort zone.
-<br>
-While thinking about my options, I notice that I had no idea how it was to work with mouse events on JS (aside from the vanilla click), so the Picross seemed like a good way to take a real challenge.
+I really wanted to do something that could be challenging and could help me improve my logic and JS/CSS skills, so I decided to recreate a game that would use a bunch of logic and that would put me out of my comfort zone. I always loved puzzle and logic related games like Sudoku and Sokoban, but by far my favorite one is Picross, and also, Picross needs a lot of mouse interactions, wihch is something that I didn't had a lot of experience doing, so I decided to go with this one.
 
 <div align="center">
   <img  src="/docs/division.png" />
