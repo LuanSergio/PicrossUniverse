@@ -57,7 +57,7 @@ In this puzzle type, the numbers are a form of discrete tomography that measures
 
 ### Why did I decide to do this project?
 
-I really wanted to do something that could be challenging and could help me improve my logic and JS/CSS skills, so I decided to recreate a game that would use a bunch of logic and that would put me out of my comfort zone. I always loved puzzle and logic related games like Sudoku and Sokoban, but by far my favorite one is Picross, and also, Picross needs a lot of mouse interactions, wihch is something that I didn't had a lot of experience doing, so I decided to go with this one.
+I really wanted to do something that could be challenging and could help me improve my logic and JS/CSS skills, so I decided to recreate a game that would use a bunch of logic and that would put me out of my comfort zone. I always loved puzzle and logic related games like Sudoku and Sokoban, but by far my favorite one is Picross, and also, Picross needs a lot of mouse interactions, wihch is something that I didn't had a lot of experience doing.
 
 <div align="center">
   <img  src="/docs/division.png" />
