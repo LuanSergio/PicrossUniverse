@@ -1,9 +1,8 @@
 import clearInputsOnFocus from './clearInputsOnFocus';
+import isMobileLayout from '../../utils/isMobileLayout';
 
 export default function clearInputOnFocusOnMobile() {
-  const screenWidth = screen.width;
-
-  if (screenWidth < 1024) {
+  if (isMobileLayout()) {
     clearInputsOnFocus();
   }
 }
