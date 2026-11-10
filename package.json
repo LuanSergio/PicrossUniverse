@@ -1,36 +1,33 @@
 {
-  "name": "PicrossJs",
+  "name": "picross-universe",
   "version": "1.0.0",
   "description": "A random Picross generate tool using Js",
-  "main": "index.js",
-  "scripts": {
-    "start": "parcel index.html -d dev --open",
-    "build": "parcel build index.html offline.html --public-url ./"
-  },
   "repository": "https://github.com/luansergiomattos/PicrossJs.git",
   "author": "Luan Sergio Mattos",
   "license": "MIT",
   "private": true,
+  "source": [
+    "index.html",
+    "offline.html"
+  ],
+  "scripts": {
+    "start": "parcel --dist-dir dev --open",
+    "build": "parcel build --public-url ./"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead"
+  ],
   "devDependencies": {
-    "cssnano": "^4.1.10",
-    "posthtml-include": "^1.6.0",
-    "sass": "^1.32.5"
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {
-        "overrideBrowserslist": [
-          "> 1%",
-          "last 4 versions",
-          "ie >= 9"
-        ]
-      }
-    }
-  },
-  "dependencies": {
-    "autoprefixer": "^9.7.4",
-    "parcel-bundler": "^1.12.4",
-    "postcss-modules": "^1.5.0",
-    "posthtml-img-autosize": "^0.1.4"
+    "@parcel/packager-raw-url": "^2.16.4",
+    "@parcel/transformer-sass": "^2.16.4",
+    "@parcel/transformer-webmanifest": "^2.16.4",
+    "parcel": "^2.16.4",
+    "posthtml-include": "^2.0.1",
+    "sass": "^1.108.1"
   }
 }
