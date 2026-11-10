@@ -14,10 +14,23 @@
   transition-timing-function: linear;
   animation-name: popIn;
   animation-duration: 0.3s;
+
+  // Dragging a finger over the squares draws instead of scrolling the page
+  // (pinch zoom still works). The board can still be scrolled from the clues.
+  touch-action: pinch-zoom;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.picross__square:hover {
-  background-color: get-color(picross, square-hover);
+// Only on devices that can hover, otherwise the color sticks after a tap.
+@media (hover: hover) {
+  .picross__square:hover {
+    background-color: get-color(picross, square-hover);
+  }
+
+  .picross__square--true.picross__square:hover {
+    background-color: get-color(picross, square-true-hover);
+  }
 }
 
 .picross__square--highlight {
@@ -30,10 +43,6 @@
 
 .picross__square--true.picross__square--highlight {
   background-color: get-color(picross, square-highlight-true);
-}
-
-.picross__square--true.picross__square:hover {
-  background-color: get-color(picross, square-true-hover);
 }
 
 .picross__square--active-hover {

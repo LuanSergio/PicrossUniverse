@@ -13,3 +13,11 @@
     display: initial;
   }
 }
+
+// Touch tablets can be wide enough for the desktop layout and still need the
+// touch-only controls.
+@media (hover: none), (pointer: coarse) {
+  .mobile-on {
+    display: initial;
+  }
+}

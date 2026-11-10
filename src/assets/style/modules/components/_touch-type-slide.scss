@@ -14,6 +14,10 @@
   height: rem(37);
   bottom: 0;
   font-size: 0;
+  // No double-tap-to-zoom here: the browser would hold the click ~300ms
+  // waiting for a second tap, and switching mode would feel unresponsive.
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .touch-type-slide__input {
