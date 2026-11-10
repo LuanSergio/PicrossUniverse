@@ -2,7 +2,7 @@ import printPicrossNumbers from './printPicrossNumbers';
 import interactions from '../interactions/interactions'
 import picrossNumberCounter from './picrossNumberCounter';
 import timer from '../../timer/timer';
-import changePicrossClassBasedOnSize from './changePicrossClassBasedOnSize';
+import setPicrossSizeVariables from './setPicrossSizeVariables';
 import fadeLineWhenValueIsZero from '../interactions/fade/fadeLineWhenValueIsZero';
 
 export default function createPicross(width, height, matrix) {
@@ -70,5 +70,5 @@ export default function createPicross(width, height, matrix) {
   interactions(width, height, matrix);
   timer();
   fadeLineWhenValueIsZero();
-  changePicrossClassBasedOnSize(width, height);
+  setPicrossSizeVariables(width, height, horizontalNumbersArray, verticalNumbersArray);
 }

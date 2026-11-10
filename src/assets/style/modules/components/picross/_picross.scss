@@ -1,17 +1,53 @@
 @use '../../../core/config' as *;
 @use '../../../core/functions' as *;
 
+.picross {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+// The board is sized from the space it has, not from fixed breakpoints:
+// one cell is the biggest size that makes the grid plus its clues fit,
+// limited between --board-cell-min and --board-cell-max so it never gets
+// too small to use or absurdly big. The grid size and the clue sizes (in
+// cells) are set by js/modules/picross/creation/setPicrossSizeVariables.js.
+// When even the minimum size does not fit, the board scrolls.
 .picross__table {
-  background-color: rgba(get-color(main, base), $alpha: 0.94);
-  width: rem(623);
-  height: rem(566);
-  display: block;
-  margin-right: rem(40);
+  --board-padding: #{rem(10)};
+  --board-available-width: calc(
+    100vw - 2 * var(--layout-padding-x) - var(--settings-width) - var(--layout-gap)
+  );
+  --board-available-height: calc(
+    var(--viewport-height) - var(--layout-padding-top) - var(--layout-padding-bottom)
+  );
+
+  --cell: clamp(
+    var(--board-cell-min),
+    min(
+      (var(--board-available-width) - 2 * var(--board-padding)) /
+        (var(--picross-columns, 5) + var(--picross-clues-width, 2.2)),
+      (var(--board-available-height) - 2 * var(--board-padding)) /
+        (var(--picross-rows, 5) + var(--picross-clues-height, 1.3))
+    ),
+    var(--board-cell-max)
+  );
+  --clues-width: calc(var(--picross-clues-width, 2.2) * var(--cell));
+  --clues-height: calc(var(--picross-clues-height, 1.3) * var(--cell));
+
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  max-width: var(--board-available-width);
+  max-height: var(--board-available-height);
+  padding: var(--board-padding);
   border-collapse: separate;
-  box-sizing: border-box;
   text-indent: initial;
   border-radius: rem(20);
-  padding: rem(10);
+  background-color: rgba(get-color(main, base), $alpha: 0.94);
 
   -webkit-box-shadow: rem(3) rem(3) rem(3) rem(5) rgba(0, 0, 0, 0.45);
   -moz-box-shadow: rem(3) rem(3) rem(3) rem(5) rgba(0, 0, 0, 0.45);
@@ -25,15 +61,15 @@
 .picross__table tbody {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 100%;
-  border-radius: rem(20);
-  overflow-y: auto;
-  overflow-x: auto;
+  align-items: flex-start;
+  min-height: 0;
+  border-radius: rem(12);
+  overflow: auto;
+  overscroll-behavior: contain;
 
   //firefox custom scrollbar
   scrollbar-color: get-color(main, contrast) get-color(main, base);
-  scrollbar-width: auto;
+  scrollbar-width: thin;
 
   // ie and edge custom scroll bar
   scrollbar-face-color: get-color(main, base);
@@ -43,8 +79,8 @@
 }
 
 .picross__table tbody::-webkit-scrollbar {
-  width: rem(13);
-  height: rem(13);
+  width: rem(9);
+  height: rem(9);
 }
 
 .picross__table tbody::-webkit-scrollbar-track {
@@ -60,57 +96,22 @@
   background-color: get-color(main, base);
 }
 
+.picross__row {
+  display: flex;
+  flex: none;
+}
+
+// Clues stay visible when a big board has to scroll.
 .picross__row:nth-child(1) {
   position: sticky;
   z-index: index-level("lvl1");
   top: 0;
 }
 
-.picross__row {
-  display: flex;
-  flex-grow: 1;
-  flex-basis: 0;
-}
-
-@include respond-to(laptop) {
-  .picross__table {
-    width: rem(530);
-    height: rem(460);
-  }
-}
-
 @include respond-to(mobile) {
   .picross__table {
-    margin-right: 0;
-  }
-}
-
-@include respond-to(tablet) {
-  .picross__table {
-    width: rem(540);
-    height: rem(480);
-  }
-}
-
-@include respond-to(smartphone) {
-  .picross {
-    width: 100%;
-    max-width: rem(400);
-    padding: 0 rem(10);
-    display: flex;
-    justify-content: center;
-    margin-top: rem(10);
-  }
-
-  .picross__table {
-    width: 100%;
-    margin-right: 0;
-    height: rem(430);
-  }
-
-  .picross__table tbody::-webkit-scrollbar {
-    width: rem(9);
-    height: rem(9);
+    --board-padding: #{rem(6)};
+    border-radius: rem(12);
   }
 
   .picross__table tbody {

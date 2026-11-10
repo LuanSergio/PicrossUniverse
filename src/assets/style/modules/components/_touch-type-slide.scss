@@ -90,3 +90,9 @@
   background-color: get-color(main, contrast);
   transform: translate(180%, -50%);
 }
+
+@include respond-to(mobile-landscape) {
+  .touch-type-slide {
+    right: rem(10);
+  }
+}

@@ -3,8 +3,12 @@
 
 .settings {
   background-color: rgba($color: get-color(main, base), $alpha: 0.9);
-  flex-grow: 1;
-  max-width: rem(272);
+  flex: 0 0 var(--settings-width);
+  // A margin and not a `gap` on .main: the button and GitHub corner wrappers are
+  // empty flex items there too and would get gaps of their own.
+  margin-left: var(--layout-gap);
+  min-width: 0;
+  max-width: var(--settings-width);
 
   border-radius: rem(20);
   padding: rem(27);
@@ -102,6 +106,8 @@
 }
 
 .settings__option {
+  width: 100%;
+  min-width: 0;
   font-size: rem(22);
   color: get-color(main, white);
   flex-basis: 100%;
@@ -214,7 +220,6 @@
 @include respond-to(laptop) {
   .settings {
     padding: rem(26) rem(20);
-    max-width: rem(242);
   }
 
   .settings__title-image {
