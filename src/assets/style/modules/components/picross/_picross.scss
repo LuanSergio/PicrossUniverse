@@ -18,11 +18,13 @@
 // When even the minimum size does not fit, the board scrolls.
 .picross__table {
   --board-padding: #{rem(10)};
-  --board-available-width: calc(
-    100vw - 2 * var(--layout-padding-x) - var(--settings-width) - var(--layout-gap)
+  --board-available-width: min(
+    100vw - 2 * var(--layout-padding-x) - var(--settings-width) - var(--layout-gap),
+    var(--board-max-width)
   );
-  --board-available-height: calc(
-    var(--viewport-height) - var(--layout-padding-top) - var(--layout-padding-bottom)
+  --board-available-height: min(
+    var(--viewport-height) - var(--layout-padding-top) - var(--layout-padding-bottom),
+    var(--board-max-height)
   );
 
   --cell: clamp(

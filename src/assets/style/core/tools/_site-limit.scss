@@ -16,6 +16,12 @@
 
   --board-cell-min: #{rem(16)};
   --board-cell-max: #{rem(56)};
+
+  // On desktop the board does not take the whole screen: big grids stop
+  // growing at this size (a bit bigger than the original fixed board) and
+  // the squares get smaller instead.
+  --board-max-width: #{rem(760)};
+  --board-max-height: #{rem(620)};
 }
 
 // Ignores the mobile browser bars that come and go.
@@ -41,6 +47,10 @@
     --layout-padding-bottom: #{rem(60)};
     --layout-gap: 0px;
     --settings-width: 0px;
+
+    // Small screens need every pixel.
+    --board-max-width: 100vw;
+    --board-max-height: 100vh;
   }
 }
 
@@ -50,6 +60,10 @@
   :root {
     --layout-padding-bottom: #{rem(60)};
     --board-cell-min: #{rem(20)};
+
+    // Fingers need the room more than the looks, so no desktop size cap.
+    --board-max-width: 100vw;
+    --board-max-height: 100vh;
   }
 }
 
