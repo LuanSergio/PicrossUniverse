@@ -1,10 +1,73 @@
 @use '../functions/em' as *;
+@use '../functions/respond-to' as *;
+
+// Layout tokens. The board uses them to work out how much room it has
+// (see components/picross/_picross.scss), so they must match what actually
+// surrounds it: the side buttons, the GitHub corner, the settings panel and
+// the touch type toggle.
+:root {
+  --viewport-height: 100vh;
+
+  --layout-padding-x: #{rem(100)};
+  --layout-padding-top: #{rem(15)};
+  --layout-padding-bottom: #{rem(15)};
+  --layout-gap: #{rem(40)};
+  --settings-width: #{rem(272)};
+
+  --board-cell-min: #{rem(16)};
+  --board-cell-max: #{rem(56)};
+}
+
+// Ignores the mobile browser bars that come and go.
+@supports (height: 100dvh) {
+  :root {
+    --viewport-height: 100dvh;
+  }
+}
+
+@include respond-to(laptop) {
+  :root {
+    --layout-padding-x: #{rem(90)};
+    --layout-gap: #{rem(30)};
+    --settings-width: #{rem(242)};
+  }
+}
+
+// Settings become a fullscreen overlay and the buttons move to the top.
+@include respond-to(mobile) {
+  :root {
+    --layout-padding-x: #{rem(10)};
+    --layout-padding-top: #{rem(80)};
+    --layout-padding-bottom: #{rem(60)};
+    --layout-gap: 0px;
+    --settings-width: 0px;
+  }
+}
+
+// Touch screens (including big tablets on the desktop layout) show the touch
+// type toggle at the bottom and need bigger squares to be tapped.
+@media (hover: none), (pointer: coarse) {
+  :root {
+    --layout-padding-bottom: #{rem(60)};
+    --board-cell-min: #{rem(20)};
+  }
+}
+
+// Controls move to the sides so the board can use the whole height.
+@include respond-to(mobile-landscape) {
+  :root {
+    --layout-padding-x: #{rem(95)};
+    --layout-padding-top: #{rem(10)};
+    --layout-padding-bottom: #{rem(10)};
+  }
+}
 
 .main {
+  position: relative;
   display: flex;
   width: 100%;
-  height: 100vh;
-  padding: rem(15);
+  height: var(--viewport-height);
+  padding: var(--layout-padding-top) var(--layout-padding-x) var(--layout-padding-bottom);
   align-items: center;
   justify-content: center;
 }

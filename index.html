@@ -30,9 +30,6 @@
 
   <link rel="manifest" href="manifest.webmanifest">
   
-  <link rel="preload" href="/src/assets/style/apps.scss" as="style">
-  <link rel="preload" href="/src/assets/js/index.js" as="script">
-
   <link rel="stylesheet" href="/src/assets/style/apps.scss">
 </head>
 
@@ -52,13 +49,15 @@
     <include src="./partials/picross.html"></include>
     <include src="./partials/settings.html"></include>
   </main>
-  <script src="src/assets/js/index.js"></script>
-  <script src="src/assets/js/install.js"></script>
-  <script>
+  <script type="module" src="src/assets/js/index.js"></script>
+  <script type="module" src="src/assets/js/install.js"></script>
+  <script type="module">
+    // Parcel builds the service worker from this reference and keeps its name
+    // stable (no hash) at the root of the build, so it controls the whole site.
     if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/service-worker.js');
-    });
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register(new URL('service-worker.js', import.meta.url), { scope: './' });
+      });
     }
   </script>
 </body>

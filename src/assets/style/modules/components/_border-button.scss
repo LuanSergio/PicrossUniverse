@@ -88,7 +88,8 @@
   font-weight: normal;
 }
 
-@include respond-to(smartphone) {
+// Buttons go to the top on the mobile layout, leaving the full width to the board.
+@include respond-to(mobile) {
   .border-button__button {
     padding: rem(15);
     animation-name: slideInFromTop;
@@ -129,5 +130,29 @@
     border-bottom-right-radius: rem(6);
     border-bottom-left-radius: rem(6);
     border-top: none;
+  }
+}
+
+// Back to a column on the left, like on desktop, so the board gets the height.
+@include respond-to(mobile-landscape) {
+  .border-button__button {
+    animation-name: slideInFromLeft;
+    transform: translateX(-100%);
+  }
+
+  .border-button--clear-picross {
+    top: rem(64);
+    left: 0;
+  }
+
+  .border-button--install-pwa {
+    top: rem(128);
+    left: 0;
+  }
+
+  .border-button__button--clear-picross,
+  .border-button__button--install-pwa {
+    border-top-right-radius: rem(6);
+    border-bottom-left-radius: 0;
   }
 }

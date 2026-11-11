@@ -1,18 +1,17 @@
 @use '../../../core/config' as *;
 @use '../../../core/functions' as *;
 
+// The clue font is half a cell. If the font size, line-height, gap or padding
+// change here, update the constants in setPicrossSizeVariables.js too.
 .picross__values {
   display: flex;
-  flex-basis: 0;
-  flex-grow: 1;
-  justify-content: flex-end;
+  flex: none;
   box-sizing: border-box;
-  top: 0;
   background-color: get-color(picross, values-1);
   border: rem(1) solid get-color(main, base);
-  font-size: rem(17);
+  font-size: calc(var(--cell) * 0.5);
+  line-height: 1.15;
   letter-spacing: 0;
-  min-width: rem(36);
   transition: 0.15s;
   transition-timing-function: linear;
   animation-name: popIn;
@@ -27,199 +26,52 @@
   background-color: get-color(picross, values-2);
 }
 
+// Column clues, on top of the board.
 .picross__values--horizontal {
+  width: var(--cell);
+  height: var(--clues-height);
   flex-direction: column;
-  padding-top: rem(10);
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.3em 0;
   border-top-right-radius: rem(5);
   border-top-left-radius: rem(5);
 }
 
-.picross__values--horizontal .picross__numbers {
-  margin-bottom: 7%;
-}
-
-.picross__values--horizontal .picross__numbers:last-child {
-  margin-bottom: 10%;
-}
-
+// Row clues, on the left of the board.
 .picross__values--vertical {
-  flex-basis: 10%;
-  padding-left: rem(5);
-  min-width: rem(96);
+  position: sticky;
+  z-index: 5;
+  left: 0;
+  width: var(--clues-width);
+  height: var(--cell);
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0 0.5em;
   border-bottom-left-radius: rem(5);
   border-top-left-radius: rem(5);
 }
 
-.picross__values--vertical .picross__numbers {
-  margin-right: 7%;
-}
-
-.picross__values--vertical .picross__numbers:last-child {
-  margin-right: 10%;
-}
-
 .picross__numbers {
+  display: block;
   letter-spacing: 0;
-  flex-grow: 0;
-  flex-basis: 0;
-  display: flex;
-  flex-basis: 0;
-  justify-content: center;
-  align-items: center;
   color: get-color(main, white);
-}
-
-.picross__values-size--10 {
-  font-size: rem(16);
-}
-
-.picross__values-size--15 {
-  font-size: rem(15);
-}
-
-.picross__values-size--20 {
-  font-size: rem(14);
-}
-
-.picross__values-size--25 {
-  font-size: rem(13);
-}
-
-.picross__values-size--30 {
-  font-size: rem(12);
 }
 
 .fade .picross__numbers {
   opacity: 0.25;
 }
 
-.picross__values--horizontal.picross__values-size--15,
-.picross__values--horizontal.picross__values-size--20,
-.picross__values--horizontal.picross__values-size--25,
-.picross__values--horizontal.picross__values-size--30 {
-  border-top-right-radius: rem(0);
-  border-top-left-radius: rem(0);
-}
-
-.picross__values--vertical.picross__values-size--15,
-.picross__values--vertical.picross__values-size--20,
-.picross__values--vertical.picross__values-size--25,
-.picross__values--vertical.picross__values-size--30 {
-  border-bottom-left-radius: rem(0);
-  border-top-left-radius: rem(0);
-}
-
-@include respond-to(laptop) {
-  .picross__values {
-    font-size: rem(13);
-  }
-
-  .picross__values--horizontal.picross__values-size--10 {
-    font-size: rem(12);
-  }
-
-  .picross__values--horizontal.picross__values-size--15,
-  .picross__values--horizontal.picross__values-size--20,
-  .picross__values--horizontal.picross__values-size--25,
-  .picross__values--horizontal.picross__values-size--30 {
-    font-size: rem(12);
-    min-width: rem(36);
-  }
-}
-
 @include respond-to(mobile) {
-  .picross__values--horizontal .picross__values-size--10 {
-    border-top-right-radius: rem(0);
-    border-top-left-radius: rem(0);
-  }
-
-  .picross__values--vertical .picross__values-size--10 {
-    border-bottom-left-radius: rem(0);
-    border-top-left-radius: rem(0);
-  }
-}
-
-@include respond-to(tablet) {
-  .picross__values {
-    font-size: rem(14);
-  }
-
-  .picross__values--horizontal.picross__values-size--10 {
-    min-width: rem(45);
-  }
-
-  .picross__values--horizontal.picross__values-size--15,
-  .picross__values--horizontal.picross__values-size--20,
-  .picross__values--horizontal.picross__values-size--25,
-  .picross__values--horizontal.picross__values-size--30 {
-    min-width: rem(36);
-  }
-
-  .picross__values-size--10,
-  .picross__values-size--15,
-  .picross__values-size--20,
-  .picross__values-size--25,
-  .picross__values-size--30 {
-    font-size: rem(12);
-  }
-
-  .picross__values--vertical {
-    min-width: rem(90);
-    border-bottom-left-radius: rem(0);
-    border-top-left-radius: rem(0);
-  }
-}
-
-@include respond-to(smartphone) {
-  .picross__values {
-    font-size: rem(12);
-    min-width: rem(69);
-  }
-
   .picross__values--horizontal {
-    border-top-right-radius: rem(0);
-    border-top-left-radius: rem(0);
-    padding-top: rem(7);
-  }
-
-  .picross__values--horizontal.picross__values-size--10 {
-    min-width: rem(55);
-  }
-
-  .picross__values--horizontal.picross__values-size--15,
-  .picross__values--horizontal.picross__values-size--20,
-  .picross__values--horizontal.picross__values-size--25,
-  .picross__values--horizontal.picross__values-size--30 {
-    min-width: rem(36);
-  }
-
-  .picross__values-size--10,
-  .picross__values-size--15,
-  .picross__values-size--20,
-  .picross__values-size--25,
-  .picross__values-size--30 {
-    font-size: rem(12);
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
   }
 
   .picross__values--vertical {
-    min-width: rem(80);
-    border-bottom-left-radius: rem(0);
-    border-top-left-radius: rem(0);
-  }
-
-  .picross__values--vertical .picross__numbers {
-    margin-right: 5%;
-  }
-
-  .picross__values--vertical .picross__numbers:last-child {
-    margin-right: 7%;
-  }
-
-  .picross__values--horizontal .picross__numbers {
-    margin-bottom: 5%;
-  }
-
-  .picross__values--horizontal .picross__numbers:last-child {
-    margin-bottom: 7%;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
   }
 }

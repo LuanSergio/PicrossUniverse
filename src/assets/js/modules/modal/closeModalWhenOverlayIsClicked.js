@@ -1,6 +1,7 @@
 import closeModal from "./closeModal";
 import confetti from "../../utils/confetti";
 import toggleSettings from "../picrossSettings/toggleSettings";
+import isMobileLayout from "../../utils/isMobileLayout";
 
 export default function closeModalWhenOverlayIsClicked(
   modal,
@@ -11,9 +12,7 @@ export default function closeModalWhenOverlayIsClicked(
     confetti.stop();
     closeModal(modal);
 
-    const screenWidth = screen.width;
-
-    if (screenWidth < 1024) {
+    if (isMobileLayout()) {
       if (won) {
         toggleSettings();
       }

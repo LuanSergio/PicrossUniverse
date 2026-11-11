@@ -2,22 +2,34 @@
 @use '../../../core/functions' as *;
 
 .picross__square {
+  flex: none;
+  width: var(--cell);
+  height: var(--cell);
   background-color: get-color(picross, square);
-  flex-grow: 1;
-  flex-basis: 0;
   border: rem(1) solid get-color(main, base);
   box-sizing: border-box;
   cursor: pointer;
-  min-width: rem(36);
-  min-height: rem(34);
   transition: 0.1s;
   transition-timing-function: linear;
   animation-name: popIn;
   animation-duration: 0.3s;
+
+  // Dragging a finger over the squares draws instead of scrolling the page
+  // (pinch zoom still works). The board can still be scrolled from the clues.
+  touch-action: pinch-zoom;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.picross__square:hover {
-  background-color: get-color(picross, square-hover);
+// Only on devices that can hover, otherwise the color sticks after a tap.
+@media (hover: hover) {
+  .picross__square:hover {
+    background-color: get-color(picross, square-hover);
+  }
+
+  .picross__square--true.picross__square:hover {
+    background-color: get-color(picross, square-true-hover);
+  }
 }
 
 .picross__square--highlight {
@@ -30,10 +42,6 @@
 
 .picross__square--true.picross__square--highlight {
   background-color: get-color(picross, square-highlight-true);
-}
-
-.picross__square--true.picross__square:hover {
-  background-color: get-color(picross, square-true-hover);
 }
 
 .picross__square--active-hover {
@@ -55,13 +63,13 @@
 .picross__square.fade::before {
   content: get-icon("x");
   font-family: "icons";
-  font-size: rem(26);
+  font-size: calc(var(--cell) * 0.6);
   display: block;
   color: get-color(main, contrast);
   position: absolute;
   top: 50%;
   left: 50%;
-  line-height: rem(26);
+  line-height: 1;
   transform: translate(-50%, -50%);
 }
 
@@ -104,74 +112,4 @@
   height: 100%;
   width: 100%;
   border-top: rem(1) solid get-color(picross, square-separation);
-}
-
-.picross__square--false.picross__square-size--10::before,
-.picross__square.fade.picross__square-size--10::before {
-  font-size: rem(20);
-}
-
-.picross__square--false.picross__square-size--15::before,
-.picross__square.fade.picross__square-size--15::before {
-  font-size: rem(16);
-}
-
-.picross__square--false.picross__square-size--20::before,
-.picross__square.fade.picross__square-size--20::before {
-  font-size: rem(16);
-}
-
-.picross__square--false.picross__square-size--25::before,
-.picross__square.fade.picross__square-size--25::before {
-  font-size: rem(16);
-}
-
-.picross__square--false.picross__square-size--30::before,
-.picross__square.fade.picross__square-size--30::before {
-  font-size: rem(16);
-}
-
-@include respond-to(laptop) {
-  .picross__square-size--15,
-  .picross__square-size--20,
-  .picross__square-size--25,
-  .picross__square-size--30 {
-    min-width: rem(36);
-    min-height: rem(32);
-  }
-}
-
-@include respond-to(tablet) {
-  .picross__square-size--10 {
-    min-width: rem(45);
-    min-height: rem(42);
-  }
-
-  .picross__square-size--15,
-  .picross__square-size--20,
-  .picross__square-size--25,
-  .picross__square-size--30 {
-    min-width: rem(36);
-    min-height: rem(33);
-  }
-}
-
-@include respond-to(smartphone) {
-  .picross__square {
-    min-width: rem(69);
-    min-height: rem(62);
-  }
-
-  .picross__square-size--10 {
-    min-width: rem(55);
-    min-height: rem(52);
-  }
-
-  .picross__square-size--15,
-  .picross__square-size--20,
-  .picross__square-size--25,
-  .picross__square-size--30 {
-    min-width: rem(36);
-    min-height: rem(32);
-  }
 }

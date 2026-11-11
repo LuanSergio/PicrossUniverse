@@ -85,7 +85,7 @@ You can duplicate this layout to own Figma account and use it as you wish by **[
 
 - HTML, CSS and JS
 - [Yarn](https://yarnpkg.com/)
-- [Parcel Bundler](https://parceljs.org/)
+- [Parcel 2](https://parceljs.org/)
 - [Sass](https://sass-lang.com/)
 
 <p>Tools: </p>
@@ -105,7 +105,7 @@ For the confetti animation on the winning screen, I used the confetti.js created
 
 ## :man_technologist: Running Locally
 
-You must have <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Git</a>, <a href="https://nodejs.org/en/">Node</a> and <a href="https://yarnpkg.com/">Yarn</a> installed.
+You must have <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Git</a>, <a href="https://nodejs.org/en/">Node</a> (version 20 or newer, see `.nvmrc`) and <a href="https://yarnpkg.com/">Yarn</a> installed.
 
 On your favorite terminal, run the following commands:
 

@@ -1,71 +1,26 @@
 @use '../../../core/config' as *;
 @use '../../../core/functions' as *;
 
+// The timer lives in the top-left corner, so it shares the clue sizes and
+// shrinks to fit "00:00:00" when the clue column is narrow.
 .picross__values--timer {
-  flex-basis: 10%;
-  display: flex;
+  --timer-font-size: min(calc(var(--cell) * 0.45), calc(var(--clues-width) / 4.6));
+
+  position: sticky;
+  z-index: 6;
+  left: 0;
+  width: var(--clues-width);
+  height: var(--clues-height);
   justify-content: center;
   align-items: center;
+  font-size: var(--timer-font-size);
   color: get-color(main, contrast);
   background-color: get-color(main, base);
-  min-width: rem(96);
   border-bottom-left-radius: rem(3);
   border-top-left-radius: rem(3);
 }
 
 .picross__timer {
-  font-size: rem(24);
-}
-
-.picross__timer--10 {
-  font-size: rem(20);
-}
-
-.picross__timer--15 {
-  font-size: rem(17);
-}
-
-.picross__timer--20 {
-  font-size: rem(17);
-}
-
-.picross__timer--25 {
-  font-size: rem(17);
-}
-
-.picross__timer--30 {
-  font-size: rem(17);
-}
-
-@include respond-to(laptop) {
-  .picross__timer {
-    font-size: rem(16);
-  }
-
-  .picross__values--timer {
-    border-bottom-left-radius: rem(0);
-    border-top-left-radius: rem(0);
-  }
-}
-
-@include respond-to(tablet) {
-  .picross__values--timer {
-    min-width: rem(90);
-  }
-  .picross__timer {
-    font-size: rem(14);
-  }
-}
-
-@include respond-to(smartphone) {
-  .picross__values--timer {
-    max-width: rem(80);
-    min-width: rem(80);
-    border-bottom-left-radius: rem(0);
-    border-top-left-radius: rem(0);
-  }
-
-  .picross__timer {
-    font-size: rem(12);
-  }
+  font-size: inherit;
+  font-variant-numeric: tabular-nums;
 }
